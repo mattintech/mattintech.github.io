@@ -55,12 +55,11 @@ Wi-Fi security types are defined in `data/wifi_security_types.json`:
 
 ```json
 [
-  { "label": "None", "value": "NONE" },
-  { "label": "WPA", "value": "WPA" },
-  { "label": "WPA2", "value": "WPA2" },
-  { "label": "WPA/WPA2", "value": "WPA_WPA2" },
-  { "label": "WPA3", "value": "WPA3" }
+    { "label": "NONE", "value": "NONE" },
+    { "label": "WEP", "value": "WEP" },
+    { "label": "WPA/WPA2/WPA3", "value": "WPA" }
 ]
+  
 ```
 
 ## License
