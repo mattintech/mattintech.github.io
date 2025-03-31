@@ -1,0 +1,6 @@
+[
+    { "label": "NONE", "value": "NONE" },
+    { "label": "WEP", "value": "WEP" },
+    { "label": "WPA/WPA2/WPA3", "value": "WPA" }
+  ]
+  

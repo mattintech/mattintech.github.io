@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Android Enterprise QR Code Generator | EMM Device Enrollment Tool</title>
+  <meta name="description" content="Generate QR codes for Android Enterprise device enrollment with Google, Microsoft Intune, VMware Workspace ONE and other EMM solutions. Free, offline-capable tool.">
+  <meta name="keywords" content="Android Enterprise, QR code generator, device enrollment, EMM, MDM, zero-touch provisioning, device admin, Intune, Workspace ONE">
+  <meta name="author" content="MattInTech">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Android Enterprise QR Code Generator">
+  <meta property="og:description" content="Free tool to generate QR codes for Android Enterprise device enrollment">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mattintech.github.io/tools/android-qr/">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://mattintech.github.io/tools/android-qr/">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .toast {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+    }
+
+    .toast.show {
+      visibility: visible;
+      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @keyframes fadein {
+      from {bottom: 0; opacity: 0;}
+      to {bottom: 30px; opacity: 1;}
+    }
+
+    @keyframes fadeout {
+      from {bottom: 30px; opacity: 1;}
+      to {bottom: 0; opacity: 0;}
+    }
+  </style>
+  
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Android Enterprise QR Code Generator",
+    "applicationCategory": "WebApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "A free tool to generate QR codes for Android Enterprise device enrollment with support for various EMM providers.",
+    "author": {
+      "@type": "Person",
+      "name": "MattInTech"
+    }
+  }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen">
+  <!-- Header with zero padding -->
+  <header class="bg-blue-600 text-white p-0">
+    <div class="container mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center">
+        <a href="/index.html" class="text-white" aria-label="Home">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+        </a>
+      </div>
+      <h1 class="text-xl font-semibold">Android Enterprise QR Code Generator</h1>
+      <div class="w-6"></div> <!-- Empty div for balance -->
+    </div>
+  </header>
+
+  <main>
+    <!-- Tool Interface -->
+    <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6 mt-4">
+      <p class="text-gray-700 mb-4">
+        Generate QR codes for Android Enterprise device enrollment with various EMM providers. All processing happens locally in your browser.
+      </p>
+    
+      <label for="emm" class="block font-semibold mb-2">Select EMM Provider:</label>
+      <select id="emm" class="w-full mb-4 p-2 border rounded">
+        <option value="">-- Select EMM --</option>
+      </select>
+      <form id="config-form" class="space-y-4"></form>
+      <button id="generate" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Generate QR</button>
+      <div id="output" class="mt-6 hidden">
+        <h2 class="text-xl font-semibold mb-2">QR Code Output</h2>
+        <div id="qrcode" class="mb-4"></div>
+        <div class="relative mb-4">
+          <textarea id="qrtext" class="w-full p-2 border rounded h-48 pr-10" readonly></textarea>
+          <button id="copy-json" class="absolute top-2 right-2 text-gray-600 hover:text-gray-900" title="Copy to clipboard" aria-label="Copy JSON to clipboard">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex gap-2">
+          <button id="download-png" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Download PNG</button>
+          <button id="download-svg" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Download SVG</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-4 mt-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>Part of <a href="/index.html" class="text-blue-300 hover:underline">MattInTech Developer Tools</a> collection</p>
+      <p class="text-sm mt-2">All processing happens locally in your browser. No data is sent to external servers.</p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast" role="alert">Copied to clipboard!</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
