@@ -1,49 +1,47 @@
 {
-    "Knox Manage": {
-      "defaults": {
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.sds.emm.cloud.knox.samsung/com.sds.emm.emmagent.core.event.receiver.DeviceAdminPolicyReceiver",
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=knoxmanage",
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "MzDUGUat9VKJ1Xv8FBmP2rts6f-5K4RFLVPmxXw6gpY=",
-        "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
-          "tenantId": "your-tenant-id",
-          "AllowModifyUserId": "Allow",
-          "TenantType":"M",
-          "Mode":"DO",
-          "UserID":"your user",
-          "Password":"Your password"
-        }
-      }
-    },
-    "Microsoft Intune": {
-      "defaults": {
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.microsoft.intune/.agent.InTuneAgent",
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=setup",
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "I5YvS0O5hXY46mb01BlRjq4oJJGs2kuUcHvVkAPEXlg",
-        "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
-          "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": ""
-        }
-      }
-    },
-    "Workspace ONE": {
-      "defaults": {
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.airwatch.androidagent/com.airwatch.agent.DeviceAdministratorReceiver",
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=hub",
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "6kyqxDOjgS30jvQuzh4uvHPk-0bmAD-1QU7vtW7i_o8=",
-        "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
-          {
-            "serverurl": "",
-            "gid": "",
-            "un": "",
-            "pw": ""
-          }
-      }
-    },
-    "TestDPC": {
-      "defaults": {
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.afwsamples.testdpc/com.afwsamples.testdpc.DeviceAdminReceiver",
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://testdpc-latest-apk.appspot.com",
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "gJD2YwtOiWJHkSMkkIfLRlj-quNqG1fb6v100QmzM9w="
+  "Knox Manage": {
+    "defaults": {
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.sds.emm.cloud.knox.samsung/com.sds.emm.emmagent.core.event.receiver.DeviceAdminPolicyReceiver",
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=knoxmanage",
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "MzDUGUat9VKJ1Xv8FBmP2rts6f-5K4RFLVPmxXw6gpY=",
+      "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
+        "tenantId": "your-tenant-id",
+        "AllowModifyUserId": "Allow",
+        "TenantType": "M",
+        "Mode": "DO",
+        "UserID": "your user",
+        "Password": "Your password"
       }
     }
+  },
+  "Microsoft Intune": {
+    "defaults": {
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.microsoft.intune/.agent.InTuneAgent",
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=setup",
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "I5YvS0O5hXY46mb01BlRjq4oJJGs2kuUcHvVkAPEXlg",
+      "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
+        "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": ""
+      }
+    }
+  },
+  "Workspace ONE": {
+    "defaults": {
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.airwatch.androidagent/com.airwatch.agent.DeviceAdministratorReceiver",
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=hub",
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "6kyqxDOjgS30jvQuzh4uvHPk-0bmAD-1QU7vtW7i_o8=",
+      "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
+        "serverurl": "",
+        "gid": "",
+        "un": "",
+        "pw": ""
+      }
+    }
+  },
+  "TestDPC": {
+    "defaults": {
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.afwsamples.testdpc/com.afwsamples.testdpc.DeviceAdminReceiver",
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://testdpc-latest-apk.appspot.com",
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "gJD2YwtOiWJHkSMkkIfLRlj-quNqG1fb6v100QmzM9w="
+    }
   }
-  
+}
