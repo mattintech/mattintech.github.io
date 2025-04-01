@@ -100,7 +100,17 @@
         Generate QR codes for Android Enterprise device enrollment with various EMM providers. All processing happens locally in your browser.
       </p>
     
-      <label for="emm" class="block font-semibold mb-2">Select EMM Provider:</label>
+      <div class="flex items-center justify-between mb-2">
+        <label for="emm" class="font-semibold">Select EMM Provider:</label>
+        <a href="https://github.com/mattintech/mattintech.github.io/issues/new?title=New%20EMM%20Request&body=EMM%20Name:%20%0A%0AAdditional%20important%20info:%20%0A%0A" 
+           target="_blank" 
+           class="text-sm text-blue-600 hover:underline flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Request new EMM
+        </a>
+      </div>
       <select id="emm" class="w-full mb-4 p-2 border rounded">
         <option value="">-- Select EMM --</option>
       </select>
