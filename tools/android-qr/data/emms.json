@@ -1,13 +1,14 @@
 {
-  "Knox Manage": {
+  "Samsung Knox Manage": {
     "defaults": {
       "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.sds.emm.cloud.knox.samsung/com.sds.emm.emmagent.core.event.receiver.DeviceAdminPolicyReceiver",
       "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=knoxmanage",
       "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "MzDUGUat9VKJ1Xv8FBmP2rts6f-5K4RFLVPmxXw6gpY=",
       "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
+        "serverUrl": "https://[server].manage.samsungknox.com/emm",
         "tenantId": "your-tenant-id",
         "AllowModifyUserId": "Allow",
-        "TenantType": "M",
+        "Method": "QR",
         "Mode": "DO",
         "UserID": "your user",
         "Password": "Your password"
@@ -24,7 +25,7 @@
       }
     }
   },
-  "Workspace ONE": {
+  "Omnissa Workspace ONE": {
     "defaults": {
       "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.airwatch.androidagent/com.airwatch.agent.DeviceAdministratorReceiver",
       "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=hub",
