@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
   <title>MattInTech Developer Tools - Free Web-Based Utilities for Developers</title>
-  <meta name="description" content="A collection of free, web-based developer tools including Android Enterprise QR Generator, and more. All tools run client-side with no data collection.">
-  <meta name="keywords" content="developer tools, web tools, Android Enterprise, QR code generator, EMM tools, mobile device management">
+  <meta name="description"
+    content="A collection of free, web-based developer tools including Android Enterprise QR Generator, and more. All tools run client-side with no data collection.">
+  <meta name="keywords"
+    content="developer tools, web tools, Android Enterprise, QR code generator, EMM tools, mobile device management">
   <meta name="author" content="MattInTech">
 
   <!-- Open Graph / Social Media -->
@@ -15,16 +18,54 @@
   <meta property="og:description" content="Free web-based tools for developers and IT professionals">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mattintech.github.io/">
-  
+
   <!-- Canonical URL -->
   <link rel="canonical" href="https://mattintech.github.io/">
-  
+
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  
+
   <!-- Styles -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   
+  <!-- Custom Styles for Tool Cards -->
+  <style>
+    .tool-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .tool-icon {
+      height: 12rem; /* h-48 equivalent */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .tool-content {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem; /* p-6 equivalent */
+      flex-grow: 1;
+    }
+    
+    .tool-description {
+      flex-grow: 1;
+      margin-bottom: 1.5rem; /* Consistent spacing before button */
+    }
+    
+    .tool-button {
+      display: block;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      color: white;
+      transition: background-color 0.2s;
+    }
+  </style>
+
   <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
   {
@@ -41,6 +82,7 @@
   }
   </script>
 </head>
+
 <body class="bg-gray-100 min-h-screen">
   <header class="bg-blue-600 text-white">
     <div class="container mx-auto px-4 py-6">
@@ -54,56 +96,89 @@
     <section class="mb-10">
       <h2 class="text-2xl font-semibold mb-4">Free Developer Tools That Respect Your Privacy</h2>
       <p class="text-gray-700 mb-3">
-        Welcome to MattInTech Developer Tools, a collection of free, web-based utilities designed to simplify common development and IT administration tasks. All tools run entirely in your browser with no server-side processing or data collection.
+        Welcome to MattInTech Developer Tools, a collection of free, web-based utilities designed to simplify common
+        development and IT administration tasks. All tools run entirely in your browser with no server-side processing
+        or data collection.
       </p>
       <p class="text-gray-700">
-        Whether you're managing Android Enterprise devices, working with data formats, or performing other technical tasks, these tools aim to make your workflow more efficient.
+        Whether you're managing Android Enterprise devices, working with data formats, or performing other technical
+        tasks, these tools aim to make your workflow more efficient.
       </p>
     </section>
 
     <h2 class="text-2xl font-semibold mb-6">Available Tools</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
+
       <!-- Android QR Tool Card -->
       <article class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
-        <div class="h-48 bg-blue-500 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
-          </svg>
+        <div class="tool-card">
+          <div class="tool-icon bg-blue-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+            </svg>
+          </div>
+          <div class="tool-content">
+            <h3 class="text-xl font-semibold mb-2">Android Enterprise QR Generator</h3>
+            <div class="tool-description">
+              <p class="text-gray-600">Generate QR codes for Android Enterprise device provisioning with support for Samsung Knox Manage, Microsoft Intune, Omnissa Workspace ONE, and other EMM providers.</p>
+            </div>
+            <a href="tools/android-qr/index.html" class="tool-button bg-blue-600 hover:bg-blue-700" aria-label="Launch Android Enterprise QR Generator tool">
+              Launch Tool
+            </a>
+          </div>
         </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Android Enterprise QR Generator</h3>
-          <p class="text-gray-600 mb-4">Generate QR codes for Android Enterprise device provisioning with support for Samsung Knox Manage, Microsoft Intune, Omnissa Workspace ONE, and other EMM providers.</p>
-          <a href="tools/android-qr/index.html" class="block text-center py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition" aria-label="Launch Android Enterprise QR Generator tool">
-            Launch Tool
-          </a>
+      </article>
+
+      <!-- ADB Commands Tool Card -->
+      <article class="bg-white rounded-lg shadow-md overflow-hidden transition-transform transform hover:scale-105">
+        <div class="tool-card">
+          <div class="tool-icon bg-green-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="tool-content">
+            <h3 class="text-xl font-semibold mb-2">ADB Debugging Commands</h3>
+            <div class="tool-description">
+              <p class="text-gray-600">Essential ADB commands for Android developers, EMM administrators, and troubleshooters with cross-platform support for Windows, Mac, and Linux.</p>
+            </div>
+            <a href="tools/adb-cmd/index.html" class="tool-button bg-green-600 hover:bg-green-700" aria-label="Launch ADB Debugging Commands tool">
+              Launch Tool
+            </a>
+          </div>
         </div>
       </article>
 
       <!-- Placeholder for future tools -->
       <article class="bg-white rounded-lg shadow-md overflow-hidden opacity-50">
-        <div class="h-48 bg-gray-400 flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-          </svg>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Coming Soon</h3>
-          <p class="text-gray-600 mb-4">More developer tools are being added to this collection. Check back soon for updates!</p>
+        <div class="tool-card">
+          <div class="tool-icon bg-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+          </div>
+          <div class="tool-content">
+            <h3 class="text-xl font-semibold mb-2">Coming Soon</h3>
+            <div class="tool-description">
+              <p class="text-gray-600">More developer tools are being added to this collection. Check back soon for updates!</p>
+            </div>
+            <!-- No button for placeholder -->
+          </div>
         </div>
       </article>
-      
+
       <!-- Add more tool cards here as you create them -->
-      
+
     </div>
-    
+
     <!-- Additional content for SEO -->
     <section class="mt-12 mb-8">
       <h2 class="text-2xl font-semibold mb-4">Why Use These Tools?</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-white p-6 rounded-lg shadow">
           <h3 class="text-lg font-semibold mb-2">Privacy-Focused</h3>
-          <p>All tools run completely within your browser. No data is sent to servers, ensuring your sensitive information stays private.</p>
+          <p>All tools run completely within your browser. No data is sent to servers, ensuring your sensitive
+            information stays private.</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow">
           <h3 class="text-lg font-semibold mb-2">Free to Use</h3>
@@ -115,7 +190,8 @@
         </div>
         <div class="bg-white p-6 rounded-lg shadow">
           <h3 class="text-lg font-semibold mb-2">Open Source</h3>
-          <p>All tools are open source. Feel free to examine the code, suggest improvements, or contribute new features.</p>
+          <p>All tools are open source. Feel free to examine the code, suggest improvements, or contribute new features.
+          </p>
         </div>
       </div>
     </section>
@@ -136,4 +212,5 @@
     </div>
   </footer>
 </body>
+
 </html>

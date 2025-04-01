@@ -20,7 +20,7 @@
   <link rel="canonical" href="https://mattintech.github.io/tools/android-qr/">
   
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
   <!-- Styles -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -79,23 +79,23 @@
 </head>
 <body class="bg-gray-100 text-gray-900 min-h-screen">
   <!-- Header with zero padding -->
-  <header class="bg-blue-600 text-white p-0">
-    <div class="container mx-auto flex items-center justify-between px-4 py-3">
-      <div class="flex items-center">
-        <a href="/index.html" class="text-white" aria-label="Home">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-          </svg>
+  <header class="bg-blue-600 text-white">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+        <div>
+          <h1 class="text-3xl font-bold">Android Enterprise QR Generator</h1>
+          <p class="mt-2">Generate QR codes for Android Enterprise device enrollment</p>
+        </div>
+        <a href="../../index.html" class="mt-4 md:mt-0 bg-white text-blue-600 px-4 py-2 rounded hover:bg-blue-100 transition">
+          <i class="fas fa-arrow-left mr-2"></i>Back to Dashboard
         </a>
       </div>
-      <h1 class="text-xl font-semibold">Android Enterprise QR Code Generator</h1>
-      <div class="w-6"></div> <!-- Empty div for balance -->
     </div>
   </header>
 
-  <main>
+  <main class="container mx-auto px-4 py-8">
     <!-- Tool Interface -->
-    <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6 mt-4">
+    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
       <p class="text-gray-700 mb-4">
         Generate QR codes for Android Enterprise device enrollment with various EMM providers. All processing happens locally in your browser.
       </p>
@@ -115,7 +115,7 @@
         <option value="">-- Select EMM --</option>
       </select>
       <form id="config-form" class="space-y-4"></form>
-      <button id="generate" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Generate QR</button>
+      <button id="generate" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Generate QR</button>
       <div id="output" class="mt-6 hidden">
         <h2 class="text-xl font-semibold mb-2">QR Code Output</h2>
         <div id="qrcode" class="mb-4"></div>
@@ -128,23 +128,59 @@
           </button>
         </div>
         <div class="flex gap-2">
-          <button id="download-png" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Download PNG</button>
-          <button id="download-svg" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Download SVG</button>
+          <button id="download-png" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Download PNG</button>
+          <button id="download-svg" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Download SVG</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Additional information section -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h2 class="text-xl font-semibold mb-4">About Android Enterprise QR Enrollment</h2>
+      <p class="text-gray-700 mb-3">
+        Android Enterprise QR code enrollment allows administrators to quickly provision corporate-owned Android devices.
+        By scanning a QR code during device setup, the device is automatically configured with the right EMM enrollment
+        details, WiFi settings, and corporate policies.
+      </p>
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-4">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <svg class="h-5 w-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="ml-3">
+            <p class="text-sm text-blue-700">
+              This tool works completely offline after initial load. Your configuration data never leaves your device,
+              making it safe for generating sensitive enrollment credentials.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </main>
 
-  <footer class="bg-gray-800 text-white py-4 mt-6">
-    <div class="container mx-auto px-4 text-center">
-      <p>Part of <a href="/index.html" class="text-blue-300 hover:underline">MattInTech Developer Tools</a> collection</p>
-      <p class="text-sm mt-2">All processing happens locally in your browser. No data is sent to external servers.</p>
+  <footer class="bg-gray-800 text-white py-6 mt-10">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div>
+          <p>&copy; 2025 MattInTech. All rights reserved.</p>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="https://github.com/mattintech" class="text-gray-400 hover:text-white transition">
+            GitHub
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <!-- Toast notification -->
   <div id="toast" class="toast" role="alert">Copied to clipboard!</div>
 
+  <!-- Add Font Awesome for the back button icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
   <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
   <script src="app.js"></script>
 </body>
