@@ -61,7 +61,7 @@ function getConstantName(fullKey) {
 function getDocLink(fullKey) {
   // Map the full key to the appropriate documentation link
   const constName = getConstantName(fullKey);
-  return `https://developer.android.com/reference/android/app/admin/DevicePolicyManager#${constName}`;
+  return `https://developer.android.com/reference/android/app/admin/DevicePolicyManager#EXTRA_${constName}`;
 }
 
 function createField(labelText, name, value = "", placeholder = "", isTextarea = false, tooltip = "", isDropdown = false, docLink = "") {
