@@ -35,12 +35,48 @@ function createFieldGroup(title) {
 }
 
 function createTooltipIcon(tooltip) {
+  const wrapper = document.createElement("span");
+  wrapper.className = "tooltip-wrapper relative inline-block ml-1";
+  
   const icon = document.createElement("img");
   icon.src = "https://cdn.jsdelivr.net/npm/lucide-static@0.260.0/icons/info.svg";
   icon.alt = "info";
   icon.className = "w-4 h-4 inline cursor-pointer";
-  icon.title = tooltip;
-  return icon;
+  
+  const tooltipElement = document.createElement("div");
+  tooltipElement.className = "tooltip-content absolute z-10 w-64 bg-gray-800 text-white text-xs rounded p-2 shadow-lg opacity-0 invisible transition-opacity duration-100 bottom-full left-1/2 transform -translate-x-1/2 mb-1";
+  tooltipElement.textContent = tooltip;
+  
+  // Add a small triangle pointing down
+  const arrow = document.createElement("div");
+  arrow.className = "tooltip-arrow absolute h-2 w-2 bg-gray-800 transform rotate-45 left-1/2 -ml-1 -bottom-1";
+  tooltipElement.appendChild(arrow);
+  
+  wrapper.appendChild(icon);
+  wrapper.appendChild(tooltipElement);
+  
+  // Show tooltip immediately on hover
+  wrapper.addEventListener("mouseenter", () => {
+    tooltipElement.classList.remove("opacity-0", "invisible");
+    tooltipElement.classList.add("opacity-100", "visible");
+  });
+  
+  // Hide tooltip on mouse leave
+  wrapper.addEventListener("mouseleave", () => {
+    tooltipElement.classList.remove("opacity-100", "visible");
+    tooltipElement.classList.add("opacity-0", "invisible");
+  });
+  
+  // Toggle tooltip on click for mobile users
+  wrapper.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent click from affecting parent elements
+    tooltipElement.classList.toggle("opacity-0");
+    tooltipElement.classList.toggle("invisible");
+    tooltipElement.classList.toggle("opacity-100");
+    tooltipElement.classList.toggle("visible");
+  });
+  
+  return wrapper;
 }
 
 function createLinkIcon(link) {
@@ -305,8 +341,30 @@ function showToast() {
   }, 3000);
 }
 
+function closeAllTooltips() {
+  document.querySelectorAll('.tooltip-content').forEach(tooltip => {
+    tooltip.classList.remove("opacity-100", "visible");
+    tooltip.classList.add("opacity-0", "invisible");
+  });
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   await Promise.all([loadEMMs(), loadWifiSecurityTypes()]);
+
+  // Load external CSS file if not already loaded
+  if (!document.querySelector('link[href="tooltips.css"]')) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'tooltips.css';
+    document.head.appendChild(link);
+  }
+
+  // Close tooltips when clicking elsewhere on the page
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.tooltip-wrapper')) {
+      closeAllTooltips();
+    }
+  });
 
   document.getElementById("emm").addEventListener("change", (e) => {
     if (e.target.value) {
