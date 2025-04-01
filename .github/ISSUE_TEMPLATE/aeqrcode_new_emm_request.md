@@ -1,7 +1,7 @@
 ---
-name: New EMM - AE QRCode
+name: New EMM
 about: Create a report to request a new EMM
-title: ''
+title: 'AEQRCode | '
 labels: ''
 assignees: ''
 

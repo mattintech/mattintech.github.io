@@ -1,7 +1,7 @@
 ---
 name: Bug report - AE QRCode
 about: Create a report to help us improve
-title: ''
+title: 'AEQRCode | '
 labels: ''
 assignees: ''
 

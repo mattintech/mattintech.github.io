@@ -1,7 +1,7 @@
 ---
-name: Feature request - AE QRCode
+name: Feature request
 about: Suggest an idea for this project
-title: ''
+title: 'AEQRCode | '
 labels: ''
 assignees: ''
 

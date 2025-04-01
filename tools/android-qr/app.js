@@ -34,22 +34,30 @@ function createFieldGroup(title) {
   return group;
 }
 
-function createTooltipIcon(tooltip, link) {
+function createTooltipIcon(tooltip) {
   const icon = document.createElement("img");
   icon.src = "https://cdn.jsdelivr.net/npm/lucide-static@0.260.0/icons/info.svg";
   icon.alt = "info";
   icon.className = "w-4 h-4 inline cursor-pointer";
   icon.title = tooltip;
-
-  if (link) {
-    const anchor = document.createElement("a");
-    anchor.href = link;
-    anchor.target = "_blank";
-    anchor.rel = "noopener noreferrer";
-    anchor.appendChild(icon);
-    return anchor;
-  }
   return icon;
+}
+
+function createLinkIcon(link) {
+  if (!link) return null;
+  
+  const icon = document.createElement("img");
+  icon.src = "https://cdn.jsdelivr.net/npm/lucide-static@0.260.0/icons/external-link.svg";
+  icon.alt = "documentation";
+  icon.className = "w-4 h-4 inline cursor-pointer";
+  icon.title = "View Android documentation";
+  
+  const anchor = document.createElement("a");
+  anchor.href = link;
+  anchor.target = "_blank";
+  anchor.rel = "noopener noreferrer";
+  anchor.appendChild(icon);
+  return anchor;
 }
 
 function getConstantName(fullKey) {
@@ -64,6 +72,21 @@ function getDocLink(fullKey) {
   return `https://developer.android.com/reference/android/app/admin/DevicePolicyManager#EXTRA_${constName}`;
 }
 
+function getTooltipText(key) {
+  // Return appropriate tooltip text based on the key
+  const tooltips = {
+    "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": "JSON-formatted key-value pairs passed to the EMM agent",
+    "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "The component name for the mobile device management application that will be set as the device owner",
+    "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "URL where the device admin package can be downloaded",
+    "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "SHA-256 checksum of the DPC package file's signature",
+    "android.app.extra.PROVISIONING_WIFI_SSID": "Wi-Fi network name the device should connect to",
+    "android.app.extra.PROVISIONING_WIFI_SECURITY_TYPE": "Security protocol used for Wi-Fi",
+    "android.app.extra.PROVISIONING_WIFI_PASSWORD": "Wi-Fi password if the network is secured"
+  };
+  
+  return tooltips[key] || "";
+}
+
 function createField(labelText, name, value = "", placeholder = "", isTextarea = false, tooltip = "", isDropdown = false, docLink = "") {
   const div = document.createElement("div");
   div.className = "flex flex-col mb-2";
@@ -72,8 +95,14 @@ function createField(labelText, name, value = "", placeholder = "", isTextarea =
   label.className = "font-semibold flex items-center gap-1";
   label.textContent = labelText;
   
+  // Add doc link icon (if available)
+  if (docLink) {
+    label.appendChild(createLinkIcon(docLink));
+  }
+  
+  // Add tooltip icon (if provided)
   if (tooltip) {
-    label.appendChild(createTooltipIcon(tooltip, docLink));
+    label.appendChild(createTooltipIcon(tooltip));
   }
 
   let input;
@@ -112,7 +141,7 @@ function renderForm(emmName) {
 
   for (const [key, value] of Object.entries(defaults)) {
     const isTextarea = key === "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE";
-    const tooltip = isTextarea ? "JSON-formatted key-value pairs passed to the EMM agent" : "";
+    const tooltip = getTooltipText(key);
     const docLink = key.startsWith("android.app.extra.") ? getDocLink(key) : "";
     baseGroup.appendChild(createField(key, key, value, "", isTextarea, tooltip, false, docLink));
   }
@@ -126,7 +155,7 @@ function renderForm(emmName) {
         "",
         "",
         true,
-        "JSON-formatted key-value pairs passed to the EMM agent",
+        getTooltipText(extrasKey),
         false,
         getDocLink(extrasKey)
       )
@@ -142,7 +171,7 @@ function renderForm(emmName) {
     "",
     "YourWiFi",
     false,
-    "Wi-Fi network name the device should connect to",
+    getTooltipText(wifiSsidKey),
     false,
     getDocLink(wifiSsidKey)
   ));
@@ -154,7 +183,7 @@ function renderForm(emmName) {
     "",
     "",
     false,
-    "Security protocol used for Wi-Fi",
+    getTooltipText(wifiSecurityKey),
     true,
     getDocLink(wifiSecurityKey)
   ));
@@ -166,7 +195,7 @@ function renderForm(emmName) {
     "",
     "Password123",
     false,
-    "Wi-Fi password if the network is secured",
+    getTooltipText(wifiPasswordKey),
     false,
     getDocLink(wifiPasswordKey)
   ));
