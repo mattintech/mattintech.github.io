@@ -28,6 +28,8 @@
   <!-- Styles -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="tooltips.css" rel="stylesheet">
+  <!-- Add Lucide Icons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.260.0/font/lucide.min.css">
 
   <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
@@ -109,10 +111,29 @@
           </button>
         </div>
         <div class="flex gap-2">
-          <button id="download-png"
-            class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Download PNG</button>
-          <button id="download-svg"
-            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Download SVG</button>
+          <button id="download-png" class="bg-green-600 text-white p-2 rounded hover:bg-green-700 transition flex items-center justify-center" title="Download QR code as PNG">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="sr-only">Download PNG</span>
+          </button>
+          <button id="download-svg" class="bg-purple-600 text-white p-2 rounded hover:bg-purple-700 transition flex items-center justify-center" title="Download QR code as SVG">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span class="sr-only">Download SVG</span>
+          </button>
+          <button id="copy-text" class="bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition flex items-center justify-center" title="Copy QR code JSON to clipboard">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span class="sr-only">Copy Text</span>
+          </button>
         </div>
       </div>
     </div>
@@ -163,7 +184,14 @@
   </footer>
 
   <!-- Toast notification -->
-  <div id="toast" class="toast" role="alert">Copied to clipboard!</div>
+  <div id="toast" class="toast" role="alert">
+    <div class="flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span>QR code JSON copied to clipboard!</span>
+    </div>
+  </div>
 
   <!-- Add Font Awesome for the back button icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">

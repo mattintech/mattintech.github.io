@@ -335,8 +335,17 @@ function downloadQRCode(format) {
 
 function showToast() {
   const toast = document.getElementById("toast");
+  
+  // Clear any existing timeout to prevent issues if button is clicked multiple times
+  if (toast.timeoutId) {
+    clearTimeout(toast.timeoutId);
+  }
+  
+  // Show the toast
   toast.className = "toast show";
-  setTimeout(() => { 
+  
+  // Set a timeout to hide the toast
+  toast.timeoutId = setTimeout(() => { 
     toast.className = toast.className.replace("show", ""); 
   }, 3000);
 }
@@ -385,25 +394,35 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("download-png").addEventListener("click", () => downloadQRCode("png"));
   document.getElementById("download-svg").addEventListener("click", () => downloadQRCode("svg"));
 
+  // Add event listener for copy-text button
+  document.getElementById("copy-text").addEventListener("click", () => {
+    const textArea = document.getElementById("qrtext");
+    copyTextToClipboard(textArea.value);
+  });
+
   // Modern clipboard copy functionality
   document.getElementById("copy-json").addEventListener("click", () => {
     const textArea = document.getElementById("qrtext");
-    
+    copyTextToClipboard(textArea.value);
+  });
+  
+  // Centralized copy function
+  function copyTextToClipboard(text) {
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(textArea.value)
+      navigator.clipboard.writeText(text)
         .then(() => {
           showToast();
         })
         .catch(err => {
           console.error('Failed to copy: ', err);
           // Fallback to older method if clipboard API fails
-          fallbackCopyTextToClipboard(textArea);
+          fallbackCopyTextToClipboard(document.getElementById("qrtext"));
         });
     } else {
       // Fallback for browsers that don't support clipboard API
-      fallbackCopyTextToClipboard(textArea);
+      fallbackCopyTextToClipboard(document.getElementById("qrtext"));
     }
-  });
+  }
   
   // Fallback copy method for older browsers
   function fallbackCopyTextToClipboard(textArea) {
