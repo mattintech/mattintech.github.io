@@ -38,6 +38,16 @@
       }
     }
   },
+  "SOTI Mobi Control": {
+    "defaults": {
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "net.soti.mobicontrol.androidwork/net.soti.mobicontrol.admin.DeviceAdminAdapte",
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=mobicontrol",
+      "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "hn8mSNJMPcovWbnnWrb-uMpWZjNlNp-jyV_2A-Whumc=",
+      "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
+        "enrollmentId": ""
+      }
+    }
+  },
   "TestDPC": {
     "defaults": {
       "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.afwsamples.testdpc/com.afwsamples.testdpc.DeviceAdminReceiver",
