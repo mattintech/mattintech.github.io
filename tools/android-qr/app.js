@@ -116,8 +116,13 @@ function getTooltipText(key) {
     "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "URL where the device admin package can be downloaded",
     "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "SHA-256 checksum of the DPC package file's signature",
     "android.app.extra.PROVISIONING_WIFI_SSID": "Wi-Fi network name the device should connect to",
+    "android.app.extra.PROVISIONING_WIFI_HIDDEN": "Indicates if the Wi-Fi network is hidden (not broadcasting its SSID)",
     "android.app.extra.PROVISIONING_WIFI_SECURITY_TYPE": "Security protocol used for Wi-Fi",
-    "android.app.extra.PROVISIONING_WIFI_PASSWORD": "Wi-Fi password if the network is secured"
+    "android.app.extra.PROVISIONING_WIFI_PASSWORD": "Wi-Fi password if the network is secured",
+    "android.app.extra.PROVISIONING_WIFI_PAC_URL": "URL for Proxy Auto-Configuration (PAC) script",
+    "android.app.extra.PROVISIONING_WIFI_PROXY_HOST": "Hostname or IP address of proxy server",
+    "android.app.extra.PROVISIONING_WIFI_PROXY_PORT": "Port number for proxy server",
+    "android.app.extra.PROVISIONING_WIFI_PROXY_BYPASS": "Comma-separated list of hosts that should bypass the proxy"
   };
   
   return tooltips[key] || "";
@@ -168,6 +173,65 @@ function createField(labelText, name, value = "", placeholder = "", isTextarea =
   return div;
 }
 
+function createToggleField(labelText, name, checked = false, tooltip = "", docLink = "") {
+  const div = document.createElement("div");
+  div.className = "flex items-center justify-between mb-2";
+
+  const labelContainer = document.createElement("div");
+  labelContainer.className = "flex items-center gap-1";
+  
+  const label = document.createElement("label");
+  label.className = "font-semibold";
+  label.textContent = labelText;
+  label.htmlFor = name;
+  
+  labelContainer.appendChild(label);
+  
+  // Add doc link icon (if available)
+  if (docLink) {
+    labelContainer.appendChild(createLinkIcon(docLink));
+  }
+  
+  // Add tooltip icon (if provided)
+  if (tooltip) {
+    labelContainer.appendChild(createTooltipIcon(tooltip));
+  }
+
+  const toggle = document.createElement("div");
+  toggle.className = "relative inline-block w-10 align-middle select-none";
+
+  const input = document.createElement("input");
+  input.type = "checkbox";
+  input.name = name;
+  input.id = name;
+  input.className = "toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-gray-300 appearance-none cursor-pointer transition-transform duration-200";
+  input.checked = checked;
+  
+  const toggleBg = document.createElement("label");
+  toggleBg.htmlFor = name;
+  toggleBg.className = "toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer";
+
+  // Add custom styling for toggle
+  const style = document.createElement("style");
+  style.textContent = `
+    .toggle-checkbox:checked {
+      transform: translateX(100%);
+      border-color: #3B82F6;
+    }
+    .toggle-checkbox:checked + .toggle-label {
+      background-color: #3B82F6;
+    }
+  `;
+  
+  toggle.appendChild(style);
+  toggle.appendChild(input);
+  toggle.appendChild(toggleBg);
+
+  div.appendChild(labelContainer);
+  div.appendChild(toggle);
+  return div;
+}
+
 function renderForm(emmName) {
   const configForm = document.getElementById("config-form");
   configForm.innerHTML = "";
@@ -198,8 +262,28 @@ function renderForm(emmName) {
     );
   }
 
-  const wifiGroup = createFieldGroup("Wi-Fi Configuration");
+  // Create Wi-Fi section header with add button
+  const wifiSectionHeader = document.createElement("div");
+  wifiSectionHeader.className = "flex items-center justify-between mb-4";
   
+  const wifiTitle = document.createElement("h3");
+  wifiTitle.className = "text-lg font-semibold";
+  wifiTitle.textContent = "Wi-Fi Configuration";
+  
+  const addWifiButton = document.createElement("button");
+  addWifiButton.className = "bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition flex items-center justify-center";
+  addWifiButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>';
+  addWifiButton.title = "Add Wi-Fi Configuration";
+  
+  wifiSectionHeader.appendChild(wifiTitle);
+  wifiSectionHeader.appendChild(addWifiButton);
+  
+  // Create Wi-Fi configuration group (initially hidden)
+  const wifiGroup = document.createElement("div");
+  wifiGroup.className = "mb-6 p-4 bg-gray-50 border rounded shadow-inner hidden";
+  wifiGroup.id = "wifi-config-group";
+  
+  // Basic Wi-Fi settings
   const wifiSsidKey = "android.app.extra.PROVISIONING_WIFI_SSID";
   wifiGroup.appendChild(createField(
     wifiSsidKey,
@@ -210,6 +294,16 @@ function renderForm(emmName) {
     getTooltipText(wifiSsidKey),
     false,
     getDocLink(wifiSsidKey)
+  ));
+  
+  // Add Hidden Wi-Fi toggle right after SSID
+  const wifiHiddenKey = "android.app.extra.PROVISIONING_WIFI_HIDDEN";
+  wifiGroup.appendChild(createToggleField(
+    wifiHiddenKey,
+    wifiHiddenKey,
+    false,
+    getTooltipText(wifiHiddenKey),
+    getDocLink(wifiHiddenKey)
   ));
   
   const wifiSecurityKey = "android.app.extra.PROVISIONING_WIFI_SECURITY_TYPE";
@@ -236,7 +330,80 @@ function renderForm(emmName) {
     getDocLink(wifiPasswordKey)
   ));
 
+  // Add proxy settings section header
+  const proxyHeader = document.createElement("h4");
+  proxyHeader.className = "font-semibold mt-4 mb-2 text-gray-700";
+  proxyHeader.textContent = "Proxy Settings";
+  wifiGroup.appendChild(proxyHeader);
+  
+  // Add proxy constants
+  const wifiPacUrlKey = "android.app.extra.PROVISIONING_WIFI_PAC_URL";
+  wifiGroup.appendChild(createField(
+    wifiPacUrlKey,
+    wifiPacUrlKey,
+    "",
+    "https://example.com/proxy.pac",
+    false,
+    getTooltipText(wifiPacUrlKey),
+    false,
+    getDocLink(wifiPacUrlKey)
+  ));
+  
+  const wifiProxyHostKey = "android.app.extra.PROVISIONING_WIFI_PROXY_HOST";
+  wifiGroup.appendChild(createField(
+    wifiProxyHostKey,
+    wifiProxyHostKey,
+    "",
+    "proxy.example.com",
+    false,
+    getTooltipText(wifiProxyHostKey),
+    false,
+    getDocLink(wifiProxyHostKey)
+  ));
+  
+  const wifiProxyPortKey = "android.app.extra.PROVISIONING_WIFI_PROXY_PORT";
+  wifiGroup.appendChild(createField(
+    wifiProxyPortKey,
+    wifiProxyPortKey,
+    "",
+    "8080",
+    false,
+    getTooltipText(wifiProxyPortKey),
+    false,
+    getDocLink(wifiProxyPortKey)
+  ));
+  
+  const wifiProxyBypassKey = "android.app.extra.PROVISIONING_WIFI_PROXY_BYPASS";
+  wifiGroup.appendChild(createField(
+    wifiProxyBypassKey,
+    wifiProxyBypassKey,
+    "",
+    "localhost,127.0.0.1,internal.example.com",
+    false,
+    getTooltipText(wifiProxyBypassKey),
+    false,
+    getDocLink(wifiProxyBypassKey)
+  ));
+
+  // Add event listener to toggle Wi-Fi configuration
+  addWifiButton.addEventListener("click", (e) => {
+    // Prevent default button behavior to avoid page refresh
+    e.preventDefault();
+    e.stopPropagation();
+    
+    wifiGroup.classList.toggle("hidden");
+    // Change button icon based on visibility
+    if (wifiGroup.classList.contains("hidden")) {
+      addWifiButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>';
+      addWifiButton.title = "Add Wi-Fi Configuration";
+    } else {
+      addWifiButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>';
+      addWifiButton.title = "Remove Wi-Fi Configuration";
+    }
+  });
+
   configForm.appendChild(baseGroup);
+  configForm.appendChild(wifiSectionHeader);
   configForm.appendChild(wifiGroup);
 }
 
@@ -247,8 +414,17 @@ function generateQRCodeText(fields) {
 
   fields.forEach(input => {
     const name = input.name;
-    const value = input.value.trim();
-    if (!value) return;
+    let value = input.value;
+    
+    // Handle checkbox/toggle inputs
+    if (input.type === 'checkbox') {
+      value = input.checked ? "true" : "";
+      // Don't include unchecked toggles in the output
+      if (!input.checked) return;
+    } else {
+      value = value.trim();
+      if (!value) return;
+    }
 
     const isWifiField = name.startsWith("android.app.extra.PROVISIONING_WIFI_");
     const isExtrasField = name === "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE";
@@ -271,7 +447,8 @@ function generateQRCodeText(fields) {
       }
     } else if (isWifiField) {
       wifiUsed = true;
-      json[name] = value;
+      // Make sure all values are strings in the JSON output
+      json[name] = value.toString();
     } else if (isRequired) {
       json[name] = value;
     }
