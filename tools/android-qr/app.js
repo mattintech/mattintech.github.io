@@ -122,9 +122,10 @@ function getTooltipText(key) {
     "android.app.extra.PROVISIONING_WIFI_PAC_URL": "URL for Proxy Auto-Configuration (PAC) script",
     "android.app.extra.PROVISIONING_WIFI_PROXY_HOST": "Hostname or IP address of proxy server",
     "android.app.extra.PROVISIONING_WIFI_PROXY_PORT": "Port number for proxy server",
-    "android.app.extra.PROVISIONING_WIFI_PROXY_BYPASS": "Comma-separated list of hosts that should bypass the proxy"
+    "android.app.extra.PROVISIONING_WIFI_PROXY_BYPASS": "Comma-separated list of hosts that should bypass the proxy",
+    "android.app.extra.PROVISIONING_LEAVE_ALL_SYSTEM_APPS_ENABLED": "Keep all pre-installed system apps when setting up the device as a managed device. Useful for dedicated devices like scanners that require manufacturer apps."
   };
-  
+
   return tooltips[key] || "";
 }
 
@@ -245,6 +246,18 @@ function renderForm(emmName) {
     const docLink = key.startsWith("android.app.extra.") ? getDocLink(key) : "";
     baseGroup.appendChild(createField(key, key, value, "", isTextarea, tooltip, false, docLink));
   }
+
+  // Add toggle for PROVISIONING_LEAVE_ALL_SYSTEM_APPS_ENABLED
+  const systemAppsKey = "android.app.extra.PROVISIONING_LEAVE_ALL_SYSTEM_APPS_ENABLED";
+  baseGroup.appendChild(
+    createToggleField(
+      systemAppsKey,
+      systemAppsKey,
+      false, // Default to false as requested
+      getTooltipText(systemAppsKey),
+      getDocLink(systemAppsKey)
+    )
+  );
 
   if (!defaults["android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE"]) {
     const extrasKey = "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE";
@@ -428,6 +441,7 @@ function generateQRCodeText(fields) {
 
     const isWifiField = name.startsWith("android.app.extra.PROVISIONING_WIFI_");
     const isExtrasField = name === "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE";
+    const isSystemAppsToggle = name === "android.app.extra.PROVISIONING_LEAVE_ALL_SYSTEM_APPS_ENABLED";
     const isRequired = [
       "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME",
       "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION",
@@ -449,6 +463,9 @@ function generateQRCodeText(fields) {
       wifiUsed = true;
       // Make sure all values are strings in the JSON output
       json[name] = value.toString();
+    } else if (isSystemAppsToggle) {
+      // Convert boolean to proper format for the QR code
+      json[name] = value === "true" ? true : false;
     } else if (isRequired) {
       json[name] = value;
     }
