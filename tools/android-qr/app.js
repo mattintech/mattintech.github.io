@@ -479,24 +479,42 @@ function renderQRCode(content) {
 
 function downloadQRCode(format) {
   const svgElement = document.querySelector("#qrcode svg");
-  const svgData = new XMLSerializer().serializeToString(svgElement);
-  const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
 
   if (format === "svg") {
+    // Clone the SVG element to modify it for download
+    const clonedSvg = svgElement.cloneNode(true);
+
+    // Set a much larger size for the SVG download (e.g., 1024x1024)
+    const targetSize = 1024;
+    clonedSvg.setAttribute("width", targetSize);
+    clonedSvg.setAttribute("height", targetSize);
+
+    // Get the modified SVG data
+    const svgData = new XMLSerializer().serializeToString(clonedSvg);
+    const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+
     const link = document.createElement("a");
     link.href = URL.createObjectURL(svgBlob);
     link.download = "qr_code.svg";
     link.click();
   } else if (format === "png") {
+    // Get the SVG data for PNG conversion
+    const svgData = new XMLSerializer().serializeToString(svgElement);
+    const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+
     const canvas = document.createElement("canvas");
     const img = new Image();
     const url = URL.createObjectURL(svgBlob);
 
     img.onload = () => {
-      canvas.width = img.width;
-      canvas.height = img.height;
+      // Set a much larger size for the PNG download (e.g., 1024x1024 pixels)
+      const targetSize = 1024;
+      canvas.width = targetSize;
+      canvas.height = targetSize;
       const ctx = canvas.getContext("2d");
-      ctx.drawImage(img, 0, 0);
+
+      // Scale the image to fit the larger canvas
+      ctx.drawImage(img, 0, 0, targetSize, targetSize);
       URL.revokeObjectURL(url);
 
       canvas.toBlob(blob => {
