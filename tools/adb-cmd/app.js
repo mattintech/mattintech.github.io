@@ -66,7 +66,190 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       `;
     }
-  
+
+    // Render verification badge with tooltip
+    function renderVerificationBadge(verification) {
+      if (!verification) return '';
+
+      let badgeClass = 'unverified';
+      let badgeText = 'Unverified';
+      let badgeIcon = 'fa-question-circle';
+      let tooltipContent = '';
+
+      if (verification.verified === true) {
+        badgeClass = 'verified';
+        badgeText = 'Verified';
+        badgeIcon = 'fa-check-circle';
+      } else if (verification.overallStatus === 'partial') {
+        badgeClass = 'partial';
+        badgeText = 'Partially Verified';
+        badgeIcon = 'fa-exclamation-circle';
+      }
+
+      // Build tooltip content
+      if (verification.testedVersions && Object.keys(verification.testedVersions).length > 0) {
+        const apiVersionMap = {
+          '31': '12',
+          '33': '13',
+          '34': '14',
+          '35': '15',
+          '36': '16'
+        };
+
+        const versions = Object.keys(verification.testedVersions)
+          .sort((a, b) => Number(b) - Number(a))
+          .map(api => {
+            const test = verification.testedVersions[api];
+            const androidVersion = apiVersionMap[api] || api;
+            const icon = test.status === 'pass' ?
+              '<i class="fas fa-check text-green-400"></i>' :
+              '<i class="fas fa-times text-red-400"></i>';
+            return `
+              <div class="tooltip-version">
+                ${icon}
+                <span>Android ${androidVersion} (API ${api})</span>
+              </div>
+            `;
+          }).join('');
+
+        tooltipContent = `
+          <div class="verification-tooltip">
+            <div class="verification-tooltip-content">
+              <div style="font-weight: 600; margin-bottom: 0.25rem;">Tested Versions:</div>
+              ${versions}
+            </div>
+          </div>
+        `;
+      } else if (badgeClass === 'unverified') {
+        tooltipContent = `
+          <div class="verification-tooltip">
+            <div class="verification-tooltip-content">
+              <div>Not yet tested on any Android version</div>
+            </div>
+          </div>
+        `;
+      }
+
+      return `
+        <span class="verification-badge ${badgeClass}" data-tooltip="${escapeHtml(tooltipContent)}">
+          <i class="fas ${badgeIcon}"></i>
+          ${badgeText}
+        </span>
+      `;
+    }
+
+    // Render API level test badges (deprecated - using tooltips instead)
+    function renderApiLevelBadges(verification) {
+      // This function is no longer used - we show versions in the tooltip
+      return '';
+    }
+
+    // Render command output from verification
+    function renderVerificationOutput(verification) {
+      // Don't show output by default to keep cards clean
+      return '';
+    }
+
+    // Helper function to escape HTML
+    function escapeHtml(text) {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+      return text.replace(/[&<>"']/g, m => map[m]);
+    }
+
+    // Render verification info for multi-version commands
+    function renderMultiVersionVerification(versions, cmd) {
+      if (!versions || versions.length === 0) return '';
+
+      // Collect all tested versions across all version entries
+      const allTestedVersions = {};
+      let hasVerified = false;
+      let hasPartial = false;
+
+      versions.forEach(version => {
+        if (version.verification && version.verification.testedVersions) {
+          Object.entries(version.verification.testedVersions).forEach(([api, testData]) => {
+            if (!allTestedVersions[api]) {
+              allTestedVersions[api] = {
+                status: testData.status,
+                date: testData.date,
+                range: version.range
+              };
+              if (testData.status === 'pass') {
+                hasVerified = true;
+              } else {
+                hasPartial = true;
+              }
+            }
+          });
+        }
+      });
+
+      if (Object.keys(allTestedVersions).length === 0) {
+        return renderVerificationBadge({ verified: false });
+      }
+
+      // Create verification badge with tooltip for multi-version commands
+      let badgeClass = 'unverified';
+      let badgeText = 'Unverified';
+      let badgeIcon = 'fa-question-circle';
+
+      if (hasVerified && !hasPartial) {
+        badgeClass = 'verified';
+        badgeText = 'Verified';
+        badgeIcon = 'fa-check-circle';
+      } else if (hasVerified) {
+        badgeClass = 'partial';
+        badgeText = 'Partially Verified';
+        badgeIcon = 'fa-exclamation-circle';
+      }
+
+      const apiVersionMap = {
+        '31': '12',
+        '33': '13',
+        '34': '14',
+        '35': '15',
+        '36': '16'
+      };
+
+      const tooltipVersions = Object.keys(allTestedVersions)
+        .sort((a, b) => Number(b) - Number(a))
+        .map(api => {
+          const test = allTestedVersions[api];
+          const androidVersion = apiVersionMap[api] || api;
+          const icon = test.status === 'pass' ?
+            '<i class="fas fa-check text-green-400"></i>' :
+            '<i class="fas fa-times text-red-400"></i>';
+          return `
+            <div class="tooltip-version">
+              ${icon}
+              <span>Android ${androidVersion} (API ${api})</span>
+            </div>
+          `;
+        }).join('');
+
+      const tooltipContent = `
+        <div class="verification-tooltip">
+          <div class="verification-tooltip-content">
+            <div style="font-weight: 600; margin-bottom: 0.25rem;">Tested Versions:</div>
+            ${tooltipVersions}
+          </div>
+        </div>
+      `;
+
+      return `
+        <span class="verification-badge ${badgeClass}" data-tooltip="${escapeHtml(tooltipContent)}">
+          <i class="fas ${badgeIcon}"></i>
+          ${badgeText}
+        </span>
+      `;
+    }
+
     // Render multi-version command tabs
     function renderMultiVersionCommand(cmd) {
       const tabsHtml = cmd.versions.map((version, index) => {
@@ -242,7 +425,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Render each command
       filteredCommands.forEach(cmd => {
         const card = document.createElement('div');
-        card.className = 'command-card bg-white rounded-lg shadow overflow-hidden transition-all mb-6';
+        card.className = 'command-card bg-white rounded-lg shadow transition-all mb-6';
         card.setAttribute('data-category', cmd.category);
         card.setAttribute('data-id', cmd.id);
         
@@ -290,19 +473,37 @@ document.addEventListener('DOMContentLoaded', function() {
           commandContent = renderStandardCommand(cmd);
         }
         
+        // Get verification badges
+        let verificationBadge = '';
+        let verificationOutput = '';
+
+        if (cmd.multiVersion) {
+          // For multi-version commands, check overall verification
+          verificationBadge = renderMultiVersionVerification(cmd.versions, cmd);
+          // Output is handled within each version tab
+        } else {
+          // For standard commands
+          verificationBadge = renderVerificationBadge(cmd.verification);
+          verificationOutput = renderVerificationOutput(cmd.verification);
+        }
+
         // Create card content
         card.innerHTML = `
           <div class="p-6">
             <div class="flex justify-between items-start mb-3">
-              <h3 class="text-xl font-semibold">${cmd.title}</h3>
+              <div>
+                <h3 class="text-xl font-semibold inline">${cmd.title}</h3>
+                ${verificationBadge}
+              </div>
               <div class="flex">
                 ${platformIcons}
               </div>
             </div>
             <p class="text-gray-600 mb-4">${cmd.description}</p>
-            
+
             ${versionInfo}
             ${commandContent}
+            ${verificationOutput}
           </div>
         `;
         
@@ -320,7 +521,7 @@ document.addEventListener('DOMContentLoaded', function() {
               const highlight = btn.closest('div').nextElementSibling;
               highlight.classList.add('copied');
               setTimeout(() => highlight.classList.remove('copied'), 1000);
-              
+
               // Change icon temporarily
               const icon = btn.querySelector('i');
               icon.className = 'fas fa-check';
@@ -331,6 +532,84 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(err => {
               console.error('Could not copy text: ', err);
             });
+        });
+      });
+
+      // Add tooltip positioning for verification badges
+      let currentTooltip = null;
+      const verificationBadges = document.querySelectorAll('.verification-badge');
+
+      verificationBadges.forEach(badge => {
+        const tooltipHTML = badge.getAttribute('data-tooltip');
+        if (!tooltipHTML || tooltipHTML === 'undefined') return;
+
+        badge.addEventListener('mouseenter', () => {
+          // Remove any existing tooltip
+          if (currentTooltip) {
+            currentTooltip.remove();
+          }
+
+          // Create new tooltip element
+          const tooltip = document.createElement('div');
+          tooltip.innerHTML = tooltipHTML.replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#039;/g, "'").replace(/&amp;/g, '&');
+          const tooltipElement = tooltip.firstElementChild;
+
+          if (!tooltipElement) return;
+
+          // Add it to the body but keep it invisible to measure
+          tooltipElement.style.visibility = 'hidden';
+          tooltipElement.style.opacity = '0';
+          document.body.appendChild(tooltipElement);
+          currentTooltip = tooltipElement;
+
+          const badgeRect = badge.getBoundingClientRect();
+
+          // Position tooltip initially to measure its size
+          tooltipElement.style.left = `${badgeRect.left + badgeRect.width / 2}px`;
+          tooltipElement.style.transform = 'translateX(-50%)';
+
+          // Get actual height after a brief delay to ensure rendering
+          setTimeout(() => {
+            const tooltipRect = tooltipElement.getBoundingClientRect();
+            const actualHeight = tooltipRect.height;
+
+            // Position tooltip above the badge by default with actual height
+            tooltipElement.style.top = `${badgeRect.top - actualHeight - 10}px`;
+
+            // Remove previous positioning classes
+            tooltipElement.classList.remove('below');
+
+            // Check if tooltip goes off screen top
+            if (badgeRect.top - actualHeight - 10 < 10) {
+              // Position below instead
+              tooltipElement.style.top = `${badgeRect.bottom + 10}px`;
+              tooltipElement.classList.add('below');
+            }
+
+            // Make sure tooltip stays within viewport horizontally
+            if (tooltipRect.left < 10) {
+              tooltipElement.style.left = `${10 + tooltipRect.width / 2}px`;
+            } else if (tooltipRect.right > window.innerWidth - 10) {
+              tooltipElement.style.left = `${window.innerWidth - 10 - tooltipRect.width / 2}px`;
+            }
+
+            // Now show the tooltip
+            tooltipElement.style.visibility = 'visible';
+            tooltipElement.style.opacity = '';
+            tooltipElement.classList.add('show');
+          }, 10);
+        });
+
+        badge.addEventListener('mouseleave', () => {
+          if (currentTooltip) {
+            currentTooltip.classList.remove('show');
+            setTimeout(() => {
+              if (currentTooltip && !currentTooltip.classList.contains('show')) {
+                currentTooltip.remove();
+                currentTooltip = null;
+              }
+            }, 200);
+          }
         });
       });
       
