@@ -1,0 +1,516 @@
+[
+    {
+      "id": 1,
+      "title": "List Connected Devices",
+      "windows": "adb devices",
+      "mac": "adb devices",
+      "description": "Shows all devices/emulators connected to your computer. This is usually the first command to run to verify your device is properly connected.",
+      "category": "connection",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core ADB command that works across all Android versions"
+      },
+      "verification": {
+        "verified": false,
+        "lastTested": null,
+        "testedVersions": {}
+      }
+    },
+    {
+      "id": 2,
+      "title": "Connect to Device over WiFi",
+      "windows": "adb connect ip_address:port",
+      "mac": "adb connect ip_address:port",
+      "description": "Connects to a device over WiFi instead of USB. You'll need to know the device's IP address, and it must be on the same network as your computer. Default port is 5555.",
+      "category": "connection",
+      "androidVersions": {
+        "min": "4.0",
+        "max": "All",
+        "notes": "Requires developer options enabled and ADB debugging turned on"
+      },
+      "verification": {
+        "verified": false,
+        "lastTested": null,
+        "testedVersions": {}
+      }
+    },
+    {
+      "id": 3,
+      "title": "Get Current Activity (Foreground App)",
+      "description": "Shows the current activity that's in the foreground. Useful for debugging or automation to determine what's currently visible on screen.",
+      "category": "deviceinfo",
+      "multiVersion": true,
+      "versions": [
+        {
+          "range": "4.0 - 10.0",
+          "windows": "adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'",
+          "mac": "adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'",
+          "notes": "Uses window service dumpsys to find the current focused window/activity",
+          "verification": {
+            "verified": false,
+            "lastTested": null,
+            "testedVersions": {}
+          }
+        },
+        {
+          "range": "11",
+          "windows": "adb shell dumpsys window | grep -E 'name=.* topActivity'",
+          "mac": "adb shell dumpsys window | grep -E 'name=.* topActivity'",
+          "notes": "Android 11 changed the output format of window service dumpsys",
+          "verification": {
+            "verified": false,
+            "lastTested": null,
+            "testedVersions": {}
+          }
+        },
+        {
+          "range": "12+",
+          "windows": "adb shell dumpsys activity recents",
+          "mac": "adb shell dumpsys activity recents",
+          "notes": "For Android 12+, use the activity recents command to get detailed info including PIP mode activities",
+          "verification": {
+            "verified": false,
+            "lastTested": null,
+            "testedVersions": {}
+          }
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "lastTested": null,
+        "overallStatus": "untested"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Check Package Info",
+      "description": "Gets detailed information about a specific package (app), including version, install time, and permissions.",
+      "category": "deviceinfo",
+      "multiVersion": true,
+      "versions": [
+        {
+          "range": "4.0 - 6.0",
+          "windows": "adb shell dumpsys package com.example.app",
+          "mac": "adb shell dumpsys package com.example.app",
+          "notes": "Basic package information"
+        },
+        {
+          "range": "7.0 - 9.0",
+          "windows": "adb shell dumpsys package com.example.app | grep -E 'versionName|firstInstallTime|lastUpdateTime'",
+          "mac": "adb shell dumpsys package com.example.app | grep -E 'versionName|firstInstallTime|lastUpdateTime'",
+          "notes": "Filtered output to show most relevant information"
+        },
+        {
+          "range": "10+",
+          "windows": "adb shell pm dump com.example.app",
+          "mac": "adb shell pm dump com.example.app",
+          "notes": "Android 10+ offers more specific package manager commands to get cleaner output"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Get Device Screenshot",
+      "description": "Captures a screenshot of the device screen and saves it to your computer.",
+      "category": "troubleshooting",
+      "multiVersion": true,
+      "versions": [
+        {
+          "range": "4.0 - 4.3",
+          "windows": "adb shell screencap -p /sdcard/screenshot.png && adb pull /sdcard/screenshot.png && adb shell rm /sdcard/screenshot.png",
+          "mac": "adb shell screencap -p /sdcard/screenshot.png && adb pull /sdcard/screenshot.png && adb shell rm /sdcard/screenshot.png",
+          "notes": "Basic two-step process with cleanup"
+        },
+        {
+          "range": "4.4+",
+          "windows": "adb exec-out screencap -p > screenshot.png",
+          "mac": "adb exec-out screencap -p > screenshot.png",
+          "notes": "More efficient single-command process using exec-out (added in Android 4.4)"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Install APK",
+      "windows": "adb install path\\to\\app.apk",
+      "mac": "adb install path/to/app.apk",
+      "description": "Installs an APK file onto the connected device. Add the '-r' flag to replace an existing application.",
+      "category": "installation",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core ADB command that works across all Android versions"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Install APK to Specific User",
+      "windows": "adb install --user user_id path\\to\\app.apk",
+      "mac": "adb install --user user_id path/to/app.apk",
+      "description": "Installs an APK for a specific user on a multi-user device. Particularly useful in enterprise environments with work profiles.",
+      "category": "installation",
+      "androidVersions": {
+        "min": "4.4",
+        "max": "All",
+        "notes": "Requires multi-user support, which began in Android 4.4 (KitKat)"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Check Battery Stats",
+      "description": "Shows detailed information about the device's battery status and usage.",
+      "category": "deviceinfo",
+      "multiVersion": true,
+      "versions": [
+        {
+          "range": "4.0 - 7.0",
+          "windows": "adb shell dumpsys battery",
+          "mac": "adb shell dumpsys battery",
+          "notes": "Basic battery information"
+        },
+        {
+          "range": "8.0 - 9.0",
+          "windows": "adb shell dumpsys batterystats",
+          "mac": "adb shell dumpsys batterystats",
+          "notes": "Enhanced battery stats with usage by app introduced in Oreo"
+        },
+        {
+          "range": "10+",
+          "windows": "adb shell dumpsys batterystats --charged",
+          "mac": "adb shell dumpsys batterystats --charged",
+          "notes": "More detailed battery usage stats with additional parameters available"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Uninstall App",
+      "windows": "adb uninstall com.example.app",
+      "mac": "adb uninstall com.example.app",
+      "description": "Removes an app from the device. You need to specify the package name, not the app name.",
+      "category": "installation",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core ADB command that works across all Android versions"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Wireless Debugging Setup",
+      "description": "Sets up wireless debugging to connect to your device over WiFi instead of USB.",
+      "category": "connection",
+      "multiVersion": true,
+      "versions": [
+        {
+          "range": "4.0 - 10.0",
+          "windows": "adb tcpip 5555 && adb shell ip addr show wlan0 | findstr \"inet\" && adb connect [device_ip]:5555",
+          "mac": "adb tcpip 5555 && adb shell ip addr show wlan0 | grep inet && adb connect [device_ip]:5555",
+          "notes": "Traditional method requiring initial USB connection"
+        },
+        {
+          "range": "11+",
+          "windows": "adb pair [ip_address]:[pairing_port]",
+          "mac": "adb pair [ip_address]:[pairing_port]",
+          "notes": "Android 11+ supports secure pairing. Enable \"Wireless debugging\" in Developer options to get pairing code."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Backup Device",
+      "windows": "adb backup -apk -shared -all -f backup_file.ab",
+      "mac": "adb backup -apk -shared -all -f backup_file.ab",
+      "description": "Creates a full backup of the device. Not all devices support this feature, especially newer Android versions with work profiles.",
+      "category": "deviceinfo",
+      "androidVersions": {
+        "min": "4.0",
+        "max": "10.0",
+        "notes": "Functionality limited after Android 9, deprecated since Android 10. No longer reliable on newer devices."
+      }
+    },
+    {
+      "id": 12,
+      "title": "View Device Logs",
+      "windows": "adb logcat",
+      "mac": "adb logcat",
+      "description": "Shows real-time logs from the device. Useful for debugging crashes or unexpected behavior. Use Ctrl+C to stop.",
+      "category": "troubleshooting",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core ADB command that works across all Android versions"
+      }
+    },
+    {
+      "id": 13,
+      "title": "Force Stop App",
+      "description": "Forces an app to stop running. Useful when an app is unresponsive or for testing app recovery.",
+      "category": "troubleshooting",
+      "multiVersion": true,
+      "versions": [
+        {
+          "range": "All",
+          "windows": "adb shell am force-stop com.example.app",
+          "mac": "adb shell am force-stop com.example.app",
+          "notes": "Basic force stop command"
+        },
+        {
+          "range": "9.0+",
+          "windows": "adb shell am kill com.example.app",
+          "mac": "adb shell am kill com.example.app",
+          "notes": "Alternative method that kills the process but may allow background services to restart"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Get Device Model",
+      "windows": "adb shell getprop ro.product.model",
+      "mac": "adb shell getprop ro.product.model",
+      "description": "Retrieves the model name of the connected device. Helpful for documentation or ensuring compatibility.",
+      "category": "deviceinfo",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core property available on all Android versions"
+      }
+    },
+    {
+      "id": 15,
+      "title": "Get Android Version",
+      "windows": "adb shell getprop ro.build.version.release",
+      "mac": "adb shell getprop ro.build.version.release",
+      "description": "Displays the Android version (e.g., 13.0) running on the device.",
+      "category": "deviceinfo",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core property available on all Android versions"
+      }
+    },
+    {
+      "id": 16,
+      "title": "Get Enterprise Info (Work Profile)",
+      "description": "Gets information about enterprise provisioning and work profile status.",
+      "category": "deviceinfo",
+      "multiVersion": true,
+      "versions": [
+        {
+          "range": "5.0 - 8.0",
+          "windows": "adb shell dumpsys device_policy",
+          "mac": "adb shell dumpsys device_policy",
+          "notes": "Basic device policy information for Android Lollipop through Oreo"
+        },
+        {
+          "range": "9.0 - 11.0",
+          "windows": "adb shell dumpsys device_policy | findstr \"Profile Owner\"",
+          "mac": "adb shell dumpsys device_policy | grep \"Profile Owner\"",
+          "notes": "Filtered output to check for profile owner and work profile"
+        },
+        {
+          "range": "12+",
+          "windows": "adb shell dumpsys device_policy | findstr -i \"owner|profile\"",
+          "mac": "adb shell dumpsys device_policy | grep -i \"owner\\|profile\"",
+          "notes": "More detailed grep to handle format changes in Android 12+"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Get Package List",
+      "windows": "adb shell pm list packages",
+      "mac": "adb shell pm list packages",
+      "description": "Lists all installed packages on the device. Add '-s' for system apps only or '-3' for user-installed apps only.",
+      "category": "deviceinfo",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core package manager command available on all Android versions"
+      }
+    },
+    {
+      "id": 18,
+      "title": "Start Activity Manager",
+      "windows": "adb shell am start -n com.package.name/com.package.name.ActivityName",
+      "mac": "adb shell am start -n com.package.name/com.package.name.ActivityName",
+      "description": "Launches a specific activity within an app. Useful for debugging or automating specific screens.",
+      "category": "troubleshooting",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core activity manager command available on all Android versions"
+      }
+    },
+    {
+      "id": 19,
+      "title": "Reboot Device",
+      "windows": "adb reboot",
+      "mac": "adb reboot",
+      "description": "Reboots the connected device. Useful when troubleshooting or after making system-level changes.",
+      "category": "troubleshooting",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core ADB command that works across all Android versions"
+      }
+    },
+    {
+      "id": 20,
+      "title": "Record Screen",
+      "windows": "adb shell screenrecord /sdcard/recording.mp4",
+      "mac": "adb shell screenrecord /sdcard/recording.mp4",
+      "description": "Records the device screen as an MP4 video. Press Ctrl+C to stop recording, then use 'adb pull' to retrieve the file.",
+      "category": "troubleshooting",
+      "androidVersions": {
+        "min": "4.4",
+        "max": "All",
+        "notes": "Screen recording was introduced in Android 4.4 (KitKat)"
+      }
+    },
+    {
+      "id": 21,
+      "title": "Copy Files to Device",
+      "windows": "adb push local_file.txt /sdcard/",
+      "mac": "adb push local_file.txt /sdcard/",
+      "description": "Transfers a file from your computer to the device storage. Useful for testing or deploying configuration files.",
+      "category": "troubleshooting",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core ADB command that works across all Android versions"
+      }
+    },
+    {
+      "id": 22,
+      "title": "Copy Files from Device",
+      "windows": "adb pull /sdcard/file.txt local_folder/",
+      "mac": "adb pull /sdcard/file.txt local_folder/",
+      "description": "Retrieves a file from the device to your computer. Essential for collecting logs or other generated files.",
+      "category": "troubleshooting",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core ADB command that works across all Android versions"
+      }
+    },
+    {
+      "id": 23,
+      "title": "Check WiFi Status",
+      "windows": "adb shell dumpsys wifi",
+      "mac": "adb shell dumpsys wifi",
+      "description": "Provides comprehensive information about the device's WiFi connection, useful for network troubleshooting.",
+      "category": "deviceinfo",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core dumpsys command available on all Android versions"
+      }
+    },
+    {
+      "id": 24,
+      "title": "Get Device Serial Number",
+      "windows": "adb shell getprop ro.serialno",
+      "mac": "adb shell getprop ro.serialno",
+      "description": "Retrieves the device's serial number. Important for inventory management or when managing multiple devices.",
+      "category": "deviceinfo",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core property available on all Android versions"
+      }
+    },
+    {
+      "id": 25,
+      "title": "Send Text Input",
+      "windows": "adb shell input text \"your_text_here\"",
+      "mac": "adb shell input text \"your_text_here\"",
+      "description": "Types the specified text on the device. Helpful for automating text entry during testing or setup.",
+      "category": "troubleshooting",
+      "androidVersions": {
+        "min": "4.1",
+        "max": "All",
+        "notes": "Input subsystem commands became reliable from Android 4.1 (Jelly Bean)"
+      }
+    },
+    {
+      "id": 26,
+      "title": "Check Device Uptime",
+      "windows": "adb shell uptime",
+      "mac": "adb shell uptime",
+      "description": "Shows how long the device has been running since the last boot. Useful for stability testing or verifying recent reboots.",
+      "category": "deviceinfo",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core Linux/Unix command available on all Android versions"
+      }
+    },
+    {
+      "id": 27,
+      "title": "Clear App Data",
+      "windows": "adb shell pm clear com.example.app",
+      "mac": "adb shell pm clear com.example.app",
+      "description": "Clears all data for a specified app (similar to clearing data in Settings). Helpful for troubleshooting app issues.",
+      "category": "troubleshooting",
+      "androidVersions": {
+        "min": "All",
+        "max": "All",
+        "notes": "Core package manager command available on all Android versions"
+      }
+    },
+    {
+      "id": 28,
+      "title": "Get Device IP Address",
+      "description": "Displays the IP address of the device's WiFi connection. Useful before setting up wireless debugging.",
+      "category": "connection",
+      "multiVersion": true,
+      "versions": [
+        {
+          "range": "4.0 - 4.4",
+          "windows": "adb shell netcfg | findstr wlan",
+          "mac": "adb shell netcfg | grep wlan",
+          "notes": "Legacy command for Android KitKat and earlier"
+        },
+        {
+          "range": "5.0 - 6.0",
+          "windows": "adb shell ifconfig wlan0",
+          "mac": "adb shell ifconfig wlan0",
+          "notes": "Traditional Unix ifconfig command works on Lollipop and Marshmallow"
+        },
+        {
+          "range": "7.0+",
+          "windows": "adb shell ip addr show wlan0",
+          "mac": "adb shell ip addr show wlan0",
+          "notes": "Modern format available since Android Nougat"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Grant App Permissions",
+      "windows": "adb shell pm grant com.example.app android.permission.PERMISSION_NAME",
+      "mac": "adb shell pm grant com.example.app android.permission.PERMISSION_NAME",
+      "description": "Grants a specific permission to an app. Useful for automating permission grants during testing.",
+      "category": "troubleshooting",
+      "androidVersions": {
+        "min": "6.0",
+        "max": "All",
+        "notes": "Runtime permissions were introduced in Android 6.0 (Marshmallow)"
+      }
+    },
+    {
+      "id": 30,
+      "title": "Revoke App Permissions",
+      "windows": "adb shell pm revoke com.example.app android.permission.PERMISSION_NAME",
+      "mac": "adb shell pm revoke com.example.app android.permission.PERMISSION_NAME",
+      "description": "Revokes a specific permission from an app. Useful for testing permission denial scenarios.",
+      "category": "troubleshooting",
+      "androidVersions": {
+        "min": "6.0",
+        "max": "All",
+        "notes": "Runtime permissions were introduced in Android 6.0 (Marshmallow)"
+      }
+    }
+  ]
