@@ -255,23 +255,23 @@ document.addEventListener('DOMContentLoaded', function() {
       const tabsHtml = cmd.versions.map((version, index) => {
         return `
           <button class="version-tab px-3 py-2 text-sm font-medium ${index === 0 ? 'active bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'} rounded-t-lg"
-                  data-cmd-id="${cmd.id}" 
+                  data-cmd-id="${cmd.id}"
                   data-version-index="${index}">
             ${version.range}
           </button>
         `;
       }).join('');
-      
+
       const contentHtml = cmd.versions.map((version, index) => {
         const sameCommand = version.windows === version.mac;
-        
+
         let commandHtml = '';
         if (sameCommand) {
           commandHtml = `
             <div class="mt-4">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-sm font-medium text-gray-600">Command:</span>
-                <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${version.windows}">
+                <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${escapeHtml(version.windows)}">
                   <i class="far fa-copy"></i>
                 </button>
               </div>
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="mt-4">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-sm font-medium text-gray-600">Windows:</span>
-                <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${version.windows}">
+                <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${escapeHtml(version.windows)}">
                   <i class="far fa-copy"></i>
                 </button>
               </div>
@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="mt-4">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-sm font-medium text-gray-600">Mac/Linux:</span>
-                <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${version.mac}">
+                <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${escapeHtml(version.mac)}">
                   <i class="far fa-copy"></i>
                 </button>
               </div>
@@ -329,13 +329,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Render standard command
     function renderStandardCommand(cmd) {
       const sameCommand = cmd.windows === cmd.mac;
-      
+
       if (sameCommand) {
         return `
           <div class="mt-4">
             <div class="flex justify-between items-center mb-2">
               <span class="text-sm font-medium text-gray-600">Command:</span>
-              <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${cmd.windows}">
+              <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${escapeHtml(cmd.windows)}">
                 <i class="far fa-copy"></i>
               </button>
             </div>
@@ -347,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="mt-4">
             <div class="flex justify-between items-center mb-2">
               <span class="text-sm font-medium text-gray-600">Windows:</span>
-              <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${cmd.windows}">
+              <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${escapeHtml(cmd.windows)}">
                 <i class="far fa-copy"></i>
               </button>
             </div>
@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="mt-4">
             <div class="flex justify-between items-center mb-2">
               <span class="text-sm font-medium text-gray-600">Mac/Linux:</span>
-              <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${cmd.mac}">
+              <button class="copy-icon text-gray-400 hover:text-blue-600 transition" data-command="${escapeHtml(cmd.mac)}">
                 <i class="far fa-copy"></i>
               </button>
             </div>
@@ -445,14 +445,19 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         } else {
           // Standard command
-          const sameCommand = cmd.windows === cmd.mac;
-          if (sameCommand) {
+          // Check for explicit allPlatforms flag first
+          if (cmd.allPlatforms) {
             platformIcons = `<span class="platform-icon both" title="All platforms"></span>`;
           } else {
-            platformIcons = `
-              <span class="platform-icon windows" title="Windows"><i class="fab fa-windows text-xs"></i></span>
-              <span class="platform-icon mac" title="Mac/Linux"><i class="fab fa-apple text-xs"></i></span>
-            `;
+            const sameCommand = cmd.windows === cmd.mac;
+            if (sameCommand) {
+              platformIcons = `<span class="platform-icon both" title="All platforms"></span>`;
+            } else {
+              platformIcons = `
+                <span class="platform-icon windows" title="Windows"><i class="fab fa-windows text-xs"></i></span>
+                <span class="platform-icon mac" title="Mac/Linux"><i class="fab fa-apple text-xs"></i></span>
+              `;
+            }
           }
         }
         
@@ -514,7 +519,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const copyButtons = document.querySelectorAll('.copy-icon');
       copyButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-          const command = btn.getAttribute('data-command');
+          const commandEscaped = btn.getAttribute('data-command');
+          // Decode HTML entities
+          const textarea = document.createElement('textarea');
+          textarea.innerHTML = commandEscaped;
+          const command = textarea.value;
+
           navigator.clipboard.writeText(command)
             .then(() => {
               // Visual feedback
