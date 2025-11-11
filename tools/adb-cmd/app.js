@@ -650,18 +650,47 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners for search
     searchInput.addEventListener('input', renderCommands);
     
+    // Initialize button styles
+    function updateButtonStyles() {
+      filterButtons.forEach(b => {
+        if (b.classList.contains('active')) {
+          b.classList.remove('bg-gray-200', 'text-gray-700', 'hover:bg-gray-300');
+          b.classList.add('bg-blue-600', 'text-white', 'hover:bg-blue-700');
+        } else {
+          b.classList.remove('bg-blue-600', 'text-white', 'hover:bg-blue-700');
+          b.classList.add('bg-gray-200', 'text-gray-700', 'hover:bg-gray-300');
+        }
+      });
+    }
+
+    // Initial styling
+    updateButtonStyles();
+
     // Event listeners for filters
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         // Update active button
-        filterButtons.forEach(b => b.classList.remove('active', 'bg-blue-600', 'text-white'));
-        filterButtons.forEach(b => b.classList.add('bg-gray-300', 'text-gray-800'));
-        btn.classList.remove('bg-gray-300', 'text-gray-800');
-        btn.classList.add('active', 'bg-blue-600', 'text-white');
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        updateButtonStyles();
         
         // Set filter
         const filterId = btn.id.replace('filter', '').toLowerCase();
-        currentFilter = filterId;
+
+        // Map filter IDs to category names
+        const categoryMap = {
+          'all': 'all',
+          'connection': 'connection',
+          'installation': 'installation',
+          'deviceinfo': 'deviceinfo',
+          'troubleshooting': 'troubleshooting',
+          'packagemanagement': 'package-management',
+          'settings': 'settings',
+          'systeminfo': 'system-info',
+          'androidenterprise': 'android-enterprise'
+        };
+
+        currentFilter = categoryMap[filterId] || filterId;
         
         // Re-render
         renderCommands();

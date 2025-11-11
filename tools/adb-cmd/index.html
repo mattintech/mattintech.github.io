@@ -512,12 +512,16 @@
           <div class="flex-grow">
             <input type="text" id="searchInput" placeholder="Search commands..." class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Search ADB commands including install apk, screenshot, logcat, and more">
           </div>
-          <div class="flex gap-2 flex-wrap">
-            <button id="filterAll" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition filter-btn active">All</button>
-            <button id="filterConnection" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 transition filter-btn">Connection</button>
-            <button id="filterInstallation" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 transition filter-btn">Installation</button>
-            <button id="filterDeviceInfo" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 transition filter-btn">Device Info</button>
-            <button id="filterTroubleshooting" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 transition filter-btn">Troubleshooting</button>
+          <div class="flex gap-1.5 flex-wrap">
+            <button id="filterAll" class="px-3 py-1 text-xs rounded-full transition filter-btn active">All</button>
+            <button id="filterConnection" class="px-3 py-1 text-xs rounded-full transition filter-btn">Connect</button>
+            <button id="filterInstallation" class="px-3 py-1 text-xs rounded-full transition filter-btn">Install</button>
+            <button id="filterDeviceInfo" class="px-3 py-1 text-xs rounded-full transition filter-btn">Device</button>
+            <button id="filterTroubleshooting" class="px-3 py-1 text-xs rounded-full transition filter-btn">Debug</button>
+            <button id="filterPackageManagement" class="px-3 py-1 text-xs rounded-full transition filter-btn">Package</button>
+            <button id="filterSettings" class="px-3 py-1 text-xs rounded-full transition filter-btn">Settings</button>
+            <button id="filterSystemInfo" class="px-3 py-1 text-xs rounded-full transition filter-btn">System</button>
+            <button id="filterAndroidEnterprise" class="px-3 py-1 text-xs rounded-full transition filter-btn">Enterprise</button>
           </div>
         </div>
       </div>

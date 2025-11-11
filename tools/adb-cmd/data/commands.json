@@ -478,6 +478,906 @@
     }
   },
   {
+    "id": 31,
+    "title": "Filter Logcat with Multiple Keywords",
+    "windows": "adb shell \"logcat | grep -E 'string1|string2|string3'\"",
+    "mac": "adb shell \"logcat | grep -E 'string1|string2|string3'\"",
+    "description": "Filters logcat output to show only lines containing any of the specified strings. Use pipe (|) to separate multiple search terms.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Uses shell grep for filtering, works on all Android versions"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 32,
+    "title": "Logcat by Priority Level",
+    "windows": "adb logcat *:W",
+    "mac": "adb logcat *:W",
+    "description": "Shows only Warning (W) level logs and above (Warning, Error, Fatal). Replace W with V (Verbose), D (Debug), I (Info), E (Error), or F (Fatal) for different levels.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Priority filtering is a core logcat feature"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 33,
+    "title": "Logcat for Specific App Package",
+    "windows": "adb logcat --pid=$(adb shell pidof -s com.example.app)",
+    "mac": "adb logcat --pid=$(adb shell pidof -s com.example.app)",
+    "description": "Shows logs only from a specific app by its package name. Filters out system and other app logs for cleaner debugging.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Requires the app to be running. Alternative: use grep to filter by package name"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 34,
+    "title": "Clear Logcat Buffer",
+    "windows": "adb logcat -c",
+    "mac": "adb logcat -c",
+    "description": "Clears the entire logcat buffer. Useful for starting fresh when debugging to avoid old log entries.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Clears all log buffers"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 35,
+    "title": "Save Logcat to File",
+    "windows": "adb logcat -d > logcat.txt",
+    "mac": "adb logcat -d > logcat.txt",
+    "description": "Dumps the current logcat buffer to a file and exits. Use without -d for continuous logging to file.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "-d flag dumps and exits immediately"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 36,
+    "title": "Logcat with Timestamps",
+    "windows": "adb logcat -v time",
+    "mac": "adb logcat -v time",
+    "description": "Shows logcat with timestamps for each log entry. Useful for tracking when events occurred.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Other formats: brief, process, tag, thread, raw, time, threadtime, long"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 37,
+    "title": "Filter Logcat by Tag",
+    "windows": "adb logcat -s ActivityManager:I MyApp:D",
+    "mac": "adb logcat -s ActivityManager:I MyApp:D",
+    "description": "Shows logs only from specific tags with their priority levels. -s means silent for all other tags.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Multiple tags can be specified with their priorities"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 38,
+    "title": "Logcat for Crashes and ANRs",
+    "windows": "adb shell \"logcat | grep -E 'FATAL|AndroidRuntime|ANR'\"",
+    "mac": "adb shell \"logcat | grep -E 'FATAL|AndroidRuntime|ANR'\"",
+    "description": "Filters logcat to show only crashes (Fatal exceptions) and Application Not Responding (ANR) errors.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Essential for crash debugging"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 39,
+    "title": "Logcat with Color Coding",
+    "windows": "adb logcat -v color",
+    "mac": "adb logcat -v color",
+    "description": "Shows logcat output with color coding for different priority levels (requires terminal with color support).",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Makes logs easier to read by highlighting errors, warnings, etc."
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 40,
+    "title": "Logcat Buffer Size Info",
+    "windows": "adb logcat -g",
+    "mac": "adb logcat -g",
+    "description": "Shows the size of each logcat buffer (main, system, radio, events, crash). Useful for understanding log capacity.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Displays current and maximum buffer sizes"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 41,
+    "title": "Logcat from Specific Buffer",
+    "windows": "adb logcat -b events",
+    "mac": "adb logcat -b events",
+    "description": "Shows logs from a specific buffer. Options: main, system, radio, events, crash, all. Default is main+system.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Different buffers contain different types of system information"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 42,
+    "title": "Logcat with Thread Info",
+    "windows": "adb logcat -v threadtime",
+    "mac": "adb logcat -v threadtime",
+    "description": "Shows logs with both timestamp and thread information. Most detailed format for debugging multi-threaded issues.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Recommended format for detailed debugging"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 43,
+    "title": "Live Grep with Case Insensitive",
+    "windows": "adb shell \"logcat | grep -i 'error'\"",
+    "mac": "adb shell \"logcat | grep -i 'error'\"",
+    "description": "Filters logcat output case-insensitively. Useful when you're not sure about the exact case of the search term.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "-i flag makes grep case insensitive"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 44,
+    "title": "Logcat Last N Lines",
+    "windows": "adb logcat -t 100",
+    "mac": "adb logcat -t 100",
+    "description": "Shows only the last 100 lines from logcat buffer and exits. Change 100 to any number of lines needed.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Useful for quick review of recent logs"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 45,
+    "title": "Exclude Specific Tags",
+    "windows": "adb shell \"logcat | grep -v 'ChattyLogger'\"",
+    "mac": "adb shell \"logcat | grep -v 'ChattyLogger'\"",
+    "description": "Shows all logs except those containing the specified string. Use -v (invert) to exclude noisy log sources.",
+    "category": "troubleshooting",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Helpful for filtering out verbose system logs"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 46,
+    "title": "List All Installed Packages",
+    "windows": "adb shell pm list packages",
+    "mac": "adb shell pm list packages",
+    "description": "Lists all package names installed on the device. Add -f to show associated APK file, -3 for third-party apps only, -s for system apps only.",
+    "category": "package-management",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Use grep to filter results: adb shell pm list packages | grep 'keyword'"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 47,
+    "title": "Find APK Path for Package",
+    "windows": "adb shell pm path com.example.app",
+    "mac": "adb shell pm path com.example.app",
+    "description": "Shows the APK file path for a specific package name. Useful for pulling APK files or understanding app installation location.",
+    "category": "package-management",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Returns base APK and any split APKs if present"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 48,
+    "title": "Check WiFi Status",
+    "windows": "adb shell settings get global wifi_on",
+    "mac": "adb shell settings get global wifi_on",
+    "description": "Gets the WiFi enabled state. Returns 1 if WiFi is on, 0 if off. Works without root access.",
+    "category": "settings",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Use 'settings put global wifi_on 1' to enable (requires appropriate permissions)"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 49,
+    "title": "Set Global HTTP Proxy",
+    "windows": "adb shell settings put global http_proxy 192.168.1.100:8080",
+    "mac": "adb shell settings put global http_proxy 192.168.1.100:8080",
+    "description": "Sets a global HTTP proxy for the device. Format is host:port. Clear with empty string or :0.",
+    "category": "settings",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "To clear: adb shell settings put global http_proxy :0"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 50,
+    "title": "Dump Display Information",
+    "windows": "adb shell dumpsys display",
+    "mac": "adb shell dumpsys display",
+    "description": "Shows detailed display information including resolution, refresh rate, display modes, and brightness settings.",
+    "category": "system-info",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Output is verbose; pipe to grep for specific info"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 51,
+    "title": "Dump Battery Information",
+    "windows": "adb shell dumpsys battery",
+    "mac": "adb shell dumpsys battery",
+    "description": "Shows current battery status including level, health, voltage, temperature, and charging state.",
+    "category": "system-info",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Use 'set' subcommand to simulate battery states for testing"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 52,
+    "title": "List Running Services",
+    "windows": "adb shell dumpsys activity services",
+    "mac": "adb shell dumpsys activity services",
+    "description": "Lists all currently running services with detailed information about each service's state and connections.",
+    "category": "system-info",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Add package name to filter: dumpsys activity services com.example.app"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 53,
+    "title": "Get Device Memory Info",
+    "windows": "adb shell dumpsys meminfo",
+    "mac": "adb shell dumpsys meminfo",
+    "description": "Shows system-wide memory usage summary. Add package name for app-specific memory details.",
+    "category": "system-info",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "For specific app: dumpsys meminfo com.example.app"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 54,
+    "title": "List Package Permissions",
+    "windows": "adb shell pm list permissions -g",
+    "mac": "adb shell pm list permissions -g",
+    "description": "Lists all permissions grouped by permission group. Add -d for dangerous permissions only, -s for short summary.",
+    "category": "package-management",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Use 'dumpsys package com.example.app' for app-specific permissions"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 55,
+    "title": "Enable/Disable Package",
+    "windows": "adb shell pm disable-user --user 0 com.example.app",
+    "mac": "adb shell pm disable-user --user 0 com.example.app",
+    "description": "Disables an app for the current user without uninstalling. Use 'enable' to re-enable.",
+    "category": "package-management",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Requires appropriate permissions; some system apps cannot be disabled"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 56,
+    "title": "Get Screen Brightness",
+    "windows": "adb shell settings get system screen_brightness",
+    "mac": "adb shell settings get system screen_brightness",
+    "description": "Gets current screen brightness value (0-255). Check screen_brightness_mode for auto/manual setting.",
+    "category": "settings",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Mode: 0=manual, 1=automatic. Set with: settings put system screen_brightness 128"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 57,
+    "title": "Toggle Airplane Mode",
+    "windows": "adb shell settings put global airplane_mode_on 1",
+    "mac": "adb shell settings put global airplane_mode_on 1",
+    "description": "Enables airplane mode (1) or disables it (0). Requires broadcasting intent to take effect.",
+    "category": "settings",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "After setting, broadcast: am broadcast -a android.intent.action.AIRPLANE_MODE"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 58,
+    "title": "Get Developer Options Status",
+    "windows": "adb shell settings get global development_settings_enabled",
+    "mac": "adb shell settings get global development_settings_enabled",
+    "description": "Checks if developer options are enabled. Returns 1 if enabled, 0 or null if disabled.",
+    "category": "settings",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Also check adb_enabled for ADB debugging status"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 59,
+    "title": "Network Statistics",
+    "windows": "adb shell dumpsys netstats",
+    "mac": "adb shell dumpsys netstats",
+    "description": "Shows detailed network usage statistics for all apps including data sent/received over WiFi and mobile.",
+    "category": "system-info",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "For simpler output use: dumpsys connectivity"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 60,
+    "title": "CPU Information",
+    "windows": "adb shell dumpsys cpuinfo",
+    "mac": "adb shell dumpsys cpuinfo",
+    "description": "Shows CPU usage for all processes. Displays percentage of CPU time used by each process.",
+    "category": "system-info",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Updates every few seconds; run multiple times for trends"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 61,
+    "title": "Set Device Owner",
+    "windows": "adb shell dpm set-device-owner com.example.dpc/.DeviceAdminReceiver",
+    "mac": "adb shell dpm set-device-owner com.example.dpc/.DeviceAdminReceiver",
+    "description": "Sets an app as Device Owner for full device management. Device must be factory reset or unprovisioned.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Requires device to be unprovisioned; use TestDPC for testing"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 62,
+    "title": "Create Managed Profile",
+    "windows": "adb shell pm create-user --profileOf 0 --managed Work",
+    "mac": "adb shell pm create-user --profileOf 0 --managed Work",
+    "description": "Creates a work profile (managed profile) for the primary user. Used for BYOD scenarios.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Creates a separate work profile for enterprise apps and data"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 63,
+    "title": "List Device Admins",
+    "windows": "adb shell dpm list-admins",
+    "mac": "adb shell dpm list-admins",
+    "description": "Lists all active device administrator apps on the device, including Device Owner and Profile Owner.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Shows component names of all device admin receivers"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 64,
+    "title": "Check Device Owner",
+    "windows": "adb shell dumpsys device_policy | grep -A 3 'Device Owner'",
+    "mac": "adb shell dumpsys device_policy | grep -A 3 'Device Owner'",
+    "description": "Checks if a Device Owner is set and shows which app is the Device Owner.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Shows package name and component of Device Owner if set"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 65,
+    "title": "Remove Device Owner",
+    "windows": "adb shell dpm remove-active-admin com.example.dpc/.DeviceAdminReceiver",
+    "mac": "adb shell dpm remove-active-admin com.example.dpc/.DeviceAdminReceiver",
+    "description": "Removes Device Owner from the device. Some DPCs may prevent removal via policy.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "May require disabling admin first; some EMMs block removal"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 66,
+    "title": "Install TestDPC",
+    "windows": "adb install -r -g testdpc.apk",
+    "mac": "adb install -r -g testdpc.apk",
+    "description": "Installs Google's Test Device Policy Controller app with all permissions granted. Download TestDPC from GitHub first.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Download from: github.com/googlesamples/android-testdpc/releases"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 67,
+    "title": "Set Profile Owner",
+    "windows": "adb shell dpm set-profile-owner com.example.dpc/.DeviceAdminReceiver",
+    "mac": "adb shell dpm set-profile-owner com.example.dpc/.DeviceAdminReceiver",
+    "description": "Sets an app as Profile Owner for work profile management. Profile must not have accounts.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Use --user flag to specify user ID for work profile"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 68,
+    "title": "Force Provision Device",
+    "windows": "adb shell am start -a android.app.action.PROVISION_MANAGED_DEVICE",
+    "mac": "adb shell am start -a android.app.action.PROVISION_MANAGED_DEVICE",
+    "description": "Starts Device Owner provisioning flow. Device must be factory reset or at setup wizard.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Device must be at initial setup or factory reset state"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 69,
+    "title": "Enable Work Profile",
+    "windows": "adb shell pm enable-user 10",
+    "mac": "adb shell pm enable-user 10",
+    "description": "Enables a disabled work profile. Replace 10 with actual work profile user ID.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Get user ID with: pm list users"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 70,
+    "title": "List Managed Users",
+    "windows": "adb shell pm list users",
+    "mac": "adb shell pm list users",
+    "description": "Lists all users including work profiles, showing user IDs and profile types.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Shows primary user (0) and any work profiles with their IDs"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 71,
+    "title": "Check Provisioning State",
+    "windows": "adb shell settings get global device_provisioned",
+    "mac": "adb shell settings get global device_provisioned",
+    "description": "Checks if device setup wizard has been completed. Returns 1 if provisioned, 0 if not.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Unprovisioned state needed for Device Owner setup"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 72,
+    "title": "Set App Restrictions",
+    "windows": "adb shell cmd appops set com.example.app RUN_IN_BACKGROUND deny",
+    "mac": "adb shell cmd appops set com.example.app RUN_IN_BACKGROUND deny",
+    "description": "Sets app operation restrictions. Useful for testing managed app configurations.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Common ops: CAMERA, RECORD_AUDIO, ACCESS_FINE_LOCATION"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 73,
+    "title": "Dump Enterprise Policy",
+    "windows": "adb shell dumpsys device_policy",
+    "mac": "adb shell dumpsys device_policy",
+    "description": "Dumps complete device policy state including owners, restrictions, and managed configurations.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Very verbose; pipe to grep for specific policies"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 74,
+    "title": "Install in Work Profile",
+    "windows": "adb install --user 10 app.apk",
+    "mac": "adb install --user 10 app.apk",
+    "description": "Installs an app specifically in the work profile. Replace 10 with work profile user ID.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Get work profile ID with: pm list users"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 75,
+    "title": "Remove Work Profile",
+    "windows": "adb shell pm remove-user 10",
+    "mac": "adb shell pm remove-user 10",
+    "description": "Removes a work profile and all its data. Replace 10 with work profile user ID.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Permanently deletes work profile and all work apps/data"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 76,
+    "title": "Set Organization Name",
+    "windows": "adb shell dpm set-device-owner-lock-screen-info com.example.dpc 'Managed by ACME Corp'",
+    "mac": "adb shell dpm set-device-owner-lock-screen-info com.example.dpc 'Managed by ACME Corp'",
+    "description": "Sets organization info shown on lock screen for managed devices.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Only works if app is Device Owner"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 77,
+    "title": "Check Knox Status",
+    "windows": "adb shell getprop ro.boot.warranty_bit",
+    "mac": "adb shell getprop ro.boot.warranty_bit",
+    "description": "Checks Samsung Knox warranty bit status. 0=intact, 1=tripped (on Samsung devices only).",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Samsung only; indicates if Knox container can be created"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 78,
+    "title": "List Whitelisted Apps",
+    "windows": "adb shell cmd package list packages -a --show-versioncode --apex-only",
+    "mac": "adb shell cmd package list packages -a --show-versioncode --apex-only",
+    "description": "Lists APEX packages and system apps that cannot be disabled by MDM.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "APEX packages are always enabled regardless of policies"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 79,
+    "title": "Enable System App",
+    "windows": "adb shell dpm enable-system-app com.example.dpc com.android.chrome",
+    "mac": "adb shell dpm enable-system-app com.example.dpc com.android.chrome",
+    "description": "Enables a system app that was disabled. Requires Device or Profile Owner privileges.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "DPC must be Device Owner or Profile Owner"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
+    "id": 80,
+    "title": "QR Provisioning Code",
+    "windows": "adb shell input text 'afw#setup'",
+    "mac": "adb shell input text 'afw#setup'",
+    "description": "Types the Android for Work provisioning code at setup wizard to trigger QR code scanner.",
+    "category": "android-enterprise",
+    "androidVersions": {
+      "min": "12",
+      "max": "All",
+      "notes": "Use at Google account screen during device setup"
+    },
+    "verification": {
+      "verified": false,
+      "lastTested": null,
+      "testedVersions": {}
+    }
+  },
+  {
     "id": 13,
     "title": "Force Stop App",
     "windows": "adb shell am kill com.example.app",
