@@ -1,0 +1,3832 @@
+{
+  "device": {
+    "android": "16",
+    "collected": "2026-01-21",
+    "manufacturer": "samsung",
+    "model": "SM-F966W"
+  },
+  "packages": [
+    {
+      "name": "Android System",
+      "package": "android",
+      "system": true
+    },
+    {
+      "name": "android.auto_generated_rro_product__",
+      "package": "android.auto_generated_rro_product__",
+      "system": true
+    },
+    {
+      "name": "android.auto_generated_rro_vendor__",
+      "package": "android.auto_generated_rro_vendor__",
+      "system": true
+    },
+    {
+      "name": "ConfigAPK",
+      "package": "android.autoinstalls.config.samsung",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Immich",
+      "package": "app.alextran.immich",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "IBKR Mobile",
+      "package": "atws.app",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Bambu Handy",
+      "package": "bbl.intl.bambulab.com",
+      "system": false
+    },
+    {
+      "category": "social",
+      "name": "MyBell",
+      "package": "ca.bell.selfserve.mybellmobile",
+      "system": false
+    },
+    {
+      "name": "REALTOR.ca",
+      "package": "ca.crea.app.consumer",
+      "system": false
+    },
+    {
+      "name": "Domino\u0027s",
+      "package": "ca.dominospizza",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Manulife",
+      "package": "ca.manulife.MobileGBRS",
+      "system": false
+    },
+    {
+      "name": "Walmart Canada",
+      "package": "ca.walmart.ecommerceapp",
+      "system": false
+    },
+    {
+      "name": "Avelo",
+      "package": "com.Avelo.app",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Slack",
+      "package": "com.Slack",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Splitwise",
+      "package": "com.Splitwise.SplitwiseMobile",
+      "system": false
+    },
+    {
+      "name": "Airbnb",
+      "package": "com.airbnb.android",
+      "system": false
+    },
+    {
+      "name": "Air Canada",
+      "package": "com.aircanada",
+      "system": false
+    },
+    {
+      "category": "amazon",
+      "name": "Amazon Shopping",
+      "package": "com.amazon.mShop.android.shopping",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Amex CA",
+      "package": "com.americanexpress.android.acctsvcs.ca",
+      "system": false
+    },
+    {
+      "category": "android",
+      "name": "Tags",
+      "package": "com.android.apps.tag",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Choose a picture",
+      "package": "com.android.avatarpicker",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.backupconfirm",
+      "package": "com.android.backupconfirm",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Default Print Service",
+      "package": "com.android.bips",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Bluetooth",
+      "package": "com.android.bluetooth",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Bluetooth MIDI Service",
+      "package": "com.android.bluetoothmidiservice",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Bookmark Provider",
+      "package": "com.android.bookmarkprovider",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Call Log Backup/Restore",
+      "package": "com.android.calllogbackup",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "CameraExtensionsProxy",
+      "package": "com.android.cameraextensions",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.carrierconfig",
+      "package": "com.android.carrierconfig",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Carrier Communications",
+      "package": "com.android.carrierdefaultapp",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Certificate installer",
+      "package": "com.android.certinstaller",
+      "system": true
+    },
+    {
+      "category": "social",
+      "name": "Chrome",
+      "package": "com.android.chrome",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Companion Device Manager",
+      "package": "com.android.companiondevicemanager",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.companiondevicemanager.auto_generated_characteristics_rro",
+      "package": "com.android.companiondevicemanager.auto_generated_characteristics_rro",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "CompOS",
+      "package": "com.android.compos.payload",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Credential Manager",
+      "package": "com.android.credentialmanager",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.cts.ctsshim",
+      "package": "com.android.cts.ctsshim",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.cts.priv.ctsshim",
+      "package": "com.android.cts.priv.ctsshim",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "DeviceDiagnostics",
+      "package": "com.android.devicediagnostics",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Basic Daydreams",
+      "package": "com.android.dreams.basic",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Photo Screensavers",
+      "package": "com.android.dreams.phototable",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Dynamic System Updates",
+      "package": "com.android.dynsystem",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Android Easter Egg",
+      "package": "com.android.egg",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "External Storage",
+      "package": "com.android.externalstorage",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "OsuLogin",
+      "package": "com.android.hotspot2.osulogin",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "OK Google Hotword",
+      "package": "com.android.hotwordenrollment.okgoogle",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Hey Google Hotword",
+      "package": "com.android.hotwordenrollment.xgoogle",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "HTML Viewer",
+      "package": "com.android.htmlviewer",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Input Devices",
+      "package": "com.android.inputdevices",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "IntentResolver",
+      "package": "com.android.intentresolver",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Corner cutout",
+      "package": "com.android.internal.display.cutout.emulation.corner",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Double cutout",
+      "package": "com.android.internal.display.cutout.emulation.double",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Punch Hole cutout",
+      "package": "com.android.internal.display.cutout.emulation.hole",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Tall cutout",
+      "package": "com.android.internal.display.cutout.emulation.tall",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Waterfall cutout",
+      "package": "com.android.internal.display.cutout.emulation.waterfall",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Gestural Navigation Bar",
+      "package": "com.android.internal.systemui.navbar.gestural",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "3 Button Navigation Bar",
+      "package": "com.android.internal.systemui.navbar.threebutton",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Transparent navigation bar",
+      "package": "com.android.internal.systemui.navbar.transparent",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Key Chain",
+      "package": "com.android.keychain",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.localtransport",
+      "package": "com.android.localtransport",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Fused Location",
+      "package": "com.android.location.fused",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Work Setup",
+      "package": "com.android.managedprovisioning",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.microdroid.empty_payload",
+      "package": "com.android.microdroid.empty_payload",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "MmsService",
+      "package": "com.android.mms.service",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "MTP Host",
+      "package": "com.android.mtp",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "NFC Service",
+      "package": "com.android.nfc",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.ons",
+      "package": "com.android.ons",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "PacProcessor",
+      "package": "com.android.pacprocessor",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Phone services",
+      "package": "com.android.phone",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.phone.auto_generated_characteristics_rro",
+      "package": "com.android.phone.auto_generated_characteristics_rro",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Print Spooler",
+      "package": "com.android.printspooler",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Blocked Numbers Storage",
+      "package": "com.android.providers.blockednumber",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Calendar storage",
+      "package": "com.android.providers.calendar",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "ContactsKeys Storage",
+      "package": "com.android.providers.contactkeys",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Download Manager",
+      "package": "com.android.providers.downloads",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Downloads",
+      "package": "com.android.providers.downloads.ui",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.providers.media",
+      "package": "com.android.providers.media",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.providers.partnerbookmarks",
+      "package": "com.android.providers.partnerbookmarks",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Settings Storage",
+      "package": "com.android.providers.settings",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Phone and Messaging Storage",
+      "package": "com.android.providers.telephony",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.providers.telephony.auto_generated_characteristics_rro",
+      "package": "com.android.providers.telephony.auto_generated_characteristics_rro",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "User Dictionary",
+      "package": "com.android.providers.userdictionary",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "ProxyHandler",
+      "package": "com.android.proxyhandler",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Notes Role enabled",
+      "package": "com.android.role.notes.enabled",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "SecureElementApplication",
+      "package": "com.android.se",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Phone calls",
+      "package": "com.android.server.telecom",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Settings",
+      "package": "com.android.settings",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Settings Suggestions",
+      "package": "com.android.settings.intelligence",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.sharedstoragebackup",
+      "package": "com.android.sharedstoragebackup",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Shell",
+      "package": "com.android.shell",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Sim App Dialog",
+      "package": "com.android.simappdialog",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "SIM toolkit",
+      "package": "com.android.stk",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "SIM toolkit",
+      "package": "com.android.stk2",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Storage Manager",
+      "package": "com.android.storagemanager",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "System UI",
+      "package": "com.android.systemui",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Noto Serif / Source Sans Pro",
+      "package": "com.android.theme.font.notoserifsource",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "System Tracing",
+      "package": "com.android.traceur",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "System UWB Resources",
+      "package": "com.android.uwb.resources",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Google Play Store",
+      "package": "com.android.vending",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Terminal",
+      "package": "com.android.virtualization.terminal",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.virtualmachine.res",
+      "package": "com.android.virtualmachine.res",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "VpnDialogs",
+      "package": "com.android.vpndialogs",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "Live Wallpaper Picker",
+      "package": "com.android.wallpaper.livepicker",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.wallpaperbackup",
+      "package": "com.android.wallpaperbackup",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.wallpapercropper",
+      "package": "com.android.wallpapercropper",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "com.android.wifi.dialog",
+      "package": "com.android.wifi.dialog",
+      "system": true
+    },
+    {
+      "category": "android",
+      "name": "System Wi-Fi Resources",
+      "package": "com.android.wifi.resources",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Anker",
+      "package": "com.anker.charging",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Claude",
+      "package": "com.anthropic.claude",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Authenticator",
+      "package": "com.azure.authenticator",
+      "system": false
+    },
+    {
+      "name": "Booking.com",
+      "package": "com.booking",
+      "system": false
+    },
+    {
+      "name": "myQ",
+      "package": "com.chamberlain.android.liftmaster.myq",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Chase",
+      "package": "com.chase.sig.android",
+      "system": false
+    },
+    {
+      "name": "Chipotle",
+      "package": "com.chipotle.ordering",
+      "system": false
+    },
+    {
+      "name": "FlightStats",
+      "package": "com.conducivetech.android.traveler",
+      "system": false
+    },
+    {
+      "name": "Best Buy Canada",
+      "package": "com.coppi.bestbuy",
+      "system": false
+    },
+    {
+      "name": "DoorDash",
+      "package": "com.dd.doordash",
+      "system": false
+    },
+    {
+      "name": "Fly Delta",
+      "package": "com.delta.mobile.android",
+      "system": false
+    },
+    {
+      "category": "social",
+      "name": "Discord",
+      "package": "com.discord",
+      "system": false
+    },
+    {
+      "name": "Dragonpass",
+      "package": "com.dragonpass.en.activity",
+      "system": false
+    },
+    {
+      "category": "game",
+      "name": "Arrows",
+      "package": "com.ecffri.arrows",
+      "system": false
+    },
+    {
+      "name": "National",
+      "package": "com.ehi.national.mobile",
+      "system": false
+    },
+    {
+      "name": "ESPN",
+      "package": "com.espn.score_center",
+      "system": false
+    },
+    {
+      "category": "game",
+      "name": "BrickSmash",
+      "package": "com.example.bricksmash",
+      "system": false
+    },
+    {
+      "name": "Expedia",
+      "package": "com.expedia.bookings",
+      "system": false
+    },
+    {
+      "category": "meta",
+      "name": "Meta App Manager",
+      "package": "com.facebook.appmanager",
+      "system": true
+    },
+    {
+      "category": "social",
+      "name": "Messenger",
+      "package": "com.facebook.orca",
+      "system": false
+    },
+    {
+      "category": "meta",
+      "name": "Meta Services",
+      "package": "com.facebook.services",
+      "system": true
+    },
+    {
+      "category": "meta",
+      "name": "Meta App Installer",
+      "package": "com.facebook.system",
+      "system": true
+    },
+    {
+      "name": "FanDuel Sportsbook",
+      "package": "com.fanduel.sportsbook.ca",
+      "system": false
+    },
+    {
+      "category": "game",
+      "name": "Hill Climb Racing 2",
+      "package": "com.fingersoft.hcr2",
+      "system": false
+    },
+    {
+      "name": "FirstChoice",
+      "package": "com.firstchoice.prod",
+      "system": false
+    },
+    {
+      "name": "FlightAware",
+      "package": "com.flightaware.android.liveFlightTracker",
+      "system": false
+    },
+    {
+      "category": "game",
+      "name": "Speedstorm",
+      "package": "com.gameloft.anmp.disney.speedstorm",
+      "system": false
+    },
+    {
+      "name": "Garmin Connect",
+      "package": "com.garmin.android.apps.connectmobile",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "NIIMBOT",
+      "package": "com.gengcon.android.jccloudprinter",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "GitHub",
+      "package": "com.github.android",
+      "system": false
+    },
+    {
+      "category": "google",
+      "name": "Ad Privacy",
+      "package": "com.google.android.adservices.api",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "AICore",
+      "package": "com.google.android.aicore",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Voice Access",
+      "package": "com.google.android.apps.accessibility.voiceaccess",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "AI wallpaper",
+      "package": "com.google.android.apps.aiwallpapers",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Gemini",
+      "package": "com.google.android.apps.bard",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Google Play Books",
+      "package": "com.google.android.apps.books",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Google Wi-Fi Provisioner",
+      "package": "com.google.android.apps.carrier.carrierwifi",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Drive",
+      "package": "com.google.android.apps.docs",
+      "system": false
+    },
+    {
+      "category": "google",
+      "name": "Maps",
+      "package": "com.google.android.apps.maps",
+      "system": true
+    },
+    {
+      "category": "social",
+      "name": "Messages",
+      "package": "com.google.android.apps.messaging",
+      "system": true
+    },
+    {
+      "category": "image",
+      "name": "Photos",
+      "package": "com.google.android.apps.photos",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Android Switch",
+      "package": "com.google.android.apps.restore",
+      "system": true
+    },
+    {
+      "category": "social",
+      "name": "Meet",
+      "package": "com.google.android.apps.tachyon",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Translate",
+      "package": "com.google.android.apps.translate",
+      "system": false
+    },
+    {
+      "category": "google",
+      "name": "Device Health Services",
+      "package": "com.google.android.apps.turbo",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "‎‏‎‎‎‎‎‏‎‏‏‏‎‎‎‏‏‎‎‎‏‎‏‎‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‏‎‎‎‎‎‎‎‎‏‏‏‎‎‏‎‎‏‏‏‏‎‎‎‎‎‏‏‏‏‎‏‎‎‏‏‎‏‏‏‎‎‏‏‏‎‎‏‎‎‏‏‏‎‏‎‎Likeness‎‏‎‎‏‎",
+      "package": "com.google.android.apps.vr.doppel",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Google Wallet",
+      "package": "com.google.android.apps.walletnfcrel",
+      "system": false
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.appsearch.apk",
+      "package": "com.google.android.appsearch.apk",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Android System Intelligence",
+      "package": "com.google.android.as",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Private Compute Services",
+      "package": "com.google.android.as.oss",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Captive Portal Login",
+      "package": "com.google.android.captiveportallogin",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Wireless emergency alerts",
+      "package": "com.google.android.cellbroadcastreceiver",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Cell Broadcast Service",
+      "package": "com.google.android.cellbroadcastservice",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "ConfigUpdater",
+      "package": "com.google.android.configupdater",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "System Connectivity Resources",
+      "package": "com.google.android.connectivity.resources",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Android System Key Verifier",
+      "package": "com.google.android.contactkeys",
+      "system": false
+    },
+    {
+      "category": "google",
+      "name": "Files",
+      "package": "com.google.android.documentsui",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Android Services Library",
+      "package": "com.google.android.ext.services",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Android Shared Library",
+      "package": "com.google.android.ext.shared",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.federatedcompute",
+      "package": "com.google.android.federatedcompute",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Market Feedback Agent",
+      "package": "com.google.android.feedback",
+      "system": true
+    },
+    {
+      "category": "social",
+      "name": "Gmail",
+      "package": "com.google.android.gm",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Google Play services",
+      "package": "com.google.android.gms",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Google Location History",
+      "package": "com.google.android.gms.location.history",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "System parental controls",
+      "package": "com.google.android.gms.supervision",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Google",
+      "package": "com.google.android.googlequicksearchbox",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Google Services Framework",
+      "package": "com.google.android.gsf",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.health.connect.backuprestore",
+      "package": "com.google.android.health.connect.backuprestore",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Health Connect",
+      "package": "com.google.android.healthconnect.controller",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Gboard",
+      "package": "com.google.android.inputmethod.latin",
+      "system": false
+    },
+    {
+      "category": "google",
+      "name": "Main components",
+      "package": "com.google.android.modulemetadata",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Network manager",
+      "package": "com.google.android.networkstack",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Tethering",
+      "package": "com.google.android.networkstack.tethering",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.networkstack.tethering.overlay",
+      "package": "com.google.android.networkstack.tethering.overlay",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.android.ondevicepersonalization.services.OnDevicePersonalizationApplication",
+      "package": "com.google.android.ondevicepersonalization.services",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Google One Time Init",
+      "package": "com.google.android.onetimeinitializer",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.gmsconfig.asi",
+      "package": "com.google.android.overlay.gmsconfig.asi",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.gmsconfig.common",
+      "package": "com.google.android.overlay.gmsconfig.common",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.gmsconfig.geotz",
+      "package": "com.google.android.overlay.gmsconfig.geotz",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.gmsconfig.gsa",
+      "package": "com.google.android.overlay.gmsconfig.gsa",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.modules.captiveportallogin.forframework",
+      "package": "com.google.android.overlay.modules.captiveportallogin.forframework",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.modules.cellbroadcastreceiver",
+      "package": "com.google.android.overlay.modules.cellbroadcastreceiver",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.modules.cellbroadcastservice",
+      "package": "com.google.android.overlay.modules.cellbroadcastservice",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.modules.documentsui",
+      "package": "com.google.android.overlay.modules.documentsui",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.modules.ext.services",
+      "package": "com.google.android.overlay.modules.ext.services",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.modules.healthfitness.forframework",
+      "package": "com.google.android.overlay.modules.healthfitness.forframework",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.modules.modulemetadata.forframework",
+      "package": "com.google.android.overlay.modules.modulemetadata.forframework",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.modules.permissioncontroller",
+      "package": "com.google.android.overlay.modules.permissioncontroller",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.overlay.modules.permissioncontroller.forframework",
+      "package": "com.google.android.overlay.modules.permissioncontroller.forframework",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Package installer",
+      "package": "com.google.android.packageinstaller",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Google Partner Setup",
+      "package": "com.google.android.partnersetup",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Permission controller",
+      "package": "com.google.android.permissioncontroller",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Photos \u0026 videos",
+      "package": "com.google.android.photopicker",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Print Service Recommendation Service",
+      "package": "com.google.android.printservice.recommendation",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Android Auto",
+      "package": "com.google.android.projection.gearhead",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Media picker",
+      "package": "com.google.android.providers.media.module",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "RemoteProvisioner",
+      "package": "com.google.android.rkpdapp",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Google Safety Center Resources",
+      "package": "com.google.android.safetycenter.resources",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.sdksandbox",
+      "package": "com.google.android.sdksandbox",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "com.google.android.server.deviceconfig.resources",
+      "package": "com.google.android.server.deviceconfig.resources",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Android Setup",
+      "package": "com.google.android.setupwizard",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Google Calendar Sync",
+      "package": "com.google.android.syncadapters.calendar",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Speech Recognition and Synthesis from Google",
+      "package": "com.google.android.tts",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Android System WebView",
+      "package": "com.google.android.webview",
+      "system": true
+    },
+    {
+      "category": "video",
+      "name": "YouTube",
+      "package": "com.google.android.youtube",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Google Play Services for AR",
+      "package": "com.google.ar.core",
+      "system": true
+    },
+    {
+      "category": "social",
+      "name": "Live Transcribe \u0026 Sound Notifications",
+      "package": "com.google.audio.hearing.visualization.accessibility.scribe",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Main components",
+      "package": "com.google.mainline.adservices",
+      "system": true
+    },
+    {
+      "category": "google",
+      "name": "Support components",
+      "package": "com.google.mainline.telemetry",
+      "system": true
+    },
+    {
+      "category": "game",
+      "name": "RISK",
+      "package": "com.hasbro.riskbigscreen",
+      "system": false
+    },
+    {
+      "name": "Hilton Honors",
+      "package": "com.hilton.android.hhonors",
+      "system": false
+    },
+    {
+      "name": "Hiya Service",
+      "package": "com.hiya.star",
+      "system": true
+    },
+    {
+      "category": "social",
+      "name": "Holafly",
+      "package": "com.holafly.holafly",
+      "system": false
+    },
+    {
+      "name": "HotSpotMobile",
+      "package": "com.hotspot.hotspotmobile",
+      "system": false
+    },
+    {
+      "name": "HouseSigma",
+      "package": "com.housesigma.android",
+      "system": false
+    },
+    {
+      "name": "Wyze",
+      "package": "com.hualai",
+      "system": false
+    },
+    {
+      "name": "MyMazda",
+      "package": "com.interrait.mymazda",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "CamScanner",
+      "package": "com.intsig.camscanner",
+      "system": false
+    },
+    {
+      "name": "iRobot",
+      "package": "com.irobot.home",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "MacEWEN Wash App",
+      "package": "com.kessel.macewenapp",
+      "system": false
+    },
+    {
+      "name": "KnoxVpnPacProcessor",
+      "package": "com.knox.vpn.proxyhandler",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "LinkedIn",
+      "package": "com.linkedin.android",
+      "system": false
+    },
+    {
+      "name": "Maple",
+      "package": "com.maplenativeuser",
+      "system": false
+    },
+    {
+      "name": "Marriott",
+      "package": "com.marriott.mrt",
+      "system": false
+    },
+    {
+      "category": "game",
+      "name": "SCD",
+      "package": "com.mattintech.CoreMain",
+      "system": false
+    },
+    {
+      "name": "BGram",
+      "package": "com.mattintech.bgram",
+      "system": false
+    },
+    {
+      "name": "GetApplicationDetails",
+      "package": "com.mattintech.getapplicationdetails",
+      "system": false
+    },
+    {
+      "name": "HRMLive",
+      "package": "com.mattintech.hrmlive",
+      "system": false
+    },
+    {
+      "name": "SimpleLogUpload",
+      "package": "com.mattintech.simplelogupload",
+      "system": false
+    },
+    {
+      "category": "game",
+      "name": "The License Plate Game",
+      "package": "com.mattintech.thelicenseplategame",
+      "system": false
+    },
+    {
+      "name": "TreadmillBuddy",
+      "package": "com.mattintech.treadmillbuddy",
+      "system": false
+    },
+    {
+      "name": "PRESTO",
+      "package": "com.metrolinx.presto.android.consumerapp",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Link to Windows",
+      "package": "com.microsoft.appmanager",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Excel",
+      "package": "com.microsoft.office.excel",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "OneNote",
+      "package": "com.microsoft.office.onenote",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Outlook",
+      "package": "com.microsoft.office.outlook",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "PowerPoint",
+      "package": "com.microsoft.office.powerpoint",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Word",
+      "package": "com.microsoft.office.word",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Windows App",
+      "package": "com.microsoft.rdc.androidx",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "SharePoint",
+      "package": "com.microsoft.sharepoint",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "OneDrive",
+      "package": "com.microsoft.skydrive",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Teams",
+      "package": "com.microsoft.teams",
+      "system": false
+    },
+    {
+      "category": "microsoft",
+      "name": "Xbox",
+      "package": "com.microsoft.xboxone.smartglass",
+      "system": false
+    },
+    {
+      "name": "MIPTV",
+      "package": "com.miptv.app",
+      "system": false
+    },
+    {
+      "category": "game",
+      "name": "Minecraft",
+      "package": "com.mojang.minecraftpe",
+      "system": false
+    },
+    {
+      "name": "Foundation",
+      "package": "com.monotype.android.font.foundation",
+      "system": true
+    },
+    {
+      "name": "Roboto",
+      "package": "com.monotype.android.font.roboto",
+      "system": true
+    },
+    {
+      "name": "SamsungOne",
+      "package": "com.monotype.android.font.samsungone",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Namecheap",
+      "package": "com.namecheap.android",
+      "system": false
+    },
+    {
+      "name": "Skip",
+      "package": "com.ncconsulting.skipthedishes_android",
+      "system": false
+    },
+    {
+      "name": "Segway Mobility",
+      "package": "com.ninebot.segway",
+      "system": false
+    },
+    {
+      "name": "OLG",
+      "package": "com.olg.ewma",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "ChatGPT",
+      "package": "com.openai.chatgpt",
+      "system": false
+    },
+    {
+      "name": "SuperCycle",
+      "package": "com.osborntech.supercycle",
+      "system": false
+    },
+    {
+      "name": "Samsung account",
+      "package": "com.osp.app.signin",
+      "system": true
+    },
+    {
+      "name": "Papa Johns",
+      "package": "com.papajohns.android",
+      "system": false
+    },
+    {
+      "name": "Porter Airlines",
+      "package": "com.porterairlines.digital.prod.mobile",
+      "system": false
+    },
+    {
+      "name": "Priority Pass",
+      "package": "com.prioritypass3",
+      "system": false
+    },
+    {
+      "name": "QCC",
+      "package": "com.qti.qcc",
+      "system": true
+    },
+    {
+      "name": "QDCM-FF",
+      "package": "com.qti.snapdragon.qdcm_ff",
+      "system": true
+    },
+    {
+      "name": "LocationServices",
+      "package": "com.qualcomm.location",
+      "system": true
+    },
+    {
+      "name": "Adreno Graphics Drivers",
+      "package": "com.qualcomm.qti.gpudrivers.sun.api35",
+      "system": true
+    },
+    {
+      "name": "System Helper Service",
+      "package": "com.qualcomm.qti.services.systemhelper",
+      "system": true
+    },
+    {
+      "name": "com.qualcomm.timeservice",
+      "package": "com.qualcomm.timeservice",
+      "system": true
+    },
+    {
+      "name": "Fibe TV",
+      "package": "com.quickplay.android.bellmediaplayer",
+      "system": false
+    },
+    {
+      "name": "Rachio",
+      "package": "com.rachio.iro",
+      "system": false
+    },
+    {
+      "category": "game",
+      "name": "Planes Control",
+      "package": "com.rarepixels.planeslittle",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "RVNC Viewer",
+      "package": "com.realvnc.viewer.android",
+      "system": false
+    },
+    {
+      "category": "social",
+      "name": "Reddit",
+      "package": "com.reddit.frontpage",
+      "system": false
+    },
+    {
+      "category": "game",
+      "name": "Roblox",
+      "package": "com.roblox.client",
+      "system": false
+    },
+    {
+      "name": "Roku",
+      "package": "com.roku.remote",
+      "system": false
+    },
+    {
+      "name": "Saily",
+      "package": "com.saily.android",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung text-to-speech engine",
+      "package": "com.samsung.SMT",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungTTS US English Voice 2",
+      "package": "com.samsung.SMT.lang_en_us_g02",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungTTS US English Voice 1",
+      "package": "com.samsung.SMT.lang_en_us_l03",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungTTS Español Voz 2",
+      "package": "com.samsung.SMT.lang_es_es_g01",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungTTS Español Voz 1",
+      "package": "com.samsung.SMT.lang_es_es_l01",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungTTS US Spanish Default voice 1",
+      "package": "com.samsung.SMT.lang_es_us_f00",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungTTS Canadian French Voice 1",
+      "package": "com.samsung.SMT.lang_fr_ca_f00",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungTTS Hindi Voice 1",
+      "package": "com.samsung.SMT.lang_hi_in_f00",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungTTS 한국어",
+      "package": "com.samsung.SMT.lang_ko_kr_r00",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "SecurityPolicy",
+      "package": "com.samsung.aasaservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Accessibility",
+      "package": "com.samsung.accessibility",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Galaxy Buds",
+      "package": "com.samsung.accessory.budsunitemgr",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Galaxy Buds FE Manager",
+      "package": "com.samsung.accessory.pearlmgr",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "IMS Settings",
+      "package": "com.samsung.advp.imssettings",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "ConnectivityOverlay",
+      "package": "com.samsung.android.ConnectivityOverlay",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "ConnectivityUxOverlay",
+      "package": "com.samsung.android.ConnectivityUxOverlay",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "TalkBack",
+      "package": "com.samsung.android.accessibility.talkback",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung AI Core",
+      "package": "com.samsung.android.aicore",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "FACM",
+      "package": "com.samsung.android.aircommandmanager",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Nearby Service",
+      "package": "com.samsung.android.allshare.service.mediashare",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "AlwaysOnDisplay",
+      "package": "com.samsung.android.app.aodservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Crocro and friends",
+      "package": "com.samsung.android.app.camera.sticker.facearavatar.preload",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Clipboard edge",
+      "package": "com.samsung.android.app.clipboardedge",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Contacts",
+      "package": "com.samsung.android.app.contacts",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Portrait",
+      "package": "com.samsung.android.app.dofviewer",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Wallpapers and Style",
+      "package": "com.samsung.android.app.dressroom",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung USB-C headset",
+      "package": "com.samsung.android.app.earphonetypec",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "esimkeystring",
+      "package": "com.samsung.android.app.esimkeystring",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Find",
+      "package": "com.samsung.android.app.find",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Expert RAW",
+      "package": "com.samsung.android.app.galaxyraw",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Interpreter",
+      "package": "com.samsung.android.app.interpreter",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Moments",
+      "package": "com.samsung.android.app.moments",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Notes",
+      "package": "com.samsung.android.app.notes",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Recommended apps",
+      "package": "com.samsung.android.app.omcagent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Parental controls",
+      "package": "com.samsung.android.app.parentalcare",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Reminder",
+      "package": "com.samsung.android.app.reminder",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Modes and Routines",
+      "package": "com.samsung.android.app.routines",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Quick Share",
+      "package": "com.samsung.android.app.sharelive",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Drawing assist",
+      "package": "com.samsung.android.app.sketchbook",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung capture",
+      "package": "com.samsung.android.app.smartcapture",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Sound picker",
+      "package": "com.samsung.android.app.soundpicker",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Tasks",
+      "package": "com.samsung.android.app.taskedge",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Call settings",
+      "package": "com.samsung.android.app.telephonyui",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "EsimClient",
+      "package": "com.samsung.android.app.telephonyui.esimclient",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "App update",
+      "package": "com.samsung.android.app.updatecenter",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Document scanner",
+      "package": "com.samsung.android.app.vex.scanner",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Galaxy Wearable",
+      "package": "com.samsung.android.app.watchmanager",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Wearable Manager Installer",
+      "package": "com.samsung.android.app.watchmanagerstub",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Separated Apps",
+      "package": "com.samsung.android.appseparation",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Galaxy Avatar",
+      "package": "com.samsung.android.aremoji",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Avatar Editor",
+      "package": "com.samsung.android.aremojieditor",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "AudioMirroring",
+      "package": "com.samsung.android.audiomirroring",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Authentication Framework",
+      "package": "com.samsung.android.authfw",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Quick Share Agent",
+      "package": "com.samsung.android.aware.service",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "BBCAgent",
+      "package": "com.samsung.android.bbc.bbcagent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Nearby device scanning agent",
+      "package": "com.samsung.android.beaconmanager",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Biometrics",
+      "package": "com.samsung.android.biometrics.app.setting",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Bixby",
+      "package": "com.samsung.android.bixby.agent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung on-device Resource English (United States)",
+      "package": "com.samsung.android.bixby.ondevice.enus",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung on-device Resource Español (España)",
+      "package": "com.samsung.android.bixby.ondevice.eses",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung on-device Resource Français (Canada)",
+      "package": "com.samsung.android.bixby.ondevice.frca",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung on-device Resource हिंदी (भारत)",
+      "package": "com.samsung.android.bixby.ondevice.hiin",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung on-device Resource 한국어 (대한민국)",
+      "package": "com.samsung.android.bixby.ondevice.kokr",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Voice wake-up",
+      "package": "com.samsung.android.bixby.wakeup",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "BixbyVision Framework",
+      "package": "com.samsung.android.bixbyvision.framework",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Eye comfort shield",
+      "package": "com.samsung.android.bluelightfilter",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "BrightnessBNR",
+      "package": "com.samsung.android.brightnessbackupservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Calendar",
+      "package": "com.samsung.android.calendar",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Call Services",
+      "package": "com.samsung.android.callassistant",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "CallBGProvider",
+      "package": "com.samsung.android.callbgprovider",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SCameraService",
+      "package": "com.samsung.android.camerasdkservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SCameraXService",
+      "package": "com.samsung.android.cameraxservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Digital Key Framework",
+      "package": "com.samsung.android.carkey",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Configuration update",
+      "package": "com.samsung.android.cidmanager",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Blockchain Keystore",
+      "package": "com.samsung.android.coldwalletservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "ContainerService",
+      "package": "com.samsung.android.container",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Dual Messenger",
+      "package": "com.samsung.android.da.daagent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Galaxy Service Setup",
+      "package": "com.samsung.android.dbsc",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "DckTimeSyncApplication",
+      "package": "com.samsung.android.dck.timesync",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Phone",
+      "package": "com.samsung.android.dialer",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Wallet Digital Key",
+      "package": "com.samsung.android.dkey",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "DQA",
+      "package": "com.samsung.android.dqagent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Dsms",
+      "package": "com.samsung.android.dsms",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Wallpaper services",
+      "package": "com.samsung.android.dynamiclock",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Nearby device scanning",
+      "package": "com.samsung.android.easysetup",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Emergency SOS",
+      "package": "com.samsung.android.emergency",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungSEAgent",
+      "package": "com.samsung.android.ese",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Secure Wi-Fi",
+      "package": "com.samsung.android.fast",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Find My Mobile",
+      "package": "com.samsung.android.fmm",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Digital Wellbeing",
+      "package": "com.samsung.android.forest",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Gaming Hub",
+      "package": "com.samsung.android.game.gamehome",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Game Booster",
+      "package": "com.samsung.android.game.gametools",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Game Optimizing Service",
+      "package": "com.samsung.android.game.gos",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Galaxy editing service",
+      "package": "com.samsung.android.globalpostprocmgr",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Galaxy Resource Updater",
+      "package": "com.samsung.android.gru",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "HdmApp",
+      "package": "com.samsung.android.hdmapp",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Keyboard",
+      "package": "com.samsung.android.honeyboard",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Camera Share",
+      "package": "com.samsung.android.hwresourceshare",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Storage Share",
+      "package": "com.samsung.android.hwresourceshare.storage",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Call",
+      "package": "com.samsung.android.incallui",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Multi control",
+      "package": "com.samsung.android.inputshare",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Intelligence Service",
+      "package": "com.samsung.android.intellivoiceservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.internal.overlay.config.default_contextual_search",
+      "package": "com.samsung.android.internal.overlay.config.default_contextual_search",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Visit In",
+      "package": "com.samsung.android.ipsgeofence",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Device Services",
+      "package": "com.samsung.android.kgclient",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Kids Installer",
+      "package": "com.samsung.android.kidsinstaller",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Knox Matrix",
+      "package": "com.samsung.android.kmxservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Knox Analytics Uploader",
+      "package": "com.samsung.android.knox.analytics.uploader",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "KnoxNetworkFilter",
+      "package": "com.samsung.android.knox.app.networkfilter",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.knox.attestation",
+      "package": "com.samsung.android.knox.attestation",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "KnoxCore",
+      "package": "com.samsung.android.knox.containercore",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.knox.er",
+      "package": "com.samsung.android.knox.er",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "KnoxFrameBufferProvider",
+      "package": "com.samsung.android.knox.kfbp",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "KnoxNeuralNetworkRuntime",
+      "package": "com.samsung.android.knox.knnr",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "KPECore",
+      "package": "com.samsung.android.knox.kpecore",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.knox.mpos",
+      "package": "com.samsung.android.knox.mpos",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "KnoxPushManager",
+      "package": "com.samsung.android.knox.pushmanager",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "KnoxSandbox",
+      "package": "com.samsung.android.knox.sandbox",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "KnoxZT Framework",
+      "package": "com.samsung.android.knox.zt.framework",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "LiveEffectService",
+      "package": "com.samsung.android.liveeffectservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "slocation",
+      "package": "com.samsung.android.location",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Device care",
+      "package": "com.samsung.android.lool",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Application recommendations",
+      "package": "com.samsung.android.mapsagent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Continuity Service",
+      "package": "com.samsung.android.mcfds",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Multi Connectivity",
+      "package": "com.samsung.android.mcfserver",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Call \u0026 text on other devices",
+      "package": "com.samsung.android.mdecservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Knox Core Service",
+      "package": "com.samsung.android.mdm",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Link to Windows Service",
+      "package": "com.samsung.android.mdx",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Quick Share Connectivity",
+      "package": "com.samsung.android.mdx.kit",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "MhsAiService",
+      "package": "com.samsung.android.mhs.ai",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "MoaiApc",
+      "package": "com.samsung.android.moaiapc",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Group Sharing",
+      "package": "com.samsung.android.mobileservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "MoccaMobile",
+      "package": "com.samsung.android.mocca",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Motionphoto",
+      "package": "com.samsung.android.motionphoto.app",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "MTP application",
+      "package": "com.samsung.android.mtp",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Nearby devices",
+      "package": "com.samsung.android.mydevice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Wi-Fi tips",
+      "package": "com.samsung.android.net.wifi.wifiguider",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "NetworkDiagnostic",
+      "package": "com.samsung.android.networkdiagnostic",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "NetworkStackOverlay",
+      "package": "com.samsung.android.networkstack",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.networkstack.tethering.overlay",
+      "package": "com.samsung.android.networkstack.tethering.overlay",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "NFC",
+      "package": "com.samsung.android.nfc",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.nfc.resources.default",
+      "package": "com.samsung.android.nfc.resources.default",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "En-Es Language Pack",
+      "package": "com.samsung.android.nmt.apps.t2t.languagepack.enes",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "En-Frca Language Pack",
+      "package": "com.samsung.android.nmt.apps.t2t.languagepack.enfrca",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "En-Hi Language Pack",
+      "package": "com.samsung.android.nmt.apps.t2t.languagepack.enhi",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "En-Ko Language Pack",
+      "package": "com.samsung.android.nmt.apps.t2t.languagepack.enko",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Language Core",
+      "package": "com.samsung.android.offline.languagemodel",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SmartThings",
+      "package": "com.samsung.android.oneconnect",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "PhotoRemasterService",
+      "package": "com.samsung.android.photoremasterservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Permission usage",
+      "package": "com.samsung.android.privacydashboard",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Automatic verification",
+      "package": "com.samsung.android.privateaccesstokens",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Filter Provider",
+      "package": "com.samsung.android.provider.filterprovider",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Contacts Storage",
+      "package": "com.samsung.android.providers.contacts",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "FactoryTestProvider",
+      "package": "com.samsung.android.providers.factory",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Media Storage",
+      "package": "com.samsung.android.providers.media",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SecTrashProvider",
+      "package": "com.samsung.android.providers.trash",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Personal voice creator",
+      "package": "com.samsung.android.ptts.enus",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "QMDService",
+      "package": "com.samsung.android.qmdservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Auto Blocker",
+      "package": "com.samsung.android.rampart",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Customization Service",
+      "package": "com.samsung.android.rubin.app",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Pass",
+      "package": "com.samsung.android.samsungpass",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Autofill with Samsung Pass",
+      "package": "com.samsung.android.samsungpassautofill",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungPositioning",
+      "package": "com.samsung.android.samsungpositioning",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Cloud",
+      "package": "com.samsung.android.scloud",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Cloud Assistant",
+      "package": "com.samsung.android.scpm",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Core Services",
+      "package": "com.samsung.android.scs",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "HandwritingService",
+      "package": "com.samsung.android.sdk.handwriting",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "OCRDataProvider",
+      "package": "com.samsung.android.sdk.ocr",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Service provider setup",
+      "package": "com.samsung.android.sdm.config",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "EnvironmentAdaptiveDisplay",
+      "package": "com.samsung.android.sead",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SecSoundPicker",
+      "package": "com.samsung.android.secsoundpicker",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "MobileWips",
+      "package": "com.samsung.android.server.wifi.mobilewips",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "People",
+      "package": "com.samsung.android.service.peoplestripe",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SmartThings Companion",
+      "package": "com.samsung.android.service.stplatform",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Tags",
+      "package": "com.samsung.android.service.tagservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Separate app sound",
+      "package": "com.samsung.android.setting.multisound",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SettingsHelper",
+      "package": "com.samsung.android.settingshelper",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "ShortcutBNR",
+      "package": "com.samsung.android.shortcutbackupservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Sim Agent",
+      "package": "com.samsung.android.simagent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Single take",
+      "package": "com.samsung.android.singletake.service",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Smart Call",
+      "package": "com.samsung.android.smartcallprovider",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SmartFaceService",
+      "package": "com.samsung.android.smartface",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.smartface.overlay",
+      "package": "com.samsung.android.smartface.overlay",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Smart View",
+      "package": "com.samsung.android.smartmirroring",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Personal data intelligence",
+      "package": "com.samsung.android.smartsuggestions",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.smartswitchassistant",
+      "package": "com.samsung.android.smartswitchassistant",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Pay Framework",
+      "package": "com.samsung.android.spayfw",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Semantic Search Core",
+      "package": "com.samsung.android.ssco",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Sticker Center",
+      "package": "com.samsung.android.stickercenter",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SVC Agent",
+      "package": "com.samsung.android.svcagent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Galaxy Themes Service",
+      "package": "com.samsung.android.themecenter",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Galaxy Themes",
+      "package": "com.samsung.android.themestore",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung TV Plus",
+      "package": "com.samsung.android.tvplus",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.uwb.resources",
+      "package": "com.samsung.android.uwb.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "VexFwkService",
+      "package": "com.samsung.android.vexfwk.service",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Video Player",
+      "package": "com.samsung.android.video",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Vision Model",
+      "package": "com.samsung.android.vision.model",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Bixby Vision",
+      "package": "com.samsung.android.visionintelligence",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Visual Cloud Core",
+      "package": "com.samsung.android.visual.cloudcore",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Smart Touch Call",
+      "package": "com.samsung.android.visualars",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Samsung Members",
+      "package": "com.samsung.android.voc",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Video effects",
+      "package": "com.samsung.android.vtcamerasettings",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Wallpaper",
+      "package": "com.samsung.android.wallpaper.live",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wallpaper.res",
+      "package": "com.samsung.android.wallpaper.res",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "WcmUrlsNetworkStackOverlay",
+      "package": "com.samsung.android.wcmurlsnetworkstack",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Gallery",
+      "package": "com.samsung.android.widget.pictureframe",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "WiFiAiService",
+      "package": "com.samsung.android.wifi.ai",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.decrease.scan.interval.resources",
+      "package": "com.samsung.android.wifi.decrease.scan.interval.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.h2e.resources",
+      "package": "com.samsung.android.wifi.h2e.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.increase.scan.interval.resources",
+      "package": "com.samsung.android.wifi.increase.scan.interval.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "WifiIntelligence",
+      "package": "com.samsung.android.wifi.intelligence",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.largetcpbuffer.resources",
+      "package": "com.samsung.android.wifi.largetcpbuffer.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.p2paware.resources",
+      "package": "com.samsung.android.wifi.p2paware.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.resources",
+      "package": "com.samsung.android.wifi.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.resources.qc",
+      "package": "com.samsung.android.wifi.resources.qc",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.resources.wifilock",
+      "package": "com.samsung.android.wifi.resources.wifilock",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.saeupgradeoffload.resources",
+      "package": "com.samsung.android.wifi.saeupgradeoffload.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.softap.resources",
+      "package": "com.samsung.android.wifi.softap.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.softapdualap.resources",
+      "package": "com.samsung.android.wifi.softapdualap.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.softapowe.resources",
+      "package": "com.samsung.android.wifi.softapowe.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.softapqc.resources",
+      "package": "com.samsung.android.wifi.softapqc.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.softapsixghz.resources",
+      "package": "com.samsung.android.wifi.softapsixghz.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.samsung.android.wifi.softapwpathree.resources",
+      "package": "com.samsung.android.wifi.softapwpathree.resources",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Editor Lite",
+      "package": "com.samsung.app.newtrim",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "CMHProvider",
+      "package": "com.samsung.cmh",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Phone",
+      "package": "com.samsung.crane",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "DrmBigdata",
+      "package": "com.samsung.drm",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "DrmEventapp",
+      "package": "com.samsung.drmboost",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Shop",
+      "package": "com.samsung.ecomm.global.gbr",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungEuiccService",
+      "package": "com.samsung.euicc",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "FaceService",
+      "package": "com.samsung.faceservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung SM8750 GameDriver",
+      "package": "com.samsung.gamedriver.sm8750",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "GPUWatch",
+      "package": "com.samsung.gpuwatchapp",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Gestural Navigation Bar",
+      "package": "com.samsung.internal.systemui.navbar.gestural_no_hint",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Gestural Navigation Bar",
+      "package": "com.samsung.internal.systemui.navbar.sec_gestural",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Gestural Navigation Bar",
+      "package": "com.samsung.internal.systemui.navbar.sec_gestural_no_hint",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "IPService",
+      "package": "com.samsung.ipservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "KLMS Agent",
+      "package": "com.samsung.klmsagent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Secure Folder",
+      "package": "com.samsung.knox.securefolder",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "MediaSearch",
+      "package": "com.samsung.mediasearch",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "MFContents",
+      "package": "com.samsung.mfcontents",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "OdaAgent",
+      "package": "com.samsung.oda.agent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SamsungOdaService",
+      "package": "com.samsung.oda.service",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "PetService",
+      "package": "com.samsung.petservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Safety information",
+      "package": "com.samsung.safetyinformation",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SoHService",
+      "package": "com.samsung.sait.sohservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "CSC",
+      "package": "com.samsung.sec.android.application.csc",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Network unlock",
+      "package": "com.samsung.ssu",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Gallery stories",
+      "package": "com.samsung.storyservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Ts43AuthService",
+      "package": "com.samsung.ts43authservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "VideoScan",
+      "package": "com.samsung.videoscan",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Galaxy XR",
+      "package": "com.samsung.wearable.vstmanager",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "CcInfo",
+      "package": "com.sec.android.CcInfo",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Service mode RIL",
+      "package": "com.sec.android.RilServiceModeApp",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "PhoneNumberService",
+      "package": "com.sec.android.app.RilPhoneNumberService",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung setup wizard",
+      "package": "com.sec.android.app.SecSetupWizard",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Checkout",
+      "package": "com.sec.android.app.billing",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Bluetooth Agent",
+      "package": "com.sec.android.app.bluetoothagent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Camera",
+      "package": "com.sec.android.app.camera",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "ChromeCustomizations",
+      "package": "com.sec.android.app.chromecustomizations",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Clock",
+      "package": "com.sec.android.app.clockpackage",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "DeviceKeystring",
+      "package": "com.sec.android.app.factorykeystring",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "HwModuleTest",
+      "package": "com.sec.android.app.hwmoduletest",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Kids",
+      "package": "com.sec.android.app.kidshome",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "One UI Home",
+      "package": "com.sec.android.app.launcher",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Magnifier",
+      "package": "com.sec.android.app.magnifier",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "My Files",
+      "package": "com.sec.android.app.myfiles",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "NFC Test 1.9",
+      "package": "com.sec.android.app.nfctest",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "DRParser Mode",
+      "package": "com.sec.android.app.parser",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Perso",
+      "package": "com.sec.android.app.personalization",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Calculator",
+      "package": "com.sec.android.app.popupcalculator",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "com.sec.android.app.qsfastpairoverlay",
+      "package": "com.sec.android.app.qsfastpairoverlay",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Tools",
+      "package": "com.sec.android.app.quicktool",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Emergency sharing",
+      "package": "com.sec.android.app.safetyassurance",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Galaxy Store",
+      "package": "com.sec.android.app.samsungapps",
+      "system": true
+    },
+    {
+      "category": "social",
+      "name": "Samsung Internet",
+      "package": "com.sec.android.app.sbrowser",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Service mode",
+      "package": "com.sec.android.app.servicemodeapp",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SetupWizardLegalProvider",
+      "package": "com.sec.android.app.setupwizardlegalprovider",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Health",
+      "package": "com.sec.android.app.shealth",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "Sound quality and effects",
+      "package": "com.sec.android.app.soundalive",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "UwbTest",
+      "package": "com.sec.android.app.uwbtest",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Editing Assets",
+      "package": "com.sec.android.app.ve.vebgm",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Studio",
+      "package": "com.sec.android.app.vepreload",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Voice Recorder",
+      "package": "com.sec.android.app.voicenote",
+      "system": false
+    },
+    {
+      "category": "samsung",
+      "name": "VolumeMonitorProvider",
+      "package": "com.sec.android.app.volumemonitorprovider",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "WlanTest",
+      "package": "com.sec.android.app.wlantest",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Auto doodle",
+      "package": "com.sec.android.autodoodle.service",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Weather",
+      "package": "com.sec.android.daemonapp",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "DiagMonAgent",
+      "package": "com.sec.android.diagmonagent",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Smart Switch",
+      "package": "com.sec.android.easyMover",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Smart Switch Agent",
+      "package": "com.sec.android.easyMover.Agent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "EasyOneHand",
+      "package": "com.sec.android.easyonehand",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Launcher",
+      "package": "com.sec.android.emergencylauncher",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Gallery",
+      "package": "com.sec.android.gallery3d",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "iaft",
+      "package": "com.sec.android.iaft",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Avatar Stickers",
+      "package": "com.sec.android.mimage.avatarstickers",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Photo Editor",
+      "package": "com.sec.android.mimage.photoretouching",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "BadgeProvider",
+      "package": "com.sec.android.provider.badge",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Device Health Manager Service",
+      "package": "com.sec.android.sdhms",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SmartFPSAdjuster",
+      "package": "com.sec.android.smartfpsadjuster",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Software update",
+      "package": "com.sec.android.soagent",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Favourite Contacts",
+      "package": "com.sec.android.widgetapp.easymodecontactswidget",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "RilNotifier",
+      "package": "com.sec.app.RilErrorNotifier",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "TetheringAutomation",
+      "package": "com.sec.automation",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.sec.bcservice",
+      "package": "com.sec.bcservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Enrollment Service",
+      "package": "com.sec.enterprise.knox.cloudmdm.smdms",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.sec.epdg",
+      "package": "com.sec.epdg",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "EpdgTestApp",
+      "package": "com.sec.epdgtestapp",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "FacAtFunction",
+      "package": "com.sec.facatfunction",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "FactoryCamera",
+      "package": "com.sec.factory.camera",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Adapt sound",
+      "package": "com.sec.hearingadjust",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "ImsLogger",
+      "package": "com.sec.imslogger",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "IMS Service",
+      "package": "com.sec.imsservice",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Service provider location",
+      "package": "com.sec.location.nfwlocationprivacy",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Location SDK",
+      "package": "com.sec.location.nsflp2",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Auto Hotspot",
+      "package": "com.sec.mhs.smarttethering",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "SilentLogging",
+      "package": "com.sec.modem.settings",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "com.sec.phone",
+      "package": "com.sec.phone",
+      "system": true
+    },
+    {
+      "category": "social",
+      "name": "Samsung Push Service",
+      "package": "com.sec.spp.push",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Samsung Call Media",
+      "package": "com.sec.sve",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "Wi-Fi Calling",
+      "package": "com.sec.unifiedwfc",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "USBSettings",
+      "package": "com.sec.usbsettings",
+      "system": true
+    },
+    {
+      "category": "samsung",
+      "name": "NSDSWebApp",
+      "package": "com.sec.vsim.ericssonnsds.webapp",
+      "system": true
+    },
+    {
+      "name": "SEMFactoryApp",
+      "package": "com.sem.factoryapp",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Termius",
+      "package": "com.server.auditor.ssh.client",
+      "system": false
+    },
+    {
+      "name": "Canadian Tire",
+      "package": "com.simplygood.ct",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Bible",
+      "package": "com.sirma.mobile.bible.android",
+      "system": false
+    },
+    {
+      "name": "SKMSAgentService",
+      "package": "com.skms.android.agent",
+      "system": true
+    },
+    {
+      "category": "audio",
+      "name": "Spotify",
+      "package": "com.spotify.music",
+      "system": false
+    },
+    {
+      "name": "Starbucks",
+      "package": "com.starbucks.mobilecard",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Starlink",
+      "package": "com.starlink.mobile",
+      "system": false
+    },
+    {
+      "name": "Strava",
+      "package": "com.strava",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "my Sun Life",
+      "package": "com.sunlife.ca.mysunlife",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "TD (Canada)",
+      "package": "com.td",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "TD Bank (US)",
+      "package": "com.tdbank",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Checkup",
+      "package": "com.telus.checkup",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Public Mobile",
+      "package": "com.telus.publicmobile",
+      "system": false
+    },
+    {
+      "name": "Tesla",
+      "package": "com.teslamotors.tesla",
+      "system": false
+    },
+    {
+      "category": "news",
+      "name": "The Globe",
+      "package": "com.theglobeandmail.headliner",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Wise",
+      "package": "com.transferwise.android",
+      "system": false
+    },
+    {
+      "category": "maps",
+      "name": "Uber",
+      "package": "com.ubercab",
+      "system": false
+    },
+    {
+      "name": "Ultralytics HUB",
+      "package": "com.ultralytics.ultralytics_app",
+      "system": false
+    },
+    {
+      "name": "Steam",
+      "package": "com.valvesoftware.android.steam.community",
+      "system": false
+    },
+    {
+      "name": "Viator",
+      "package": "com.viator.mobile.android",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Wealthsimple",
+      "package": "com.wealthsimple.trade",
+      "system": false
+    },
+    {
+      "category": "social",
+      "name": "WhatsApp",
+      "package": "com.whatsapp",
+      "system": false
+    },
+    {
+      "name": "Windy",
+      "package": "com.windyty.android",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "WireGuard",
+      "package": "com.wireguard.android",
+      "system": false
+    },
+    {
+      "name": "Flipp",
+      "package": "com.wishabi.flipp",
+      "system": false
+    },
+    {
+      "name": "Withings",
+      "package": "com.withings.wiscale2",
+      "system": false
+    },
+    {
+      "name": "Configuration message",
+      "package": "com.wsomacp",
+      "system": true
+    },
+    {
+      "name": "Software update",
+      "package": "com.wssyncmldm",
+      "system": true
+    },
+    {
+      "category": "productivity",
+      "name": "Bitwarden",
+      "package": "com.x8bit.bitwarden",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Finance",
+      "package": "com.yahoo.mobile.client.android.finance",
+      "system": false
+    },
+    {
+      "category": "social",
+      "name": "TikTok",
+      "package": "com.zhiliaoapp.musically",
+      "system": false
+    },
+    {
+      "name": "Zillow",
+      "package": "com.zillow.android.zillowmap",
+      "system": false
+    },
+    {
+      "name": "MyChart",
+      "package": "epic.mychart.android",
+      "system": false
+    },
+    {
+      "name": "Home Assistant",
+      "package": "io.homeassistant.companion.android",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "PrivadoVPN",
+      "package": "io.privado.android",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Canon Print Service",
+      "package": "jp.co.canon.android.printservice.plugin",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Canon PRINT",
+      "package": "jp.co.canon.bsd.ad.pixmaprint",
+      "system": false
+    },
+    {
+      "category": "social",
+      "name": "VoIP.ms SMS",
+      "package": "net.kourlas.voipms_sms",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "nRF Connect",
+      "package": "no.nordicsemi.android.mcp",
+      "system": false
+    },
+    {
+      "category": "social",
+      "name": "Firefox",
+      "package": "org.mozilla.firefox",
+      "system": false
+    },
+    {
+      "category": "social",
+      "name": "Signal",
+      "package": "org.thoughtcrime.securesms",
+      "system": false
+    },
+    {
+      "category": "video",
+      "name": "VLC",
+      "package": "org.videolan.vlc",
+      "system": false
+    },
+    {
+      "category": "productivity",
+      "name": "Speedtest",
+      "package": "org.zwanoo.android.speedtest",
+      "system": false
+    },
+    {
+      "name": "Twitch",
+      "package": "tv.twitch.android.app",
+      "system": false
+    },
+    {
+      "category": "audio",
+      "name": "Mini Piano Lite",
+      "package": "umito.android.minipiano",
+      "system": false
+    },
+    {
+      "name": "TxPwrAdmin",
+      "package": "vendor.qti.data.txpwradmin",
+      "system": true
+    },
+    {
+      "name": "FrameworksUtilsApp",
+      "package": "vendor.qti.frameworks.utils",
+      "system": true
+    },
+    {
+      "name": "CACertApp",
+      "package": "vendor.qti.hardware.cacert.server",
+      "system": true
+    }
+  ]
+}

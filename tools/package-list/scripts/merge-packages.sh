@@ -53,7 +53,7 @@ for f in $JSON_FILES; do
 done
 echo ""
 
-echo -e "${GREEN}Merging packages (system apps only)...${NC}"
+echo -e "${GREEN}Merging packages (system apps + OEM apps)...${NC}"
 
 # Process each file: extract packages, add OEM, filter system only
 # Then merge all together
@@ -65,7 +65,7 @@ jq -s '
       # New format: extract OEM and map packages
       .device.manufacturer as $oem |
       .packages | map(
-        select(.system == true) |
+        select(.system == true or .category == "samsung") |
         {
           package: .package,
           name: .name,
