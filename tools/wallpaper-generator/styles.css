@@ -31,6 +31,25 @@ body {
     overflow-y: auto;
 }
 
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 12px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #e94560;
+}
+
+.back-link .material-icons {
+    font-size: 18px;
+}
+
 .panel-title {
     font-size: 18px;
     font-weight: 700;
