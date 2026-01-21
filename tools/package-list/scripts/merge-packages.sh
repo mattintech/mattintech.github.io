@@ -2,6 +2,7 @@
 #
 # Merge Package JSON Files
 # Combines multiple device exports into a single packages.json
+# Handles new format from Android app: { device: {...}, packages: [...] }
 # Merges OEM arrays for packages found on multiple devices
 #
 # Usage: ./merge-packages.sh
@@ -31,45 +32,80 @@ JSON_FILES=$(find "$DATA_DIR" -name "packages-*.json" -type f 2>/dev/null | sort
 
 if [ -z "$JSON_FILES" ]; then
     echo -e "${RED}No package files found in $DATA_DIR${NC}"
-    echo "Run ./collect-packages.sh first to collect packages from a device."
+    echo "Export packages from the Android app first."
     exit 1
 fi
 
 echo -e "${GREEN}Found package files:${NC}"
 for f in $JSON_FILES; do
-    COUNT=$(jq 'length' "$f")
-    echo -e "  ${YELLOW}$(basename "$f")${NC} ($COUNT packages)"
+    # Handle both old format (array) and new format (object with device/packages)
+    IS_NEW_FORMAT=$(jq 'has("device")' "$f")
+    if [ "$IS_NEW_FORMAT" = "true" ]; then
+        OEM=$(jq -r '.device.manufacturer' "$f")
+        MODEL=$(jq -r '.device.model' "$f")
+        COUNT=$(jq '.packages | length' "$f")
+        SYSTEM_COUNT=$(jq '[.packages[] | select(.system == true)] | length' "$f")
+        echo -e "  ${YELLOW}$(basename "$f")${NC} - $OEM $MODEL ($SYSTEM_COUNT system / $COUNT total)"
+    else
+        COUNT=$(jq 'length' "$f")
+        echo -e "  ${YELLOW}$(basename "$f")${NC} ($COUNT packages, old format)"
+    fi
 done
 echo ""
 
-echo -e "${GREEN}Merging packages...${NC}"
+echo -e "${GREEN}Merging packages (system apps only)...${NC}"
 
-# Merge all JSON files, combining OEMs for duplicate packages
+# Process each file: extract packages, add OEM, filter system only
+# Then merge all together
 jq -s '
+  # Process each input file
+  map(
+    # Check if new format (has device object) or old format (array)
+    if type == "object" and has("device") then
+      # New format: extract OEM and map packages
+      .device.manufacturer as $oem |
+      .packages | map(
+        select(.system == true) |
+        {
+          package: .package,
+          name: .name,
+          description: (.description // ""),
+          system: true,
+          oems: [$oem],
+          category: (.category // "other"),
+          playStore: (if .package | test("^com\\.google\\.android\\.apps\\.") then true elif .package | test("^com\\.android\\.chrome") then true else false end)
+        }
+      )
+    else
+      # Old format: already an array with oems
+      map(select(.system == true))
+    end
+  ) |
+  # Flatten all arrays into one
   flatten |
+  # Group by package name
   group_by(.package) |
+  # For each group, merge the entries
   map({
     package: .[0].package,
-    name: (if (map(select(.name != .package)) | length) > 0 then (map(select(.name != .package)) | .[0].name) else .[0].name end),
-    description: (if (map(select(.description != "")) | length) > 0 then (map(select(.description != "")) | .[0].description) else "" end),
-    system: (map(.system) | any),
+    name: (map(select(.name != .package)) | if length > 0 then .[0].name else .[0].name end),
+    description: (map(select(.description != null and .description != "")) | if length > 0 then .[0].description else "" end),
+    system: true,
     oems: (map(.oems) | flatten | unique | sort),
-    category: .[0].category,
+    category: (map(select(.category != null and .category != "other")) | if length > 0 then .[0].category else .[0].category end),
     playStore: (map(.playStore) | any)
   }) |
+  # Sort by package name
   sort_by(.package)
 ' $JSON_FILES > "$OUTPUT_FILE"
 
 TOTAL=$(jq 'length' "$OUTPUT_FILE")
-OEMS=$(jq '[.[].oems] | flatten | unique | sort' "$OUTPUT_FILE")
+OEMS=$(jq -r '[.[].oems] | flatten | unique | sort | join(", ")' "$OUTPUT_FILE")
+PLAY_STORE=$(jq '[.[] | select(.playStore == true)] | length' "$OUTPUT_FILE")
 
 echo -e "${GREEN}Done!${NC}"
 echo ""
 echo -e "Merged output: ${YELLOW}$OUTPUT_FILE${NC}"
-echo -e "Total unique packages: ${YELLOW}$TOTAL${NC}"
+echo -e "Total unique system packages: ${YELLOW}$TOTAL${NC}"
 echo -e "OEMs included: ${YELLOW}$OEMS${NC}"
-echo ""
-echo "Review the merged file and:"
-echo "  1. Fill in missing descriptions"
-echo "  2. Verify playStore flags"
-echo "  3. Check app names are correct"
+echo -e "With Play Store links: ${YELLOW}$PLAY_STORE${NC}"

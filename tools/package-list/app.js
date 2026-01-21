@@ -6,7 +6,6 @@
 let allPackages = [];
 let filteredPackages = [];
 let currentOemFilter = 'all';
-let currentCategoryFilter = 'all';
 let searchQuery = '';
 
 // DOM Elements
@@ -15,7 +14,6 @@ const packagesContainer = document.getElementById('packagesContainer');
 const resultsCount = document.getElementById('resultsCount');
 const statsContainer = document.getElementById('statsContainer');
 const oemFilters = document.getElementById('oemFilters');
-const categoryFilters = document.getElementById('categoryFilters');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -71,15 +69,6 @@ function setupEventListeners() {
       applyFilters();
     }
   });
-
-  // Category filter buttons
-  categoryFilters.addEventListener('click', (e) => {
-    if (e.target.matches('[data-category]')) {
-      currentCategoryFilter = e.target.dataset.category;
-      updateFilterButtonState(categoryFilters, e.target);
-      applyFilters();
-    }
-  });
 }
 
 /**
@@ -122,7 +111,7 @@ function applyFilters() {
     if (searchQuery) {
       const matchesSearch =
         pkg.package.toLowerCase().includes(searchQuery) ||
-        pkg.name.toLowerCase().includes(searchQuery) ||
+        (pkg.name && pkg.name.toLowerCase().includes(searchQuery)) ||
         (pkg.description && pkg.description.toLowerCase().includes(searchQuery));
       if (!matchesSearch) return false;
     }
@@ -130,11 +119,6 @@ function applyFilters() {
     // OEM filter
     if (currentOemFilter !== 'all') {
       if (!pkg.oems.includes(currentOemFilter)) return false;
-    }
-
-    // Category filter
-    if (currentCategoryFilter !== 'all') {
-      if (pkg.category !== currentCategoryFilter) return false;
     }
 
     return true;
@@ -149,11 +133,8 @@ function applyFilters() {
 function renderStats() {
   const totalPackages = allPackages.length;
   const oems = new Set();
-  const categories = {};
-
   allPackages.forEach(pkg => {
     pkg.oems.forEach(oem => oems.add(oem));
-    categories[pkg.category] = (categories[pkg.category] || 0) + 1;
   });
 
   const playStoreCount = allPackages.filter(p => p.playStore).length;
@@ -166,10 +147,6 @@ function renderStats() {
     <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-4 rounded-lg text-center">
       <div class="text-2xl font-bold">${oems.size}</div>
       <div class="text-xs opacity-90">OEMs Covered</div>
-    </div>
-    <div class="bg-gradient-to-br from-green-500 to-green-600 text-white p-4 rounded-lg text-center">
-      <div class="text-2xl font-bold">${Object.keys(categories).length}</div>
-      <div class="text-xs opacity-90">Categories</div>
     </div>
     <div class="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-4 rounded-lg text-center">
       <div class="text-2xl font-bold">${playStoreCount}</div>
@@ -209,10 +186,6 @@ function createPackageCard(pkg) {
     return `<span class="oem-badge ${oemClass}">${oem}</span>`;
   }).join('');
 
-  // Category badge
-  const categoryClass = `category-${pkg.category}`;
-  const categoryBadge = `<span class="category-badge ${categoryClass}">${pkg.category}</span>`;
-
   // Play Store button
   const playStoreBtn = pkg.playStore
     ? `<a href="https://play.google.com/store/apps/details?id=${encodeURIComponent(pkg.package)}"
@@ -231,9 +204,8 @@ function createPackageCard(pkg) {
 
   return `
     <div class="package-card bg-white rounded-lg shadow-md p-4">
-      <div class="flex justify-between items-start mb-2">
-        <h3 class="font-semibold text-gray-900">${escapeHtml(pkg.name)}</h3>
-        ${categoryBadge}
+      <div class="mb-2">
+        <h3 class="font-semibold text-gray-900">${escapeHtml(pkg.name || pkg.package)}</h3>
       </div>
 
       <div class="flex items-center gap-2 mb-3">
