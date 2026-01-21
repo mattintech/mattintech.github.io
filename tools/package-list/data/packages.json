@@ -1,0 +1,7649 @@
+[
+  {
+    "package": "android",
+    "name": "Android",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "android.auto_generated_characteristics_rro",
+    "name": "Auto_generated_characteristics_rro",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "android.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "android.auto_generated_rro_vendor__",
+    "name": "Auto_generated_rro_vendor__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "android.autoinstalls.config.google.nexus",
+    "name": "Nexus",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "android.autoinstalls.config.samsung",
+    "name": "Samsung",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.android.DeviceAsWebcam",
+    "name": "DeviceAsWebcam",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.angle",
+    "name": "Angle",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.apps.tag",
+    "name": "Tag",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.avatarpicker",
+    "name": "Avatarpicker",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.backupconfirm",
+    "name": "Backupconfirm",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.bips",
+    "name": "Bips",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.bips.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.bluetooth",
+    "name": "Bluetooth",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.bluetoothmidiservice",
+    "name": "Bluetoothmidiservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.bookmarkprovider",
+    "name": "Bookmarkprovider",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.calllogbackup",
+    "name": "Calllogbackup",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.cameraextensions",
+    "name": "Cameraextensions",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.captiveportallogin.overlay",
+    "name": "Overlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.carrierconfig",
+    "name": "Carrierconfig",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.carrierdefaultapp",
+    "name": "Carrierdefaultapp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.cellbroadcastreceiver",
+    "name": "Cellbroadcastreceiver",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.cellbroadcastreceiver.overlay.pixel",
+    "name": "Pixel",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.cellbroadcastservice.overlay.pixel",
+    "name": "Pixel",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.certinstaller",
+    "name": "Certinstaller",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.chrome",
+    "name": "Chrome",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": true
+  },
+  {
+    "package": "com.android.companiondevicemanager",
+    "name": "Companiondevicemanager",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.companiondevicemanager.auto_generated_characteristics_rro",
+    "name": "Auto_generated_characteristics_rro",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.compos.payload",
+    "name": "Payload",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.credentialmanager",
+    "name": "Credentialmanager",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.cts.ctsshim",
+    "name": "Ctsshim",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.cts.priv.ctsshim",
+    "name": "Ctsshim",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.devicediagnostics",
+    "name": "Devicediagnostics",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.devicediagnostics.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.devicediagnostics.auto_generated_rro_vendor__",
+    "name": "Auto_generated_rro_vendor__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.devicelockcontroller",
+    "name": "Devicelockcontroller",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.dreams.basic",
+    "name": "Basic",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.dreams.phototable",
+    "name": "Phototable",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.dynsystem",
+    "name": "Dynsystem",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.egg",
+    "name": "Egg",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.emergency",
+    "name": "Emergency",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.externalstorage",
+    "name": "Externalstorage",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.healthconnect.overlay",
+    "name": "Overlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.hotspot2.osulogin",
+    "name": "Osulogin",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.hotwordenrollment.okgoogle",
+    "name": "Okgoogle",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.hotwordenrollment.xgoogle",
+    "name": "Xgoogle",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.htmlviewer",
+    "name": "Htmlviewer",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.imsserviceentitlement",
+    "name": "Imsserviceentitlement",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.inputdevices",
+    "name": "Inputdevices",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.intentresolver",
+    "name": "Intentresolver",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.internal.display.cutout.emulation.avoidAppsInCutout",
+    "name": "AvoidAppsInCutout",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.internal.display.cutout.emulation.corner",
+    "name": "Corner",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.internal.display.cutout.emulation.double",
+    "name": "Double",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.internal.display.cutout.emulation.hole",
+    "name": "Hole",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.internal.display.cutout.emulation.noCutout",
+    "name": "NoCutout",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.internal.display.cutout.emulation.tall",
+    "name": "Tall",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.internal.display.cutout.emulation.waterfall",
+    "name": "Waterfall",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.internal.systemui.navbar.gestural",
+    "name": "Gestural",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.internal.systemui.navbar.threebutton",
+    "name": "Threebutton",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.internal.systemui.navbar.transparent",
+    "name": "Transparent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.keychain",
+    "name": "Keychain",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.localtransport",
+    "name": "Localtransport",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.location.fused",
+    "name": "Fused",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.managedprovisioning",
+    "name": "Managedprovisioning",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.managedprovisioning.overlay",
+    "name": "Overlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.microdroid.empty_payload",
+    "name": "Empty_payload",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.mms.service",
+    "name": "Service",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.mtp",
+    "name": "Mtp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.multiuser",
+    "name": "Multiuser",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.musicfx",
+    "name": "Musicfx",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.networkstack.overlay",
+    "name": "Overlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.nfc",
+    "name": "Nfc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.omadm.service",
+    "name": "Service",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.omadm.service.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.omadm.service.auto_generated_rro_vendor__",
+    "name": "Auto_generated_rro_vendor__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.ons",
+    "name": "Ons",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.pacprocessor",
+    "name": "Pacprocessor",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.phone",
+    "name": "Phone",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.phone.auto_generated_characteristics_rro",
+    "name": "Auto_generated_characteristics_rro",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.phone.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.phone.auto_generated_rro_vendor__",
+    "name": "Auto_generated_rro_vendor__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.pixeldisplayservice",
+    "name": "Pixeldisplayservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.pixeldisplayservice.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.printspooler",
+    "name": "Printspooler",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.blockednumber",
+    "name": "Blockednumber",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.calendar",
+    "name": "Calendar",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.contactkeys",
+    "name": "Contactkeys",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.contacts",
+    "name": "Contacts",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.contacts.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.downloads",
+    "name": "Downloads",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.downloads.ui",
+    "name": "Ui",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.media",
+    "name": "Media",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.media.overlay.pixel",
+    "name": "Pixel",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.partnerbookmarks",
+    "name": "Partnerbookmarks",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.settings",
+    "name": "Settings",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.settings.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.telephony",
+    "name": "Telephony",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.telephony.auto_generated_characteristics_rro",
+    "name": "Auto_generated_characteristics_rro",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.telephony.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.providers.userdictionary",
+    "name": "Userdictionary",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.proxyhandler",
+    "name": "Proxyhandler",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.qns",
+    "name": "Qns",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.role.notes.enabled",
+    "name": "Enabled",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.safetyregulatoryinfo",
+    "name": "Safetyregulatoryinfo",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.safetyregulatoryinfo.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.sdm.plugins.connmo",
+    "name": "Connmo",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.sdm.plugins.dcmo",
+    "name": "Dcmo",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.sdm.plugins.diagmon",
+    "name": "Diagmon",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.se",
+    "name": "Se",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.server.telecom",
+    "name": "Telecom",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.server.telecom.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.settings",
+    "name": "Settings",
+    "description": "Device settings and configuration",
+    "system": true,
+    "oems": [
+      "aosp",
+      "motorola",
+      "oneplus",
+      "pixel",
+      "samsung",
+      "xiaomi"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.settings.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.settings.auto_generated_rro_vendor__",
+    "name": "Auto_generated_rro_vendor__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.settings.intelligence",
+    "name": "Intelligence",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.settings.overlay.shiba",
+    "name": "Shiba",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.settings.shiba",
+    "name": "Shiba",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.sharedstoragebackup",
+    "name": "Sharedstoragebackup",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.shell",
+    "name": "Shell",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.simappdialog",
+    "name": "Simappdialog",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.simappdialog.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.soundpicker",
+    "name": "Soundpicker",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.stk",
+    "name": "Stk",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.stk2",
+    "name": "Stk2",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.storagemanager",
+    "name": "Storagemanager",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui",
+    "name": "Systemui",
+    "description": "Status bar, notification shade, and quick settings",
+    "system": true,
+    "oems": [
+      "aosp",
+      "motorola",
+      "oneplus",
+      "pixel",
+      "samsung",
+      "xiaomi"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.accessibility.accessibilitymenu",
+    "name": "Accessibilitymenu",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.accessibility.accessibilitymenu.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.auto_generated_rro_vendor__",
+    "name": "Auto_generated_rro_vendor__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.clocks.bignum",
+    "name": "Bignum",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.clocks.calligraphy",
+    "name": "Calligraphy",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.clocks.growth",
+    "name": "Growth",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.clocks.inflate",
+    "name": "Inflate",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.clocks.metro",
+    "name": "Metro",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.clocks.numoverlap",
+    "name": "Numoverlap",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.clocks.weather",
+    "name": "Weather",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.systemui.plugin.globalactions.wallet",
+    "name": "Wallet",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.telephony.imsmedia",
+    "name": "Imsmedia",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.theme.font.notoserifsource",
+    "name": "Notoserifsource",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.traceur",
+    "name": "Traceur",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.traceur.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.traceur.auto_generated_rro_vendor__",
+    "name": "Auto_generated_rro_vendor__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.uwb.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.vending",
+    "name": "Vending",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.virtualization.terminal",
+    "name": "Terminal",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.virtualmachine.res",
+    "name": "Res",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.vpndialogs",
+    "name": "Vpndialogs",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.wallpaper.livepicker",
+    "name": "Livepicker",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.wallpaperbackup",
+    "name": "Wallpaperbackup",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.wallpapercropper",
+    "name": "Wallpapercropper",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.wifi.dialog",
+    "name": "Dialog",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.wifi.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.android.yadayada",
+    "name": "Yadayada",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "android",
+    "playStore": false
+  },
+  {
+    "package": "com.facebook.appmanager",
+    "name": "Appmanager",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.facebook.services",
+    "name": "Services",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.facebook.system",
+    "name": "System",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.google.RilConfigService",
+    "name": "RilConfigService",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.SSRestartDetector",
+    "name": "SSRestartDetector",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.ambient.streaming",
+    "name": "Streaming",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.GoogleCamera",
+    "name": "GoogleCamera",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.accessibility.soundamplifier",
+    "name": "Soundamplifier",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.accessibility.switchaccess",
+    "name": "Switchaccess",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.adservices.api",
+    "name": "Api",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.aicore",
+    "name": "Aicore",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.apps.accessibility.voiceaccess",
+    "name": "Voiceaccess",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.aiwallpapers",
+    "name": "Aiwallpapers",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.bard",
+    "name": "Bard",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.betterbug",
+    "name": "Betterbug",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.camera.services",
+    "name": "Services",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.carrier.carrierwifi",
+    "name": "Carrierwifi",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.carrier.log",
+    "name": "Log",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.cbrsnetworkmonitor",
+    "name": "Cbrsnetworkmonitor",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.customization.pixel",
+    "name": "Pixel",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.diagnosticstool",
+    "name": "Diagnosticstool",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.docs",
+    "name": "Docs",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.dreamliner",
+    "name": "Dreamliner",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.emojiwallpaper",
+    "name": "Emojiwallpaper",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.internal.betterbug",
+    "name": "Betterbug",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.magicportrait",
+    "name": "Magicportrait",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.maps",
+    "name": "Maps",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.messaging",
+    "name": "Messaging",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.nbu.files",
+    "name": "Files",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.nexuslauncher",
+    "name": "Nexuslauncher",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.photos",
+    "name": "Photos",
+    "description": "Photo gallery, backup, and editing app",
+    "system": true,
+    "oems": [
+      "oneplus",
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.pixel.creativeassistant",
+    "name": "Creativeassistant",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.pixel.dcservice",
+    "name": "Dcservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.pixel.nowplaying",
+    "name": "Nowplaying",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.pixel.relationships",
+    "name": "Relationships",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.pixel.support",
+    "name": "Support",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.privacy.wildlife",
+    "name": "Wildlife",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.recorder",
+    "name": "Recorder",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.restore",
+    "name": "Restore",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.retaildemo.preload",
+    "name": "Preload",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.safetyhub",
+    "name": "Safetyhub",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.scone",
+    "name": "Scone",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.setupwizard.searchselector",
+    "name": "Searchselector",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.tachyon",
+    "name": "Tachyon",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.tips",
+    "name": "Tips",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.turbo",
+    "name": "Turbo",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.wallpaper",
+    "name": "Wallpaper",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.wallpaper.pixel",
+    "name": "Pixel",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.wearables.maestro.companion",
+    "name": "Companion",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.weather",
+    "name": "Weather",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.wellbeing",
+    "name": "Wellbeing",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.work.clouddpc",
+    "name": "Clouddpc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.work.oobconfig",
+    "name": "Oobconfig",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.apps.youtube.music",
+    "name": "Music",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.appsearch.apk",
+    "name": "Apk",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.as",
+    "name": "As",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.as.oss",
+    "name": "Oss",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.avatarpicker",
+    "name": "Avatarpicker",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.bluetooth",
+    "name": "Bluetooth",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.calculator",
+    "name": "Calculator",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.calendar",
+    "name": "Calendar",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.captiveportallogin",
+    "name": "Captiveportallogin",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.carrier",
+    "name": "Carrier",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.carrierlocation",
+    "name": "Carrierlocation",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.carriersetup",
+    "name": "Carriersetup",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.cellbroadcastreceiver",
+    "name": "Cellbroadcastreceiver",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.cellbroadcastservice",
+    "name": "Cellbroadcastservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.compos.payload",
+    "name": "Payload",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.configupdater",
+    "name": "Configupdater",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.connectivity.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.connectivity.resources.overlay",
+    "name": "Overlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.connectivitythermalpowermanager",
+    "name": "Connectivitythermalpowermanager",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.contacts",
+    "name": "Contacts",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.deskclock",
+    "name": "Deskclock",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.dialer",
+    "name": "Dialer",
+    "description": "Google's phone dialer with spam filtering",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.documentsui",
+    "name": "Documentsui",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.documentsui.theme.pixel",
+    "name": "Pixel",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.dreamlinerupdater",
+    "name": "Dreamlinerupdater",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.euicc",
+    "name": "Euicc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.euiccoverlay",
+    "name": "Euiccoverlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.ext.services",
+    "name": "Services",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.ext.shared",
+    "name": "Shared",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.factoryota",
+    "name": "Factoryota",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.federatedcompute",
+    "name": "Federatedcompute",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.feedback",
+    "name": "Feedback",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.flipendo",
+    "name": "Flipendo",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.flipendo.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.flipendo.auto_generated_rro_vendor__",
+    "name": "Auto_generated_rro_vendor__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.glasses.core",
+    "name": "Core",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.gm",
+    "name": "Gm",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.gms",
+    "name": "Gms",
+    "description": "Core Google services framework required by most apps",
+    "system": true,
+    "oems": [
+      "motorola",
+      "oneplus",
+      "pixel",
+      "samsung",
+      "xiaomi"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.gms.location.history",
+    "name": "History",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.gms.supervision",
+    "name": "Supervision",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.android.googlequicksearchbox",
+    "name": "Googlequicksearchbox",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.googlequicksearchbox.nga_resources",
+    "name": "Nga_resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.grilservice",
+    "name": "Grilservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.gsf",
+    "name": "Gsf",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.hardwareinfo",
+    "name": "Hardwareinfo",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.health.connect.backuprestore",
+    "name": "Backuprestore",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.healthconnect.controller",
+    "name": "Controller",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.hotspot2.osulogin",
+    "name": "Osulogin",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.inputmethod.latin",
+    "name": "Latin",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.iwlan",
+    "name": "Iwlan",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.markup",
+    "name": "Markup",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.marvin.talkback",
+    "name": "Talkback",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.microdroid.empty_payload",
+    "name": "Empty_payload",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.modulemetadata",
+    "name": "Modulemetadata",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.networkstack",
+    "name": "Networkstack",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.networkstack.tethering",
+    "name": "Tethering",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.networkstack.tethering.overlay",
+    "name": "Overlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.networkstack.tethering.overlay2021",
+    "name": "Overlay2021",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.nfc",
+    "name": "Nfc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.nfc.overlay",
+    "name": "Overlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.nfc.overlay.common",
+    "name": "Common",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.odad",
+    "name": "Odad",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.ondevicepersonalization.services",
+    "name": "Services",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.onetimeinitializer",
+    "name": "Onetimeinitializer",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.devicelockcontroller",
+    "name": "Devicelockcontroller",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.glanceablehubconfig",
+    "name": "Glanceablehubconfig",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.glanceablehubsettings",
+    "name": "Glanceablehubsettings",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.glanceablehubsettings2022",
+    "name": "Glanceablehubsettings2022",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.gmsconfig.asi",
+    "name": "Asi",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.gmsconfig.common",
+    "name": "Common",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.gmsconfig.geotz",
+    "name": "Geotz",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.gmsconfig.gsa",
+    "name": "Gsa",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.googleconfig",
+    "name": "Googleconfig",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.googlewebview",
+    "name": "Googlewebview",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.modules.captiveportallogin.forframework",
+    "name": "Forframework",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.modules.cellbroadcastreceiver",
+    "name": "Cellbroadcastreceiver",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.modules.cellbroadcastservice",
+    "name": "Cellbroadcastservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.modules.documentsui",
+    "name": "Documentsui",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.modules.ext.services",
+    "name": "Services",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.modules.healthfitness.forframework",
+    "name": "Forframework",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.modules.modulemetadata.forframework",
+    "name": "Forframework",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.modules.permissioncontroller",
+    "name": "Permissioncontroller",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.modules.permissioncontroller.forframework",
+    "name": "Forframework",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.permissioncontroller",
+    "name": "Permissioncontroller",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.permissioncontroller.safetycenter",
+    "name": "Safetycenter",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.pixelconfig2018",
+    "name": "Pixelconfig2018",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.pixelconfig2019",
+    "name": "Pixelconfig2019",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.pixelconfig2019midyear",
+    "name": "Pixelconfig2019midyear",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.pixelconfig2021",
+    "name": "Pixelconfig2021",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.pixelconfigcommon",
+    "name": "Pixelconfigcommon",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.trafficlightfaceoverlay",
+    "name": "Trafficlightfaceoverlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.overlay.udfpsoverlay",
+    "name": "Udfpsoverlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.packageinstaller",
+    "name": "Packageinstaller",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.partnersetup",
+    "name": "Partnersetup",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.pcs",
+    "name": "Pcs",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.permissioncontroller",
+    "name": "Permissioncontroller",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.photopicker",
+    "name": "Photopicker",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.pixel.avatarpicker",
+    "name": "Avatarpicker",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.pixel.setupwizard",
+    "name": "Setupwizard",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.pixel.setupwizard.overlay.expressive",
+    "name": "Expressive",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.pixelnfc",
+    "name": "Pixelnfc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.pixelsystemservice",
+    "name": "Pixelsystemservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.printservice.recommendation",
+    "name": "Recommendation",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.projection.gearhead",
+    "name": "Gearhead",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.providers.media.module",
+    "name": "Module",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.repairmode",
+    "name": "Repairmode",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.retaildemo",
+    "name": "Retaildemo",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.rilextension",
+    "name": "Rilextension",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.rkpdapp",
+    "name": "Rkpdapp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.safetycenter.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.sdksandbox",
+    "name": "Sdksandbox",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.server.deviceconfig.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.settings.future.biometrics.faceenroll",
+    "name": "Faceenroll",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.settings.intelligence",
+    "name": "Intelligence",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.settings.overlay.pixelvpnconfig",
+    "name": "Pixelvpnconfig",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.setupwizard",
+    "name": "Setupwizard",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.soundpicker",
+    "name": "Soundpicker",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.storagemanager",
+    "name": "Storagemanager",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.storagemanager.auto_generated_rro_product__",
+    "name": "Auto_generated_rro_product__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.storagemanager.auto_generated_rro_vendor__",
+    "name": "Auto_generated_rro_vendor__",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.syncadapters.calendar",
+    "name": "Calendar",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.systemui.gxoverlay",
+    "name": "Gxoverlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.systemui.overlay.glanceablehubconfig",
+    "name": "Glanceablehubconfig",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.systemui.overlay.pixelbatteryhealthconfig",
+    "name": "Pixelbatteryhealthconfig",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.systemui.overlay.pixelvpnconfig",
+    "name": "Pixelvpnconfig",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.tag",
+    "name": "Tag",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.telephony",
+    "name": "Telephony",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.tetheringentitlement",
+    "name": "Tetheringentitlement",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.tts",
+    "name": "Tts",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.turboadapter",
+    "name": "Turboadapter",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.uvexposurereporter",
+    "name": "Uvexposurereporter",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.uwb.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.verifier",
+    "name": "Verifier",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.verifier.overlay",
+    "name": "Overlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.videos",
+    "name": "Videos",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.virtualmachine.res",
+    "name": "Res",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.wallpaper.effects",
+    "name": "Effects",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.webview",
+    "name": "Webview",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.wfcactivation",
+    "name": "Wfcactivation",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.wifi.dialog",
+    "name": "Dialog",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.wifi.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.wifi.resources.pixel",
+    "name": "Pixel",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.android.youtube",
+    "name": "Youtube",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": true
+  },
+  {
+    "package": "com.google.ar.core",
+    "name": "Core",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.assistant.hubui",
+    "name": "Hubui",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.audio.hearing.visualization.accessibility.scribe",
+    "name": "Scribe",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.euiccpixel",
+    "name": "Euiccpixel",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.euiccpixel.overlay.zuma",
+    "name": "Zuma",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.euiccpixel.permissions",
+    "name": "Permissions",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.mainline.adservices",
+    "name": "Adservices",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.mainline.telemetry",
+    "name": "Telemetry",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel",
+      "samsung"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.omadm.trigger",
+    "name": "Trigger",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.pixel.camera.services",
+    "name": "Services",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.google.pixel.livewallpaper",
+    "name": "Livewallpaper",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "google",
+    "playStore": false
+  },
+  {
+    "package": "com.hiya.star",
+    "name": "Star",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.knox.vpn.proxyhandler",
+    "name": "Proxyhandler",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.microsoft.appmanager",
+    "name": "Appmanager",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.microsoft.skydrive",
+    "name": "Skydrive",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.monotype.android.font.foundation",
+    "name": "Foundation",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.monotype.android.font.roboto",
+    "name": "Roboto",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.monotype.android.font.samsungone",
+    "name": "Samsungone",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.osp.app.signin",
+    "name": "Signin",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.qti.qcc",
+    "name": "Qcc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "qualcomm",
+    "playStore": false
+  },
+  {
+    "package": "com.qti.snapdragon.qdcm_ff",
+    "name": "Qdcm_ff",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "qualcomm",
+    "playStore": false
+  },
+  {
+    "package": "com.qualcomm.location",
+    "name": "Location",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "qualcomm",
+    "playStore": false
+  },
+  {
+    "package": "com.qualcomm.qti.gpudrivers.sun.api35",
+    "name": "Api35",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "qualcomm",
+    "playStore": false
+  },
+  {
+    "package": "com.qualcomm.qti.qms.service.connectionsecurity",
+    "name": "QTI Connection Security",
+    "description": "Qualcomm modem security service",
+    "system": true,
+    "oems": [
+      "oneplus",
+      "pixel",
+      "samsung"
+    ],
+    "category": "qualcomm",
+    "playStore": false
+  },
+  {
+    "package": "com.qualcomm.qti.services.systemhelper",
+    "name": "Systemhelper",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "qualcomm",
+    "playStore": false
+  },
+  {
+    "package": "com.qualcomm.timeservice",
+    "name": "Timeservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "qualcomm",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.SMT",
+    "name": "SMT",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.SMT.lang_en_us_l03",
+    "name": "Lang_en_us_l03",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.SMT.lang_es_us_f00",
+    "name": "Lang_es_us_f00",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.SMT.lang_fr_ca_f00",
+    "name": "Lang_fr_ca_f00",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.aasaservice",
+    "name": "Aasaservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.accessibility",
+    "name": "Accessibility",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.accessory.budsunitemgr",
+    "name": "Budsunitemgr",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.advp.imssettings",
+    "name": "Imssettings",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.ConnectivityOverlay",
+    "name": "ConnectivityOverlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.ConnectivityUxOverlay",
+    "name": "ConnectivityUxOverlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.accessibility.talkback",
+    "name": "Talkback",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.aicore",
+    "name": "Aicore",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.aircommandmanager",
+    "name": "Aircommandmanager",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.allshare.service.mediashare",
+    "name": "Mediashare",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.aodservice",
+    "name": "Aodservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.camera.sticker.facearavatar.preload",
+    "name": "Preload",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.clipboardedge",
+    "name": "Clipboardedge",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.contacts",
+    "name": "Contacts",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.dofviewer",
+    "name": "Dofviewer",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.dressroom",
+    "name": "Dressroom",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.earphonetypec",
+    "name": "Earphonetypec",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.esimkeystring",
+    "name": "Esimkeystring",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.interpreter",
+    "name": "Interpreter",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.moments",
+    "name": "Moments",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.omcagent",
+    "name": "Omcagent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.parentalcare",
+    "name": "Parentalcare",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.routines",
+    "name": "Routines",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.sharelive",
+    "name": "Sharelive",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.sketchbook",
+    "name": "Sketchbook",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.smartcapture",
+    "name": "Smartcapture",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.soundpicker",
+    "name": "Soundpicker",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.taskedge",
+    "name": "Taskedge",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.telephonyui",
+    "name": "Telephonyui",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.telephonyui.esimclient",
+    "name": "Esimclient",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.updatecenter",
+    "name": "Updatecenter",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.vex.scanner",
+    "name": "Scanner",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.app.watchmanagerstub",
+    "name": "Watchmanagerstub",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.appseparation",
+    "name": "Appseparation",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.aremoji",
+    "name": "Aremoji",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.aremojieditor",
+    "name": "Aremojieditor",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.audiomirroring",
+    "name": "Audiomirroring",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.authfw",
+    "name": "Authfw",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.aware.service",
+    "name": "Service",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.bbc.bbcagent",
+    "name": "Bbcagent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.beaconmanager",
+    "name": "Beaconmanager",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.biometrics.app.setting",
+    "name": "Setting",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.bixby.agent",
+    "name": "Agent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.bixby.wakeup",
+    "name": "Wakeup",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.bixbyvision.framework",
+    "name": "Framework",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.bluelightfilter",
+    "name": "Bluelightfilter",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.brightnessbackupservice",
+    "name": "Brightnessbackupservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.callassistant",
+    "name": "Callassistant",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.callbgprovider",
+    "name": "Callbgprovider",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.camerasdkservice",
+    "name": "Camerasdkservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.cameraxservice",
+    "name": "Cameraxservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.carkey",
+    "name": "Carkey",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.cidmanager",
+    "name": "Cidmanager",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.coldwalletservice",
+    "name": "Coldwalletservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.container",
+    "name": "Container",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.da.daagent",
+    "name": "Daagent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.dbsc",
+    "name": "Dbsc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.dck.timesync",
+    "name": "Timesync",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.dialer",
+    "name": "Dialer",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.dkey",
+    "name": "Dkey",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.dqagent",
+    "name": "Dqagent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.dsms",
+    "name": "Dsms",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.dynamiclock",
+    "name": "Dynamiclock",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.easysetup",
+    "name": "Easysetup",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.emergency",
+    "name": "Emergency",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.ese",
+    "name": "Ese",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.fast",
+    "name": "Fast",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.fmm",
+    "name": "Fmm",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.forest",
+    "name": "Forest",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.game.gametools",
+    "name": "Gametools",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.game.gos",
+    "name": "Gos",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.globalpostprocmgr",
+    "name": "Globalpostprocmgr",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.gru",
+    "name": "Gru",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.hdmapp",
+    "name": "Hdmapp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.honeyboard",
+    "name": "Honeyboard",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.hwresourceshare",
+    "name": "Hwresourceshare",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.hwresourceshare.storage",
+    "name": "Storage",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.incallui",
+    "name": "Incallui",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.inputshare",
+    "name": "Inputshare",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.intellivoiceservice",
+    "name": "Intellivoiceservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.internal.overlay.config.default_contextual_search",
+    "name": "Default_contextual_search",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.ipsgeofence",
+    "name": "Ipsgeofence",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.kgclient",
+    "name": "Kgclient",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.kidsinstaller",
+    "name": "Kidsinstaller",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.kmxservice",
+    "name": "Kmxservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.analytics.uploader",
+    "name": "Uploader",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.app.networkfilter",
+    "name": "Networkfilter",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.attestation",
+    "name": "Attestation",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.containercore",
+    "name": "Containercore",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.er",
+    "name": "Er",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.kfbp",
+    "name": "Kfbp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.knnr",
+    "name": "Knnr",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.kpecore",
+    "name": "Kpecore",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.mpos",
+    "name": "Mpos",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.pushmanager",
+    "name": "Pushmanager",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.sandbox",
+    "name": "Sandbox",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.knox.zt.framework",
+    "name": "Framework",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.liveeffectservice",
+    "name": "Liveeffectservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.location",
+    "name": "Location",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.lool",
+    "name": "Lool",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mapsagent",
+    "name": "Mapsagent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mcfds",
+    "name": "Mcfds",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mcfserver",
+    "name": "Mcfserver",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mdecservice",
+    "name": "Mdecservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mdm",
+    "name": "Mdm",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mdx",
+    "name": "Mdx",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mdx.kit",
+    "name": "Kit",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mhs.ai",
+    "name": "Ai",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.moaiapc",
+    "name": "Moaiapc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mobileservice",
+    "name": "Mobileservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mocca",
+    "name": "Mocca",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.motionphoto.app",
+    "name": "App",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mtp",
+    "name": "Mtp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.mydevice",
+    "name": "Mydevice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.net.wifi.wifiguider",
+    "name": "Wifiguider",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.networkdiagnostic",
+    "name": "Networkdiagnostic",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.networkstack",
+    "name": "Networkstack",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.networkstack.tethering.overlay",
+    "name": "Overlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.nfc",
+    "name": "Nfc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.nfc.resources.default",
+    "name": "Default",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.offline.languagemodel",
+    "name": "Languagemodel",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.oneconnect",
+    "name": "SmartThings",
+    "description": "Samsung smart home and IoT control hub",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": true
+  },
+  {
+    "package": "com.samsung.android.photoremasterservice",
+    "name": "Photoremasterservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.privacydashboard",
+    "name": "Privacydashboard",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.privateaccesstokens",
+    "name": "Privateaccesstokens",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.provider.filterprovider",
+    "name": "Filterprovider",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.providers.contacts",
+    "name": "Contacts",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.providers.factory",
+    "name": "Factory",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.providers.media",
+    "name": "Media",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.providers.trash",
+    "name": "Trash",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.qmdservice",
+    "name": "Qmdservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.rampart",
+    "name": "Rampart",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.rubin.app",
+    "name": "App",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.samsungpass",
+    "name": "Samsungpass",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.samsungpassautofill",
+    "name": "Samsungpassautofill",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.samsungpositioning",
+    "name": "Samsungpositioning",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.scloud",
+    "name": "Scloud",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.scpm",
+    "name": "Scpm",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.scs",
+    "name": "Scs",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.sdk.handwriting",
+    "name": "Handwriting",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.sdk.ocr",
+    "name": "Ocr",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.sdm.config",
+    "name": "Config",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.sead",
+    "name": "Sead",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.secsoundpicker",
+    "name": "Secsoundpicker",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.server.wifi.mobilewips",
+    "name": "Mobilewips",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.service.peoplestripe",
+    "name": "Peoplestripe",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.service.stplatform",
+    "name": "Stplatform",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.service.tagservice",
+    "name": "Tagservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.setting.multisound",
+    "name": "Multisound",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.settingshelper",
+    "name": "Settingshelper",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.shortcutbackupservice",
+    "name": "Shortcutbackupservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.simagent",
+    "name": "Simagent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.singletake.service",
+    "name": "Service",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.smartcallprovider",
+    "name": "Smartcallprovider",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.smartface",
+    "name": "Smartface",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.smartface.overlay",
+    "name": "Overlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.smartmirroring",
+    "name": "Smartmirroring",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.smartsuggestions",
+    "name": "Smartsuggestions",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.smartswitchassistant",
+    "name": "Smartswitchassistant",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.spayfw",
+    "name": "Spayfw",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.ssco",
+    "name": "Ssco",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.stickercenter",
+    "name": "Stickercenter",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.svcagent",
+    "name": "Svcagent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.themecenter",
+    "name": "Themecenter",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.themestore",
+    "name": "Themestore",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.uwb.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.vexfwk.service",
+    "name": "Service",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.video",
+    "name": "Video",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.vision.model",
+    "name": "Model",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.visionintelligence",
+    "name": "Visionintelligence",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.visual.cloudcore",
+    "name": "Cloudcore",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.visualars",
+    "name": "Visualars",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.vtcamerasettings",
+    "name": "Vtcamerasettings",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wallpaper.live",
+    "name": "Live",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wallpaper.res",
+    "name": "Res",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wcmurlsnetworkstack",
+    "name": "Wcmurlsnetworkstack",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.widget.pictureframe",
+    "name": "Pictureframe",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.ai",
+    "name": "Ai",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.decrease.scan.interval.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.h2e.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.increase.scan.interval.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.intelligence",
+    "name": "Intelligence",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.largetcpbuffer.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.p2paware.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.resources.qc",
+    "name": "Qc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.resources.wifilock",
+    "name": "Wifilock",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.saeupgradeoffload.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.softap.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.softapdualap.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.softapowe.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.softapqc.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.softapsixghz.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.android.wifi.softapwpathree.resources",
+    "name": "Resources",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.app.newtrim",
+    "name": "Newtrim",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.cmh",
+    "name": "Cmh",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.crane",
+    "name": "Crane",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.drm",
+    "name": "Drm",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.drmboost",
+    "name": "Drmboost",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.euicc",
+    "name": "Euicc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.faceservice",
+    "name": "Faceservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.gamedriver.sm8750",
+    "name": "Sm8750",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.gpuwatchapp",
+    "name": "Gpuwatchapp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.internal.systemui.navbar.gestural_no_hint",
+    "name": "Gestural_no_hint",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.internal.systemui.navbar.sec_gestural",
+    "name": "Sec_gestural",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.internal.systemui.navbar.sec_gestural_no_hint",
+    "name": "Sec_gestural_no_hint",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.ipservice",
+    "name": "Ipservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.klmsagent",
+    "name": "Klmsagent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.knox.securefolder",
+    "name": "Securefolder",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.mediasearch",
+    "name": "Mediasearch",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.mfcontents",
+    "name": "Mfcontents",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.oda.agent",
+    "name": "Agent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.oda.service",
+    "name": "Service",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.petservice",
+    "name": "Petservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.safetyinformation",
+    "name": "Safetyinformation",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.sait.sohservice",
+    "name": "Sohservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.sec.android.application.csc",
+    "name": "Csc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.slsi.telephony.oem.oemrilhookservice",
+    "name": "Oemrilhookservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.slsi.telephony.oemril",
+    "name": "Oemril",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.ssu",
+    "name": "Ssu",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.storyservice",
+    "name": "Storyservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.ts43authservice",
+    "name": "Ts43authservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.samsung.videoscan",
+    "name": "Videoscan",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.CcInfo",
+    "name": "CcInfo",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.RilServiceModeApp",
+    "name": "RilServiceModeApp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.RilPhoneNumberService",
+    "name": "RilPhoneNumberService",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.SecSetupWizard",
+    "name": "SecSetupWizard",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.billing",
+    "name": "Billing",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.bluetoothagent",
+    "name": "Bluetoothagent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.camera",
+    "name": "Camera",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.chromecustomizations",
+    "name": "Chromecustomizations",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.factorykeystring",
+    "name": "Factorykeystring",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.hwmoduletest",
+    "name": "Hwmoduletest",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.launcher",
+    "name": "Launcher",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.magnifier",
+    "name": "Magnifier",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.myfiles",
+    "name": "Myfiles",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.nfctest",
+    "name": "Nfctest",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.parser",
+    "name": "Parser",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.personalization",
+    "name": "Personalization",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.qsfastpairoverlay",
+    "name": "Qsfastpairoverlay",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.quicktool",
+    "name": "Quicktool",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.safetyassurance",
+    "name": "Safetyassurance",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.samsungapps",
+    "name": "Samsungapps",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.sbrowser",
+    "name": "Samsung Internet",
+    "description": "Samsung's web browser with ad blocking",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": true
+  },
+  {
+    "package": "com.sec.android.app.servicemodeapp",
+    "name": "Servicemodeapp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.setupwizardlegalprovider",
+    "name": "Setupwizardlegalprovider",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.soundalive",
+    "name": "Soundalive",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.uwbtest",
+    "name": "Uwbtest",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.ve.vebgm",
+    "name": "Vebgm",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.vepreload",
+    "name": "Vepreload",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.volumemonitorprovider",
+    "name": "Volumemonitorprovider",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.app.wlantest",
+    "name": "Wlantest",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.autodoodle.service",
+    "name": "Service",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.daemonapp",
+    "name": "Daemonapp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.diagmonagent",
+    "name": "Diagmonagent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.easyMover",
+    "name": "EasyMover",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.easyMover.Agent",
+    "name": "Agent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.easyonehand",
+    "name": "Easyonehand",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.emergencylauncher",
+    "name": "Emergencylauncher",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.gallery3d",
+    "name": "Gallery3d",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.iaft",
+    "name": "Iaft",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.mimage.avatarstickers",
+    "name": "Avatarstickers",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.mimage.photoretouching",
+    "name": "Photoretouching",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.provider.badge",
+    "name": "Badge",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.sdhms",
+    "name": "Sdhms",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.smartfpsadjuster",
+    "name": "Smartfpsadjuster",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.soagent",
+    "name": "Soagent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.android.widgetapp.easymodecontactswidget",
+    "name": "Easymodecontactswidget",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.app.RilErrorNotifier",
+    "name": "RilErrorNotifier",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.automation",
+    "name": "Automation",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.bcservice",
+    "name": "Bcservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.enterprise.knox.cloudmdm.smdms",
+    "name": "Smdms",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.epdg",
+    "name": "Epdg",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.epdgtestapp",
+    "name": "Epdgtestapp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.facatfunction",
+    "name": "Facatfunction",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.factory.camera",
+    "name": "Camera",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.hearingadjust",
+    "name": "Hearingadjust",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.imslogger",
+    "name": "Imslogger",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.imsservice",
+    "name": "Imsservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.location.nfwlocationprivacy",
+    "name": "Nfwlocationprivacy",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.location.nsflp2",
+    "name": "Nsflp2",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.mhs.smarttethering",
+    "name": "Smarttethering",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.modem.settings",
+    "name": "Settings",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.phone",
+    "name": "Phone",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.spp.push",
+    "name": "Push",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.sve",
+    "name": "Sve",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.unifiedwfc",
+    "name": "Unifiedwfc",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.usbsettings",
+    "name": "Usbsettings",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sec.vsim.ericssonnsds.webapp",
+    "name": "Webapp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
+    "package": "com.sem.factoryapp",
+    "name": "Factoryapp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.shannon.imsservice",
+    "name": "Imsservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.shannon.rcsservice",
+    "name": "Rcsservice",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.skms.android.agent",
+    "name": "Agent",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.telus.checkup",
+    "name": "Checkup",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.verizon.mips.services",
+    "name": "Services",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.verizon.services",
+    "name": "Services",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.vzw.apnlib",
+    "name": "Apnlib",
+    "description": "",
+    "system": true,
+    "oems": [
+      "pixel"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.wsomacp",
+    "name": "Wsomacp",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "com.wssyncmldm",
+    "name": "Wssyncmldm",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "vendor.qti.data.txpwradmin",
+    "name": "Txpwradmin",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "vendor.qti.frameworks.utils",
+    "name": "Utils",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  },
+  {
+    "package": "vendor.qti.hardware.cacert.server",
+    "name": "Server",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "other",
+    "playStore": false
+  }
+]
