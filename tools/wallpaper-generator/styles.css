@@ -721,3 +721,60 @@ input[type="file"] {
     background: rgba(233, 69, 96, 0.2);
     border-color: #e94560;
 }
+
+/* Contribute Section */
+.contribute-section {
+    margin-top: 30px;
+}
+
+.contribute-section h3 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #a78bfa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contribute-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(167, 139, 250, 0.1) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contribute-card p {
+    font-size: 12px;
+    color: #c4b5fd;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.contribute-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contribute-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 6px;
+    color: #c4b5fd;
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.contribute-btn:hover {
+    background: rgba(139, 92, 246, 0.3);
+    border-color: rgba(139, 92, 246, 0.6);
+    color: #ddd6fe;
+}
+
+.contribute-btn .material-icons {
+    font-size: 16px;
+}
