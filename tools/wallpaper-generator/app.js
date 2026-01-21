@@ -823,15 +823,22 @@ async function exportImage() {
             ctx.drawImage(img, left, top, width, height);
         } else if (element.dataset.type === 'text') {
             const fontSize = parseFloat(element.style.fontSize) / scale;
+            const padding = 5 / scale; // Account for CSS padding on .text-element
             ctx.font = `${element.dataset.weight} ${fontSize}px ${element.dataset.font}`;
             ctx.fillStyle = element.dataset.color;
-            ctx.fillText(element.dataset.text, left + 5, top + fontSize);
+            ctx.textBaseline = 'top';
+            ctx.fillText(element.dataset.text, left + padding, top + padding);
         } else if (element.dataset.type === 'icon') {
-            const size = element.offsetWidth / scale;
+            const width = element.offsetWidth / scale;
+            const height = element.offsetHeight / scale;
+            const size = parseFloat(element.style.fontSize) / scale;
             ctx.font = `${size}px Material Icons`;
             ctx.fillStyle = element.dataset.color;
-            ctx.textBaseline = 'top';
-            ctx.fillText(element.dataset.icon, left, top);
+            // Center icon within its container (matches CSS flexbox centering)
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(element.dataset.icon, left + width / 2, top + height / 2);
+            ctx.textAlign = 'left'; // Reset for other elements
         } else if (element.dataset.type === 'shape') {
             const width = element.offsetWidth / scale;
             const height = element.offsetHeight / scale;

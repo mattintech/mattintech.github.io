@@ -314,6 +314,7 @@ input[type="file"] {
 .text-element {
     white-space: nowrap;
     padding: 5px;
+    line-height: 1;
 }
 
 .icon-element {
