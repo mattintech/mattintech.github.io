@@ -666,3 +666,39 @@ input[type="file"] {
 .no-selection.hidden {
     display: none;
 }
+
+/* Grid Overlay */
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 9997;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Control divider */
+.control-divider {
+    width: 1px;
+    height: 24px;
+    background: #0f3460;
+    margin: 0 5px;
+    align-self: center;
+}
+
+/* Undo/Redo button states */
+#undoBtn:disabled,
+#redoBtn:disabled {
+    cursor: not-allowed;
+}
+
+/* Grid toggle active state */
+#gridBtn.active {
+    background: rgba(233, 69, 96, 0.2);
+    border-color: #e94560;
+}

@@ -8,6 +8,15 @@ let elements = [];
 let selectedElement = null;
 let zIndexCounter = 1;
 
+// Undo/Redo History
+let historyStack = [];
+let historyIndex = -1;
+const MAX_HISTORY = 50;
+
+// Grid state
+let gridVisible = false;
+let gridSize = 50; // pixels in canvas coordinates
+
 // Material Design Icons (common ones)
 const materialIcons = [
     'home', 'settings', 'search', 'menu', 'close', 'check', 'add', 'remove',
@@ -64,7 +73,15 @@ function initCanvas() {
     // Create canvas center guide lines
     createCanvasCenterGuides();
 
+    // Create grid overlay
+    createGridOverlay();
+
     renderCanvas();
+
+    // Save initial state if history is empty
+    if (historyStack.length === 0) {
+        saveState();
+    }
 }
 
 function renderCanvas() {
@@ -144,23 +161,56 @@ function setupEventListeners() {
         }
     });
 
-    // Keyboard delete
+    // Keyboard shortcuts
     document.addEventListener('keydown', (e) => {
-        if ((e.key === 'Delete' || e.key === 'Backspace') && selectedElement &&
-            document.activeElement.tagName !== 'INPUT' &&
-            document.activeElement.tagName !== 'TEXTAREA') {
+        const isInputFocused = document.activeElement.tagName === 'INPUT' ||
+            document.activeElement.tagName === 'TEXTAREA';
+
+        // Delete selected element
+        if ((e.key === 'Delete' || e.key === 'Backspace') && selectedElement && !isInputFocused) {
             deleteSelected();
+        }
+
+        // Undo: Ctrl+Z (Windows/Linux) or Cmd+Z (Mac)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'z' && !e.shiftKey && !isInputFocused) {
+            e.preventDefault();
+            undo();
+        }
+
+        // Redo: Ctrl+Y or Ctrl+Shift+Z (Windows/Linux) or Cmd+Shift+Z (Mac)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 'y' || (e.key === 'z' && e.shiftKey)) && !isInputFocused) {
+            e.preventDefault();
+            redo();
+        }
+
+        // Toggle grid: G key
+        if (e.key === 'g' && !isInputFocused) {
+            toggleGrid();
         }
     });
 
     // Opacity slider
+    let opacityChangeTimeout;
     document.getElementById('elementOpacity').addEventListener('input', (e) => {
         const value = e.target.value;
         document.getElementById('opacityValue').textContent = value + '%';
         if (selectedElement) {
             selectedElement.style.opacity = value / 100;
             selectedElement.dataset.opacity = value;
+
+            // Debounce save state for slider changes
+            clearTimeout(opacityChangeTimeout);
+            opacityChangeTimeout = setTimeout(() => saveState(), 300);
         }
+    });
+
+    // Background color change - save state
+    let bgChangeTimeout;
+    const bgColorInput = document.getElementById('bgColor');
+    const originalBgHandler = bgColorInput.oninput;
+    bgColorInput.addEventListener('change', () => {
+        clearTimeout(bgChangeTimeout);
+        bgChangeTimeout = setTimeout(() => saveState(), 300);
     });
 }
 
@@ -173,6 +223,309 @@ function updateTextPreview() {
     textInput.style.fontFamily = font;
     textInput.style.color = color;
     textInput.style.fontWeight = weight;
+}
+
+// ============================================
+// UNDO/REDO HISTORY SYSTEM
+// ============================================
+
+function captureState() {
+    const wrapper = document.getElementById('canvasWrapper');
+    const scale = parseFloat(wrapper.style.width) / canvasWidth;
+
+    const state = {
+        bgColor: document.getElementById('bgColor').value,
+        canvasWidth: canvasWidth,
+        canvasHeight: canvasHeight,
+        zIndexCounter: zIndexCounter,
+        elements: elements.map(el => ({
+            type: el.dataset.type,
+            left: el.style.left,
+            top: el.style.top,
+            width: el.style.width,
+            height: el.style.height,
+            zIndex: el.style.zIndex,
+            opacity: el.dataset.opacity || '100',
+            // Type-specific data
+            ...(el.dataset.type === 'text' && {
+                text: el.dataset.text,
+                font: el.dataset.font,
+                size: el.dataset.size,
+                color: el.dataset.color,
+                weight: el.dataset.weight,
+                fontSize: el.style.fontSize
+            }),
+            ...(el.dataset.type === 'icon' && {
+                icon: el.dataset.icon,
+                size: el.dataset.size,
+                color: el.dataset.color,
+                fontSize: el.style.fontSize
+            }),
+            ...(el.dataset.type === 'image' && {
+                src: el.dataset.src,
+                originalWidth: el.dataset.originalWidth,
+                originalHeight: el.dataset.originalHeight
+            }),
+            ...(el.dataset.type === 'shape' && {
+                shapeType: el.dataset.shapeType,
+                fillColor: el.dataset.fillColor,
+                strokeColor: el.dataset.strokeColor,
+                strokeWidth: el.dataset.strokeWidth
+            })
+        }))
+    };
+    return state;
+}
+
+function saveState() {
+    // Remove any redo states
+    if (historyIndex < historyStack.length - 1) {
+        historyStack = historyStack.slice(0, historyIndex + 1);
+    }
+
+    // Capture current state
+    const state = captureState();
+    historyStack.push(state);
+
+    // Limit history size
+    if (historyStack.length > MAX_HISTORY) {
+        historyStack.shift();
+    } else {
+        historyIndex++;
+    }
+
+    updateUndoRedoButtons();
+}
+
+function restoreState(state) {
+    // Clear current elements
+    elements.forEach(el => el.remove());
+    elements = [];
+
+    // Restore background color
+    document.getElementById('bgColor').value = state.bgColor;
+    document.getElementById('bgColorHex').value = state.bgColor;
+    renderCanvas();
+
+    // Restore canvas size if changed
+    if (state.canvasWidth !== canvasWidth || state.canvasHeight !== canvasHeight) {
+        canvasWidth = state.canvasWidth;
+        canvasHeight = state.canvasHeight;
+        initCanvas();
+    }
+
+    zIndexCounter = state.zIndexCounter;
+
+    const wrapper = document.getElementById('canvasWrapper');
+    const scale = parseFloat(wrapper.style.width) / canvasWidth;
+
+    // Recreate elements
+    state.elements.forEach(elData => {
+        let element;
+
+        switch (elData.type) {
+            case 'text':
+                element = document.createElement('div');
+                element.className = 'canvas-element text-element';
+                element.style.fontFamily = elData.font;
+                element.style.fontSize = elData.fontSize;
+                element.style.color = elData.color;
+                element.style.fontWeight = elData.weight;
+                element.textContent = elData.text;
+                element.innerHTML += `
+                    <div class="resize-handle se"></div>
+                    <button class="delete-btn" onclick="deleteElement(this.parentElement)">&times;</button>
+                `;
+                element.dataset.type = 'text';
+                element.dataset.text = elData.text;
+                element.dataset.font = elData.font;
+                element.dataset.size = elData.size;
+                element.dataset.color = elData.color;
+                element.dataset.weight = elData.weight;
+                break;
+
+            case 'icon':
+                element = document.createElement('div');
+                element.className = 'canvas-element icon-element';
+                element.style.fontSize = elData.fontSize;
+                element.style.color = elData.color;
+                element.innerHTML = `
+                    <span class="material-icons">${elData.icon}</span>
+                    <div class="resize-handle se"></div>
+                    <button class="delete-btn" onclick="deleteElement(this.parentElement)">&times;</button>
+                `;
+                element.dataset.type = 'icon';
+                element.dataset.icon = elData.icon;
+                element.dataset.size = elData.size;
+                element.dataset.color = elData.color;
+                break;
+
+            case 'image':
+                element = document.createElement('div');
+                element.className = 'canvas-element image-element';
+                element.innerHTML = `
+                    <img src="${elData.src}" draggable="false">
+                    <div class="resize-handle se"></div>
+                    <button class="delete-btn" onclick="deleteElement(this.parentElement)">&times;</button>
+                `;
+                element.dataset.type = 'image';
+                element.dataset.src = elData.src;
+                element.dataset.originalWidth = elData.originalWidth;
+                element.dataset.originalHeight = elData.originalHeight;
+                break;
+
+            case 'shape':
+                element = document.createElement('div');
+                element.className = 'canvas-element shape-element';
+                const sw = parseInt(elData.strokeWidth);
+                const offset = sw / 2;
+                let svgContent = '';
+
+                switch (elData.shapeType) {
+                    case 'rectangle':
+                        svgContent = `<rect x="${offset}" y="${offset}" width="calc(100% - ${sw}px)" height="calc(100% - ${sw}px)"
+                            fill="${elData.fillColor}" stroke="${elData.strokeColor}" stroke-width="${elData.strokeWidth}"
+                            style="width: calc(100% - ${sw}px); height: calc(100% - ${sw}px);"/>`;
+                        break;
+                    case 'circle':
+                        svgContent = `<ellipse cx="50%" cy="50%" rx="calc(50% - ${offset}px)" ry="calc(50% - ${offset}px)"
+                            fill="${elData.fillColor}" stroke="${elData.strokeColor}" stroke-width="${elData.strokeWidth}"/>`;
+                        break;
+                    case 'triangle':
+                        svgContent = `<polygon points="50,${offset} ${100 - offset},${100 - offset} ${offset},${100 - offset}"
+                            fill="${elData.fillColor}" stroke="${elData.strokeColor}" stroke-width="${elData.strokeWidth}"
+                            style="transform-origin: center;"/>`;
+                        break;
+                    case 'rounded':
+                        svgContent = `<rect x="${offset}" y="${offset}" rx="15" ry="15"
+                            width="calc(100% - ${sw}px)" height="calc(100% - ${sw}px)"
+                            fill="${elData.fillColor}" stroke="${elData.strokeColor}" stroke-width="${elData.strokeWidth}"
+                            style="width: calc(100% - ${sw}px); height: calc(100% - ${sw}px);"/>`;
+                        break;
+                    case 'line':
+                        svgContent = `<line x1="0" y1="50%" x2="100%" y2="50%"
+                            stroke="${elData.fillColor}" stroke-width="${Math.max(4, sw)}" stroke-linecap="round"/>`;
+                        break;
+                    case 'star':
+                        svgContent = `<polygon points="50,5 61,40 98,40 68,62 79,96 50,75 21,96 32,62 2,40 39,40"
+                            fill="${elData.fillColor}" stroke="${elData.strokeColor}" stroke-width="${elData.strokeWidth}"
+                            style="transform-origin: center;"/>`;
+                        break;
+                }
+
+                element.innerHTML = `
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="width: 100%; height: 100%; overflow: visible;">
+                        ${svgContent}
+                    </svg>
+                    <div class="resize-handle se"></div>
+                    <button class="delete-btn" onclick="deleteElement(this.parentElement)">&times;</button>
+                `;
+                element.dataset.type = 'shape';
+                element.dataset.shapeType = elData.shapeType;
+                element.dataset.fillColor = elData.fillColor;
+                element.dataset.strokeColor = elData.strokeColor;
+                element.dataset.strokeWidth = elData.strokeWidth;
+                break;
+        }
+
+        if (element) {
+            element.style.left = elData.left;
+            element.style.top = elData.top;
+            element.style.width = elData.width;
+            element.style.height = elData.height;
+            element.style.zIndex = elData.zIndex;
+            element.style.opacity = elData.opacity / 100;
+            element.dataset.opacity = elData.opacity;
+
+            wrapper.appendChild(element);
+            elements.push(element);
+            makeDraggable(element);
+            makeResizable(element);
+        }
+    });
+
+    selectedElement = null;
+    deselectAll();
+}
+
+function undo() {
+    if (historyIndex > 0) {
+        historyIndex--;
+        restoreState(historyStack[historyIndex]);
+        updateUndoRedoButtons();
+    }
+}
+
+function redo() {
+    if (historyIndex < historyStack.length - 1) {
+        historyIndex++;
+        restoreState(historyStack[historyIndex]);
+        updateUndoRedoButtons();
+    }
+}
+
+function updateUndoRedoButtons() {
+    const undoBtn = document.getElementById('undoBtn');
+    const redoBtn = document.getElementById('redoBtn');
+
+    if (undoBtn) {
+        undoBtn.disabled = historyIndex <= 0;
+        undoBtn.style.opacity = historyIndex <= 0 ? '0.5' : '1';
+    }
+    if (redoBtn) {
+        redoBtn.disabled = historyIndex >= historyStack.length - 1;
+        redoBtn.style.opacity = historyIndex >= historyStack.length - 1 ? '0.5' : '1';
+    }
+}
+
+// ============================================
+// GRID OVERLAY SYSTEM
+// ============================================
+
+function createGridOverlay() {
+    const wrapper = document.getElementById('canvasWrapper');
+
+    // Remove existing grid if any
+    const existingGrid = document.getElementById('gridOverlay');
+    if (existingGrid) existingGrid.remove();
+
+    const grid = document.createElement('div');
+    grid.id = 'gridOverlay';
+    grid.className = 'grid-overlay';
+
+    const scale = parseFloat(wrapper.style.width) / canvasWidth;
+    const scaledGridSize = gridSize * scale;
+
+    grid.style.backgroundSize = `${scaledGridSize}px ${scaledGridSize}px`;
+    grid.style.display = gridVisible ? 'block' : 'none';
+
+    wrapper.appendChild(grid);
+}
+
+function toggleGrid() {
+    gridVisible = !gridVisible;
+    const grid = document.getElementById('gridOverlay');
+    const btn = document.getElementById('gridBtn');
+
+    if (grid) {
+        grid.style.display = gridVisible ? 'block' : 'none';
+    }
+
+    if (btn) {
+        btn.classList.toggle('active', gridVisible);
+    }
+}
+
+function setGridSize(size) {
+    gridSize = parseInt(size);
+    const wrapper = document.getElementById('canvasWrapper');
+    const grid = document.getElementById('gridOverlay');
+
+    if (grid) {
+        const scale = parseFloat(wrapper.style.width) / canvasWidth;
+        const scaledGridSize = gridSize * scale;
+        grid.style.backgroundSize = `${scaledGridSize}px ${scaledGridSize}px`;
+    }
 }
 
 // Alignment guide system
@@ -368,6 +721,7 @@ function addImageElement(img, src) {
     makeDraggable(element);
     makeResizable(element);
     selectElement(element);
+    saveState();
 }
 
 function addText() {
@@ -412,6 +766,7 @@ function addText() {
     makeDraggable(element);
     makeResizable(element);
     selectElement(element);
+    saveState();
 
     document.getElementById('textInput').value = '';
 }
@@ -451,6 +806,7 @@ function addIcon(iconName) {
     makeDraggable(element);
     makeResizable(element);
     selectElement(element);
+    saveState();
 }
 
 function addShape(shapeType) {
@@ -529,16 +885,19 @@ function addShape(shapeType) {
     makeDraggable(element);
     makeResizable(element);
     selectElement(element);
+    saveState();
 }
 
 function makeDraggable(element) {
     let isDragging = false;
     let startX, startY, initialLeft, initialTop;
+    let hasMoved = false;
 
     element.addEventListener('mousedown', (e) => {
         if (e.target.classList.contains('resize-handle') || e.target.classList.contains('delete-btn')) return;
 
         isDragging = true;
+        hasMoved = false;
         startX = e.clientX;
         startY = e.clientY;
         initialLeft = parseInt(element.style.left) || 0;
@@ -556,6 +915,10 @@ function makeDraggable(element) {
         const dx = e.clientX - startX;
         const dy = e.clientY - startY;
 
+        if (Math.abs(dx) > 2 || Math.abs(dy) > 2) {
+            hasMoved = true;
+        }
+
         element.style.left = (initialLeft + dx) + 'px';
         element.style.top = (initialTop + dy) + 'px';
 
@@ -566,8 +929,12 @@ function makeDraggable(element) {
         if (isDragging) {
             hideCanvasCenterGuides();
             clearAlignmentGuides();
+            if (hasMoved) {
+                saveState();
+            }
         }
         isDragging = false;
+        hasMoved = false;
     });
 }
 
@@ -575,9 +942,11 @@ function makeResizable(element) {
     const handle = element.querySelector('.resize-handle');
     let isResizing = false;
     let startX, startY, startWidth, startHeight;
+    let hasResized = false;
 
     handle.addEventListener('mousedown', (e) => {
         isResizing = true;
+        hasResized = false;
         startX = e.clientX;
         startY = e.clientY;
         startWidth = parseInt(element.style.width) || element.offsetWidth;
@@ -592,6 +961,10 @@ function makeResizable(element) {
 
         const dx = e.clientX - startX;
         const dy = e.clientY - startY;
+
+        if (Math.abs(dx) > 2 || Math.abs(dy) > 2) {
+            hasResized = true;
+        }
 
         if (element.dataset.type === 'text') {
             // Scale font for text
@@ -628,8 +1001,12 @@ function makeResizable(element) {
         if (isResizing) {
             hideCanvasCenterGuides();
             clearAlignmentGuides();
+            if (hasResized) {
+                saveState();
+            }
         }
         isResizing = false;
+        hasResized = false;
     });
 }
 
@@ -668,6 +1045,7 @@ function deleteElement(element) {
         selectedElement = null;
         deselectAll();
     }
+    saveState();
 }
 
 function deleteSelected() {
@@ -677,21 +1055,25 @@ function deleteSelected() {
 }
 
 function clearCanvas() {
+    if (elements.length === 0) return;
     elements.forEach(el => el.remove());
     elements = [];
     selectedElement = null;
     deselectAll();
+    saveState();
 }
 
 function bringToFront() {
     if (selectedElement) {
         selectedElement.style.zIndex = zIndexCounter++;
+        saveState();
     }
 }
 
 function sendToBack() {
     if (selectedElement) {
         selectedElement.style.zIndex = 0;
+        saveState();
     }
 }
 

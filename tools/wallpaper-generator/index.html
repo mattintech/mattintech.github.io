@@ -137,6 +137,20 @@
         <!-- Canvas Area -->
         <div class="canvas-area">
             <div class="canvas-controls">
+                <button class="btn btn-secondary" id="undoBtn" onclick="undo()" title="Undo (Ctrl+Z)">
+                    <span class="material-icons">undo</span>
+                    Undo
+                </button>
+                <button class="btn btn-secondary" id="redoBtn" onclick="redo()" title="Redo (Ctrl+Y)">
+                    <span class="material-icons">redo</span>
+                    Redo
+                </button>
+                <div class="control-divider"></div>
+                <button class="btn btn-secondary" id="gridBtn" onclick="toggleGrid()" title="Toggle Grid (G)">
+                    <span class="material-icons">grid_on</span>
+                    Grid
+                </button>
+                <div class="control-divider"></div>
                 <button class="btn btn-secondary" onclick="clearCanvas()">
                     <span class="material-icons">delete_sweep</span>
                     Clear All
