@@ -61,6 +61,9 @@ function initCanvas() {
     wrapper.style.width = (canvasWidth * scale) + 'px';
     wrapper.style.height = (canvasHeight * scale) + 'px';
 
+    // Create canvas center guide lines
+    createCanvasCenterGuides();
+
     renderCanvas();
 }
 
@@ -121,6 +124,19 @@ function setupEventListeners() {
         });
     });
 
+    // Font preview in text input
+    const textInput = document.getElementById('textInput');
+    const fontSelect = document.getElementById('fontSelect');
+    const textColor = document.getElementById('textColor');
+    const fontWeight = document.getElementById('fontWeight');
+
+    // Initialize with default font
+    updateTextPreview();
+
+    fontSelect.addEventListener('change', updateTextPreview);
+    textColor.addEventListener('input', updateTextPreview);
+    fontWeight.addEventListener('change', updateTextPreview);
+
     // Click outside to deselect
     document.getElementById('canvasWrapper').addEventListener('click', (e) => {
         if (e.target.id === 'canvas' || e.target.id === 'canvasWrapper') {
@@ -145,6 +161,154 @@ function setupEventListeners() {
             selectedElement.style.opacity = value / 100;
             selectedElement.dataset.opacity = value;
         }
+    });
+}
+
+function updateTextPreview() {
+    const textInput = document.getElementById('textInput');
+    const font = document.getElementById('fontSelect').value;
+    const color = document.getElementById('textColor').value;
+    const weight = document.getElementById('fontWeight').value;
+
+    textInput.style.fontFamily = font;
+    textInput.style.color = color;
+    textInput.style.fontWeight = weight;
+}
+
+// Alignment guide system
+const SNAP_THRESHOLD = 6;
+
+function getElementBounds(element) {
+    const left = parseFloat(element.style.left) || 0;
+    const top = parseFloat(element.style.top) || 0;
+    const width = element.offsetWidth;
+    const height = element.offsetHeight;
+
+    return {
+        left: left,
+        top: top,
+        right: left + width,
+        bottom: top + height,
+        centerX: left + width / 2,
+        centerY: top + height / 2,
+        width: width,
+        height: height
+    };
+}
+
+function createCanvasCenterGuides() {
+    const wrapper = document.getElementById('canvasWrapper');
+
+    if (!document.getElementById('canvasCenterH')) {
+        const guideH = document.createElement('div');
+        guideH.id = 'canvasCenterH';
+        guideH.className = 'canvas-center-guide canvas-center-guide-h';
+        wrapper.appendChild(guideH);
+
+        const guideV = document.createElement('div');
+        guideV.id = 'canvasCenterV';
+        guideV.className = 'canvas-center-guide canvas-center-guide-v';
+        wrapper.appendChild(guideV);
+    }
+}
+
+function showCanvasCenterGuides() {
+    const guideH = document.getElementById('canvasCenterH');
+    const guideV = document.getElementById('canvasCenterV');
+    if (guideH) guideH.classList.add('visible');
+    if (guideV) guideV.classList.add('visible');
+}
+
+function hideCanvasCenterGuides() {
+    const guideH = document.getElementById('canvasCenterH');
+    const guideV = document.getElementById('canvasCenterV');
+    if (guideH) guideH.classList.remove('visible');
+    if (guideV) guideV.classList.remove('visible');
+}
+
+function clearAlignmentGuides() {
+    const wrapper = document.getElementById('canvasWrapper');
+    wrapper.querySelectorAll('.align-guide').forEach(g => g.remove());
+}
+
+function createAlignGuide(type, position) {
+    const wrapper = document.getElementById('canvasWrapper');
+    const guide = document.createElement('div');
+    guide.className = `align-guide align-guide-${type}`;
+
+    if (type === 'h') {
+        guide.style.top = position + 'px';
+    } else {
+        guide.style.left = position + 'px';
+    }
+
+    wrapper.appendChild(guide);
+    return guide;
+}
+
+function updateAlignmentGuides(draggedElement) {
+    clearAlignmentGuides();
+
+    const wrapper = document.getElementById('canvasWrapper');
+    const wrapperWidth = parseFloat(wrapper.style.width);
+    const wrapperHeight = parseFloat(wrapper.style.height);
+
+    const draggedBounds = getElementBounds(draggedElement);
+
+    // Canvas center points
+    const canvasCenterX = wrapperWidth / 2;
+    const canvasCenterY = wrapperHeight / 2;
+
+    // Collect all alignment points from other elements
+    const hPoints = []; // horizontal alignment (y positions)
+    const vPoints = []; // vertical alignment (x positions)
+
+    // Add canvas center as alignment points
+    hPoints.push({ y: canvasCenterY, type: 'canvas-center' });
+    vPoints.push({ x: canvasCenterX, type: 'canvas-center' });
+
+    // Add canvas edges
+    hPoints.push({ y: 0, type: 'canvas-edge' });
+    hPoints.push({ y: wrapperHeight, type: 'canvas-edge' });
+    vPoints.push({ x: 0, type: 'canvas-edge' });
+    vPoints.push({ x: wrapperWidth, type: 'canvas-edge' });
+
+    // Collect alignment points from other elements
+    elements.forEach(el => {
+        if (el === draggedElement) return;
+
+        const bounds = getElementBounds(el);
+
+        // Add element edges and center
+        hPoints.push({ y: bounds.top, type: 'element-edge' });
+        hPoints.push({ y: bounds.bottom, type: 'element-edge' });
+        hPoints.push({ y: bounds.centerY, type: 'element-center' });
+
+        vPoints.push({ x: bounds.left, type: 'element-edge' });
+        vPoints.push({ x: bounds.right, type: 'element-edge' });
+        vPoints.push({ x: bounds.centerX, type: 'element-center' });
+    });
+
+    // Check dragged element's key points against alignment points
+    const draggedHPoints = [draggedBounds.top, draggedBounds.centerY, draggedBounds.bottom];
+    const draggedVPoints = [draggedBounds.left, draggedBounds.centerX, draggedBounds.right];
+
+    // Find horizontal alignments
+    hPoints.forEach(point => {
+        draggedHPoints.forEach(dragY => {
+            if (Math.abs(dragY - point.y) < SNAP_THRESHOLD) {
+                createAlignGuide('h', point.y);
+            }
+        });
+    });
+
+    // Find vertical alignments
+    vPoints.forEach(point => {
+        draggedVPoints.forEach(dragX => {
+            if (Math.abs(dragX - point.x) < SNAP_THRESHOLD) {
+                createAlignGuide('v', point.x);
+            }
+        });
     });
 }
 
@@ -381,6 +545,8 @@ function makeDraggable(element) {
         initialTop = parseInt(element.style.top) || 0;
 
         selectElement(element);
+        showCanvasCenterGuides();
+        updateAlignmentGuides(element);
         e.preventDefault();
     });
 
@@ -392,9 +558,15 @@ function makeDraggable(element) {
 
         element.style.left = (initialLeft + dx) + 'px';
         element.style.top = (initialTop + dy) + 'px';
+
+        updateAlignmentGuides(element);
     });
 
     document.addEventListener('mouseup', () => {
+        if (isDragging) {
+            hideCanvasCenterGuides();
+            clearAlignmentGuides();
+        }
         isDragging = false;
     });
 }
@@ -410,6 +582,7 @@ function makeResizable(element) {
         startY = e.clientY;
         startWidth = parseInt(element.style.width) || element.offsetWidth;
         startHeight = parseInt(element.style.height) || element.offsetHeight;
+        showCanvasCenterGuides();
         e.preventDefault();
         e.stopPropagation();
     });
@@ -447,9 +620,15 @@ function makeResizable(element) {
             element.style.width = newWidth + 'px';
             element.style.height = newHeight + 'px';
         }
+
+        updateAlignmentGuides(element);
     });
 
     document.addEventListener('mouseup', () => {
+        if (isResizing) {
+            hideCanvasCenterGuides();
+            clearAlignmentGuides();
+        }
         isResizing = false;
     });
 }

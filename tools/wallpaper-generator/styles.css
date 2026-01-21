@@ -4,17 +4,23 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background: #1a1a2e;
     color: #eee;
-    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
 }
 
 .app-container {
     display: grid;
     grid-template-columns: 280px 1fr 300px;
-    min-height: 100vh;
+    height: 100%;
 }
 
 /* Left Panel - Tools */
@@ -122,6 +128,13 @@ input[type="file"] {
     color: #eee;
 }
 
+/* Font preview styling for text input */
+#textInput {
+    font-size: 18px;
+    min-height: 48px;
+    transition: font-family 0.2s, font-weight 0.2s;
+}
+
 .text-controls {
     display: flex;
     gap: 10px;
@@ -186,6 +199,60 @@ input[type="file"] {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
+/* Alignment guide lines */
+.align-guide {
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.align-guide-h {
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(0, 255, 136, 0.9);
+    box-shadow: 0 0 4px rgba(0, 255, 136, 0.5);
+}
+
+.align-guide-v {
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(0, 255, 136, 0.9);
+    box-shadow: 0 0 4px rgba(0, 255, 136, 0.5);
+}
+
+/* Canvas center guides (always pink, shown during drag) */
+.canvas-center-guide {
+    position: absolute;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.canvas-center-guide.visible {
+    opacity: 1;
+}
+
+.canvas-center-guide-h {
+    left: 0;
+    right: 0;
+    height: 1px;
+    top: 50%;
+    background: rgba(233, 69, 96, 0.4);
+    border-top: 1px dashed rgba(233, 69, 96, 0.7);
+}
+
+.canvas-center-guide-v {
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    left: 50%;
+    background: rgba(233, 69, 96, 0.4);
+    border-left: 1px dashed rgba(233, 69, 96, 0.7);
+}
+
 #canvas {
     display: block;
 }
@@ -200,6 +267,23 @@ input[type="file"] {
 .canvas-element.selected {
     outline: 2px dashed #e94560;
     outline-offset: 2px;
+}
+
+/* Center point indicator on selected elements */
+.canvas-element.selected::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: #e94560;
+    border: 2px solid white;
+    border-radius: 50%;
+    z-index: 100;
+    pointer-events: none;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
 }
 
 .canvas-element .resize-handle {
