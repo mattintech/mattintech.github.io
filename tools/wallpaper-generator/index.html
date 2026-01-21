@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Kiosk Wallpaper Generator - Create Custom Android & Digital Signage Backgrounds</title>
+    <meta name="description" content="Free online wallpaper generator for kiosks, Android devices, and digital signage. Create custom backgrounds with text, icons, shapes, and images. Export in exact device resolutions for Samsung Galaxy, Pixel, tablets, and retail displays.">
+    <meta name="keywords" content="kiosk wallpaper generator, Android wallpaper maker, digital signage background creator, Samsung Knox wallpaper, retail kiosk graphics, device wallpaper tool, custom tablet background, enterprise device wallpaper, MDM wallpaper, EMM branding">
+    <meta name="author" content="MattInTech">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Kiosk Wallpaper Generator - Free Online Tool">
+    <meta property="og:description" content="Create custom wallpapers for kiosks, Android devices, and digital signage. Export in exact device resolutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mattintech.github.io/tools/wallpaper-generator/">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mattintech.github.io/tools/wallpaper-generator/">
+
+    <!-- Fonts and Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Oswald:wght@400;700&family=Raleway:wght@400;700&family=Poppins:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Panel - Tools -->
+        <div class="tools-panel">
+            <h2 class="panel-title">Tools</h2>
+
+            <div class="tool-section">
+                <h3>Background Color</h3>
+                <div class="color-picker-wrapper">
+                    <input type="color" id="bgColor" value="#1a1a2e">
+                    <input type="text" id="bgColorHex" value="#1a1a2e" maxlength="7">
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <h3>PNG Overlay</h3>
+                <input type="file" id="imageUpload" accept="image/*">
+                <button class="btn btn-secondary btn-full" onclick="document.getElementById('imageUpload').click()">
+                    <span class="material-icons">upload</span>
+                    Upload Image
+                </button>
+            </div>
+
+            <div class="tool-section">
+                <h3>Add Text</h3>
+                <div class="text-input-group">
+                    <input type="text" id="textInput" placeholder="Enter your text...">
+                    <select id="fontSelect">
+                        <option value="Roboto">Roboto</option>
+                        <option value="Open Sans">Open Sans</option>
+                        <option value="Montserrat">Montserrat</option>
+                        <option value="Playfair Display">Playfair Display</option>
+                        <option value="Oswald">Oswald</option>
+                        <option value="Raleway">Raleway</option>
+                        <option value="Poppins">Poppins</option>
+                        <option value="Lato">Lato</option>
+                    </select>
+                    <div class="text-controls">
+                        <input type="number" id="fontSize" value="48" min="12" max="200" title="Font Size">
+                        <input type="color" id="textColor" value="#ffffff" title="Text Color">
+                        <select id="fontWeight">
+                            <option value="400">Normal</option>
+                            <option value="700">Bold</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary btn-full" onclick="addText()">
+                        <span class="material-icons">text_fields</span>
+                        Add Text
+                    </button>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <h3>Material Icons</h3>
+                <input type="text" class="icon-search" id="iconSearch" placeholder="Search icons...">
+                <div class="text-controls" style="margin-bottom: 10px;">
+                    <input type="number" id="iconSize" value="48" min="16" max="200" title="Icon Size">
+                    <input type="color" id="iconColor" value="#ffffff" title="Icon Color">
+                </div>
+                <div class="icon-grid" id="iconGrid">
+                    <!-- Icons will be populated by JS -->
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <h3>Shapes</h3>
+                <div class="shape-controls">
+                    <div class="text-controls" style="margin-bottom: 10px;">
+                        <input type="color" id="shapeFillColor" value="#e94560" title="Fill Color">
+                        <input type="color" id="shapeStrokeColor" value="#ffffff" title="Stroke Color">
+                        <input type="number" id="shapeStrokeWidth" value="0" min="0" max="20" title="Stroke Width">
+                    </div>
+                    <div class="shape-grid">
+                        <button class="shape-btn" onclick="addShape('rectangle')" title="Rectangle">
+                            <span class="material-icons">rectangle</span>
+                        </button>
+                        <button class="shape-btn" onclick="addShape('circle')" title="Circle">
+                            <span class="material-icons">circle</span>
+                        </button>
+                        <button class="shape-btn" onclick="addShape('triangle')" title="Triangle">
+                            <span class="material-icons">change_history</span>
+                        </button>
+                        <button class="shape-btn" onclick="addShape('rounded')" title="Rounded Rectangle">
+                            <span class="material-icons">rounded_corner</span>
+                        </button>
+                        <button class="shape-btn" onclick="addShape('line')" title="Line">
+                            <span class="material-icons">horizontal_rule</span>
+                        </button>
+                        <button class="shape-btn" onclick="addShape('star')" title="Star">
+                            <span class="material-icons">star</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <h3>Selected Element</h3>
+                <div class="element-properties" id="elementProperties">
+                    <div class="property-row">
+                        <label>Opacity</label>
+                        <div class="opacity-control">
+                            <input type="range" id="elementOpacity" min="0" max="100" value="100">
+                            <span id="opacityValue">100%</span>
+                        </div>
+                    </div>
+                    <p class="no-selection" id="noSelectionMsg">Select an element to edit</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Canvas Area -->
+        <div class="canvas-area">
+            <div class="canvas-controls">
+                <button class="btn btn-secondary" onclick="clearCanvas()">
+                    <span class="material-icons">delete_sweep</span>
+                    Clear All
+                </button>
+                <button class="btn btn-secondary" onclick="deleteSelected()">
+                    <span class="material-icons">delete</span>
+                    Delete Selected
+                </button>
+                <button class="btn btn-secondary" onclick="bringToFront()">
+                    <span class="material-icons">flip_to_front</span>
+                    Bring Forward
+                </button>
+                <button class="btn btn-secondary" onclick="sendToBack()">
+                    <span class="material-icons">flip_to_back</span>
+                    Send Back
+                </button>
+            </div>
+            <div class="canvas-wrapper" id="canvasWrapper">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+
+        <!-- Right Panel - Export & Tips -->
+        <div class="export-panel">
+            <h2 class="panel-title">Export</h2>
+
+            <div class="tool-section">
+                <h3>Device Preset</h3>
+                <select class="device-select" id="deviceSelect">
+                    <optgroup label="Custom">
+                        <option value="custom">Custom Size</option>
+                    </optgroup>
+                    <optgroup label="Android Phones">
+                        <option value="1080x2400">Samsung Galaxy S24 (1080 x 2400)</option>
+                        <option value="1440x3088">Samsung Galaxy S24 Ultra (1440 x 3088)</option>
+                        <option value="1080x2340">Samsung Galaxy A54 (1080 x 2340)</option>
+                        <option value="1080x2400">Google Pixel 8 (1080 x 2400)</option>
+                        <option value="1344x2992">Google Pixel 8 Pro (1344 x 2992)</option>
+                        <option value="1080x2412">OnePlus 12 (1080 x 2412)</option>
+                        <option value="1080x2400">Xiaomi 14 (1080 x 2400)</option>
+                        <option value="1260x2800">Oppo Find X7 (1260 x 2800)</option>
+                    </optgroup>
+                    <optgroup label="Samsung Rugged">
+                        <option value="1080x2408">Samsung XCover7 Pro (1080 x 2408)</option>
+                        <option value="1920x1200">Samsung Tab Active5 (1920 x 1200)</option>
+                        <option value="2560x1600">Samsung Tab Active5 Pro (2560 x 1600)</option>
+                    </optgroup>
+                    <optgroup label="Android Tablets">
+                        <option value="1600x2560">Samsung Galaxy Tab S9 (1600 x 2560)</option>
+                        <option value="1848x2960">Samsung Galaxy Tab S9 Ultra (1848 x 2960)</option>
+                        <option value="1600x2560">Google Pixel Tablet (1600 x 2560)</option>
+                    </optgroup>
+                    <optgroup label="Kiosk Displays">
+                        <option value="1080x1920">Full HD Portrait (1080 x 1920)</option>
+                        <option value="1920x1080">Full HD Landscape (1920 x 1080)</option>
+                        <option value="2160x3840">4K Portrait (2160 x 3840)</option>
+                        <option value="3840x2160">4K Landscape (3840 x 2160)</option>
+                        <option value="768x1024">iPad-style Kiosk (768 x 1024)</option>
+                    </optgroup>
+                    <optgroup label="Common Resolutions">
+                        <option value="720x1280">HD (720 x 1280)</option>
+                        <option value="1080x1920" selected>Full HD (1080 x 1920)</option>
+                        <option value="1440x2560">QHD (1440 x 2560)</option>
+                        <option value="2160x3840">4K UHD (2160 x 3840)</option>
+                    </optgroup>
+                </select>
+
+                <div class="manual-override">
+                    <h4>Manual Override</h4>
+                    <div class="custom-size-inputs active" id="customSizeInputs">
+                        <input type="number" id="customWidth" placeholder="Width" value="1080" min="100" max="7680">
+                        <span class="size-separator">x</span>
+                        <input type="number" id="customHeight" placeholder="Height" value="1920" min="100" max="7680">
+                        <button class="btn btn-secondary" onclick="applyCustomSize()">
+                            <span class="material-icons">check</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="orientation-toggle">
+                    <button class="orientation-btn active" id="portraitBtn" onclick="setOrientation('portrait')">
+                        <span class="material-icons">stay_current_portrait</span>
+                        Portrait
+                    </button>
+                    <button class="orientation-btn" id="landscapeBtn" onclick="setOrientation('landscape')">
+                        <span class="material-icons">stay_current_landscape</span>
+                        Landscape
+                    </button>
+                </div>
+
+                <div class="size-display">
+                    <div class="size" id="currentSize">1080 x 1920</div>
+                    <div class="label">Current Canvas Size</div>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <h3>Format</h3>
+                <div class="export-format">
+                    <button class="format-btn active" id="pngBtn" onclick="setFormat('png')">PNG</button>
+                    <button class="format-btn" id="jpgBtn" onclick="setFormat('jpg')">JPG</button>
+                </div>
+                <div id="qualitySection" style="display: none;">
+                    <label>Quality: <span id="qualityValue">90</span>%</label>
+                    <input type="range" class="quality-slider" id="qualitySlider" min="10" max="100" value="90">
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-full" onclick="exportImage()" style="margin-bottom: 20px;">
+                <span class="material-icons">download</span>
+                Export Wallpaper
+            </button>
+
+            <div class="tips-section">
+                <h3>Size Tips</h3>
+
+                <div class="tip-card">
+                    <h4>Retail Kiosks</h4>
+                    <p>Most retail kiosks use <span class="size-info">1080x1920</span> (portrait) or <span class="size-info">1920x1080</span> (landscape). High-end displays may need 4K resolution.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h4>Android Phones</h4>
+                    <p>Modern Android phones typically use <span class="size-info">1080x2400</span> or higher. Flagship devices like Galaxy S24 Ultra use <span class="size-info">1440x3088</span>.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h4>Android Tablets</h4>
+                    <p>Tablet resolutions vary widely. Common sizes: <span class="size-info">1600x2560</span> for 10-11" tablets, <span class="size-info">1848x2960</span> for larger displays.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h4>Samsung Rugged Devices</h4>
+                    <p>XCover7 Pro uses <span class="size-info">1080x2408</span>. Tab Active5 is <span class="size-info">1920x1200</span> (8"), Tab Active5 Pro is <span class="size-info">2560x1600</span> (10.1"). Great for industrial/field use.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h4>Digital Signage</h4>
+                    <p>For professional signage, use <span class="size-info">3840x2160</span> (4K) to ensure crisp text and images on large displays.</p>
+                </div>
+
+                <div class="tip-card">
+                    <h4>Pro Tip</h4>
+                    <p>Always design at the target resolution. Avoid upscaling as it causes blurriness. PNG for graphics with transparency, JPG for photos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
