@@ -2,33 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mattintech.github.io/</loc>
-    <lastmod>2025-04-15</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://mattintech.github.io/tools/android-qr/</loc>
-    <lastmod>2025-04-05</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mattintech.github.io/tools/adb-cmd/</loc>
-    <lastmod>2025-04-01</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://github.com/mattintech/simplefileupload-android</loc>
-    <lastmod>2025-04-15</lastmod>
+    <loc>https://mattintech.github.io/tools/package-list/</loc>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://github.com/mattintech/OEMConfigPlayground</loc>
-    <lastmod>2025-04-14</lastmod>
+    <loc>https://mattintech.github.io/tools/wallpaper-generator/</loc>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Add more URLs as you create new tools -->
 </urlset>
