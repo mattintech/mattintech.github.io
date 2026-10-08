@@ -2393,6 +2393,12 @@
     },
     {
       "category": "samsung",
+      "name": "Samsung Messages",
+      "package": "com.samsung.android.messaging",
+      "system": true
+    },
+    {
+      "category": "samsung",
       "name": "MhsAiService",
       "package": "com.samsung.android.mhs.ai",
       "system": true

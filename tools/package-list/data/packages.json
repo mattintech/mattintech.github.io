@@ -3399,6 +3399,17 @@
     "playStore": false
   },
   {
+    "package": "com.samsung.android.messaging",
+    "name": "Samsung Messages",
+    "description": "",
+    "system": true,
+    "oems": [
+      "samsung"
+    ],
+    "category": "samsung",
+    "playStore": false
+  },
+  {
     "package": "com.samsung.android.mhs.ai",
     "name": "MhsAiService",
     "description": "",
