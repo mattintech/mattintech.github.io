@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimpleFileUpload: Android File &amp; Dumpstate Log Upload App + Self-Hosted Server | MattInTech</title>
+  <meta name="description" content="Free, open-source way to get files and Samsung dumpstate logs off Android devices: an Android upload app plus a self-hosted Flask server with share codes, expiry, download limits, and Docker support.">
+  <meta name="keywords" content="Android file upload app, Samsung dumpstate upload, Android log upload, dumpstate logs, self-hosted file sharing, Flask upload server, Docker file server, chunked upload, enterprise mobility tools, Android Enterprise, EMM support tools">
+  <meta name="author" content="Matt Hills">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mattintech.github.io/tools/simplefileupload/">
+
+  <meta property="og:title" content="SimpleFileUpload: Android app + self-hosted upload server">
+  <meta property="og:description" content="Get files and Samsung dumpstate logs off Android devices, onto a server you control. Free and open source.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mattintech.github.io/tools/simplefileupload/">
+  <meta property="og:site_name" content="MattInTech">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://mattintech.github.io/tools/simplefileupload/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SimpleFileUpload: Android app and Flask upload server">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SimpleFileUpload: Android app + self-hosted upload server">
+  <meta name="twitter:description" content="Get files and Samsung dumpstate logs off Android devices, onto a server you control.">
+  <meta name="twitter:image" content="https://mattintech.github.io/tools/simplefileupload/og.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "SimpleFileUpload for Android",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Android",
+        "description": "Android app to upload files and Samsung dumpstate logs to a self-hosted SimpleFileUpload server, with share codes, expiry times, download limits, and chunked uploads.",
+        "url": "https://mattintech.github.io/tools/simplefileupload/",
+        "sameAs": "https://github.com/mattintech/simplefileupload-android",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "Matt Hills", "url": "https://matthills.ca" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "SimpleFileUpload Server",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Linux, macOS, Windows (Docker)",
+        "description": "Lightweight self-hosted Flask upload and download server with 6-character share codes, client-key authentication, chunked uploads, download limits, expiry, and Docker support.",
+        "url": "https://mattintech.github.io/tools/simplefileupload/",
+        "sameAs": "https://github.com/mattintech/simplefileupload-server",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "Matt Hills", "url": "https://matthills.ca" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "MattInTech Developer Tools", "item": "https://mattintech.github.io/" },
+          { "@type": "ListItem", "position": 2, "name": "SimpleFileUpload", "item": "https://mattintech.github.io/tools/simplefileupload/" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <header class="text-white" style="background-color:#ea580c;">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
+        <div>
+          <h1 class="text-3xl font-bold">SimpleFileUpload</h1>
+          <span class="sr-only">Android file and Samsung dumpstate log upload app with a self-hosted Flask upload server</span>
+          <p class="mt-2">Get files and Samsung dumpstate logs off Android devices, onto a server you control.</p>
+        </div>
+        <a href="../../index.html" class="mt-4 md:mt-0 bg-white px-4 py-2 rounded hover:bg-gray-100 transition" style="color:#ea580c;">&larr; Back to Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <section class="bg-white rounded-lg shadow p-6 mb-8">
+      <h2 class="text-2xl font-semibold mb-3">How it works</h2>
+      <p class="text-gray-700 mb-6">SimpleFileUpload has two parts. The Android app uploads a file (or a bundle of dumpstate logs) to your server and gets back a short code. Anyone with the code can download the file from the server's web page until it expires or hits its download limit.</p>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center text-center">
+        <div class="md:col-span-2 bg-gray-50 rounded-lg p-4 border">
+          <div class="text-sm font-semibold uppercase tracking-wide" style="color:#ea580c;">1 · Android app</div>
+          <p class="text-gray-700 mt-1">Pick a file or dumpstate logs. The app zips and uploads them.</p>
+        </div>
+        <div class="text-3xl text-gray-400">&rarr;</div>
+        <div class="md:col-span-2 bg-gray-50 rounded-lg p-4 border">
+          <div class="text-sm font-semibold uppercase tracking-wide" style="color:#ea580c;">2 · Upload server</div>
+          <p class="text-gray-700 mt-1">Stores it and returns a 6-character code. Share the code; download from the web page.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <article class="bg-white rounded-lg shadow p-6 flex flex-col">
+        <div class="flex items-center mb-3">
+          <h2 class="text-xl font-semibold">Android app</h2>
+          <span class="ml-2 bg-green-100 text-green-800 text-xs font-semibold px-2 py-0.5 rounded">Android</span>
+        </div>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1 flex-grow">
+          <li>Upload any file from device storage</li>
+          <li>Finds Samsung dumpstate files automatically; multi-select several and send them as one package</li>
+          <li>Zips files before upload; chunked uploads for large files</li>
+          <li>Set an expiry time and maximum number of downloads per upload</li>
+          <li>Upload history with codes to copy and share, and delete from the server</li>
+          <li>Android 14+ support with a proper foreground service</li>
+        </ul>
+        <a href="https://github.com/mattintech/simplefileupload-android" class="tool-button block text-center text-white rounded px-4 py-2 mt-6 hover:opacity-90" style="background-color:#ea580c;">View on GitHub</a>
+      </article>
+
+      <article class="bg-white rounded-lg shadow p-6 flex flex-col">
+        <div class="flex items-center mb-3">
+          <h2 class="text-xl font-semibold">Upload server</h2>
+          <span class="ml-2 bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">Python · Flask · Docker</span>
+        </div>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1 flex-grow">
+          <li>Lightweight Flask server with a clean download page</li>
+          <li>Uploads authenticated with a client key</li>
+          <li>Secure 6-character alphanumeric codes</li>
+          <li>Chunked upload support for large files</li>
+          <li>Download limits, expiry times, and automatic cleanup</li>
+          <li>Runs in Docker; the app needs HTTPS (bring your own cert or self-signed)</li>
+        </ul>
+        <a href="https://github.com/mattintech/simplefileupload-server" class="tool-button block text-center text-white rounded px-4 py-2 mt-6 bg-gray-800 hover:bg-gray-900">View on GitHub</a>
+      </article>
+    </div>
+
+    <section class="bg-white rounded-lg shadow p-6 mb-8">
+      <h2 class="text-2xl font-semibold mb-3">Quick start</h2>
+      <ol class="list-decimal pl-5 text-gray-700 space-y-3">
+        <li>Run the server with Docker and HTTPS:
+          <pre class="bg-gray-900 text-gray-100 text-sm rounded p-4 mt-2 overflow-x-auto">docker build -t simplefileupload-server .
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+docker run -p 7777:7777 \
+  -e CLIENT_KEY=your-secret-key \
+  -v $(pwd)/cert.pem:/app/cert.pem \
+  -v $(pwd)/key.pem:/app/key.pem \
+  simplefileupload-server</pre>
+        </li>
+        <li>Build the Android app and, in its settings, enter your server URL and the same client key.</li>
+        <li>Upload a file, share the code, and download it from your server's web page.</li>
+      </ol>
+      <p class="text-sm text-gray-500 mt-4">Set your own <code>CLIENT_KEY</code>. If you don't, the server falls back to a default key.</p>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-6 mt-10">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p>&copy; 2026 MattInTech. All rights reserved. | SimpleFileUpload</p>
+        <a href="https://github.com/mattintech" class="text-gray-400 hover:text-white transition mt-4 md:mt-0">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -7,13 +7,13 @@
 
   <!-- SEO Meta Tags -->
   <title>MattInTech Developer Tools - Free Web-Based Utilities for Developers</title>
-  <meta name="description" content="A collection of free tools for developers, including web-based utilities, Android apps, and backend tools. Create custom kiosk wallpapers, Android device backgrounds, and digital signage graphics. All tools prioritize privacy and efficiency.">
-  <meta name="keywords" content="developer tools, web tools, Android apps, backend tools, QR code generator, EMM tools, mobile device management, kiosk wallpaper generator, Android wallpaper creator, digital signage backgrounds, device wallpaper maker, Samsung Knox wallpaper, retail kiosk graphics">
+  <meta name="description" content="Free tools for Android Enterprise and EMM admins and developers: Android Enterprise QR generator, ADB commands, Android package names, kiosk wallpaper generator, SimpleFileUpload (Android dumpstate and file upload app + self-hosted server), and the Knox Portal Obfuscator browser extension. Privacy-focused and open source.">
+  <meta name="keywords" content="developer tools, web tools, Android apps, backend tools, QR code generator, EMM tools, mobile device management, kiosk wallpaper generator, Android wallpaper creator, digital signage backgrounds, device wallpaper maker, Samsung Knox wallpaper, retail kiosk graphics, Samsung dumpstate upload, Android log upload, self-hosted file upload server, Knox portal screen sharing, Samsung Knox browser extension, mask IMEI serial numbers">
   <meta name="author" content="MattInTech">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="MattInTech Developer Tools">
-  <meta property="og:description" content="Free web-based tools for developers and IT professionals — Android Enterprise QR generator, ADB commands, kiosk wallpaper generator, and more.">
+  <meta property="og:description" content="Free tools for developers and IT professionals — Android Enterprise QR generator, ADB commands, kiosk wallpapers, SimpleFileUpload, Knox Portal Obfuscator, and more.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mattintech.github.io/">
   <meta property="og:site_name" content="MattInTech">
@@ -26,7 +26,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MattInTech Developer Tools">
-  <meta name="twitter:description" content="Free web-based tools for developers and IT professionals — Android Enterprise, ADB, kiosk wallpapers, and more.">
+  <meta name="twitter:description" content="Free tools for developers and IT professionals — Android Enterprise, ADB, kiosk wallpapers, SimpleFileUpload, Knox Portal Obfuscator, and more.">
   <meta name="twitter:image" content="https://mattintech.github.io/og.png">
 
   <!-- Canonical URL -->
@@ -90,6 +90,51 @@
       "target": "https://mattintech.github.io/?s={search_term_string}",
       "query-input": "required name=search_term_string"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "MattInTech Developer Tools",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Android Enterprise QR Generator",
+        "url": "https://mattintech.github.io/tools/android-qr/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "ADB Debugging Commands",
+        "url": "https://mattintech.github.io/tools/adb-cmd/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SimpleFileUpload",
+        "url": "https://mattintech.github.io/tools/simplefileupload/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Wallpaper Generator",
+        "url": "https://mattintech.github.io/tools/wallpaper-generator/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Android Package Names",
+        "url": "https://mattintech.github.io/tools/package-list/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Knox Portal Obfuscator",
+        "url": "https://addons.mozilla.org/firefox/addon/knox-portal-obfuscator/"
+      }
+    ]
   }
   </script>
   <meta name="google-site-verification" content="BDqLC-HjG1TuMx2hjNa4D87aruWv3C9Tu-LanErLoe0" />
@@ -200,9 +245,9 @@
               <span class="ml-2 bg-green-100 text-green-800 text-xs font-semibold px-2 py-0.5 rounded">Android</span>
             </div>
             <div class="tool-description">
-              <p class="text-gray-600">A lightweight file upload solution for Android that provides an easy-to-use interface for selecting and transferring files to servers. Features progress tracking, error handling, and a minimalist design ideal for integration into existing apps.</p>
+              <p class="text-gray-600">Get files and Samsung dumpstate logs off Android devices onto a server you control. An Android app plus a lightweight Flask upload server, with share codes, expiry, and download limits.</p>
             </div>
-            <a href="https://code.mattintech.com/mattintech/simplefileupload-android" class="tool-button bg-orange-600 hover:bg-orange-700" style="background-color: #ea580c;" aria-label="View SimpleFileUpload Android project">
+            <a href="tools/simplefileupload/index.html" class="tool-button bg-orange-600 hover:bg-orange-700" style="background-color: #ea580c;" aria-label="Open SimpleFileUpload: Android app and upload server">
               View Project
             </a>
           </div>
